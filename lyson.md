@@ -248,7 +248,7 @@
 
   `"photoname": "addoverlay1.png"`
 
-   ##### Table3 here are some combination of photoeffect & photoname
+   ##### photoeffect & photoname combination table
   
     | photoeffect | photoname | notes |
     |------------ | --------- | ----- |
