@@ -17,8 +17,9 @@
 
 - **logoplace:** *logoplace is define position where logo will be display `Default: TR`*
   > `"logoplace": "TR`
+
   | Code | Position |  
-  ---------|------------  
+  -------|------------  
   | TR | Top, Right|  
   | BR | Bottom, Right|  
   | TL | Top, Left|  
