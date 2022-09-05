@@ -13,5 +13,5 @@
 -  time
    > time mention timeline for effect and animation draw in canvas
    `"time": "0:0,4:2,8:0,12:0,16:0,20:18,26:0"`
-   ![Sample](../images/timeline.jpg)
+   ![Sample](https://github.com/mayur-rank/lyson/blob/main/images/timeline.jpg)
 
