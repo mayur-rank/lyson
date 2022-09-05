@@ -114,7 +114,7 @@
 
 - **aimodel:** *AI Models*
 
-  `"aimodel": ["face278","facemask","disney","comic"]`
+  ```"aimodel": ["face278","facemask","disney","comic"]```
 
   | Effect | Need of Model |  
     -------|------------  
@@ -131,11 +131,6 @@
 
 
 ## MultiMaskInputs & HiddenMaskInputs & MaskInputs
-
-| MultiMaskInputs | HiddenMaskInputs |  MaskInputs |
-|    -------|------------  | ------------  |
-
-|
 
 ```
 {
@@ -156,9 +151,6 @@
 }]
 }
 ```
-|
-
-|
 
 ```
 {
@@ -179,7 +171,6 @@
 	}]
 }
 ```
-|
 
 ```
 {
@@ -202,5 +193,4 @@
 	}]
 }
 ```
-|
 
