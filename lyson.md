@@ -4,7 +4,7 @@
 
 ## Index
 - [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
-- [MultiMaskInputs & HiddenMaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [MultiMaskInputs & HiddenMaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [TextEffects](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
