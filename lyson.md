@@ -1,8 +1,16 @@
 # LYSON
 **Lyrical.ly  Script Object Notation** `VERSION 8.0`
 
+
+## index
+- [Common Notation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+  - [Sample](https://github.com/mayur-rank/lyson/blob/main/lyson.md#sample)
+  - [Key Value Pair](https://github.com/mayur-rank/lyson/blob/main/lyson.md#key-value-pair)
+- [MultiMaskInputs & HiddenMaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+
 ## Common Notation
 
+### Sample
 ```
 {
 	"width": "720",
@@ -14,12 +22,12 @@
 	"logoplace": "TR",
 	"islogoblack": "false",
 	"isexternalaudioallow": "true",
-    "audiotitle": "Dil Se Bandhi Ek Dor",
+	"audiotitle": "Dil Se Bandhi Ek Dor",
 	"backgroundvideo" : "background.mp4"
 }
 ```
 
-### Key Value 
+### Key Value Pair
 
 - **~~type:~~** *type is always none in lyson 7.0+*
 
@@ -52,7 +60,7 @@
 
 - **logoplace:** *The logoplace specifies where the logo will be displayed `Default: TR`*
   
-  `"logoplace": "TR`
+  `"logoplace": "TR"`
 
   | Code | Position |  
   -------|------------  
@@ -106,4 +114,19 @@
 
   `"audiofile": "selecetbyinput()#text1#m_audio.mp3:a_audio.mp3:y_audio.mp3"` 
 
+- **aimodel:** *AI Models*
 
+  `"aimodel": ["face278","facemask","disney","comic"]`
+
+  | Effect | Need of Model |  
+    -------|------------  
+  | Face Key Point  | "face278" |  
+  | Face Mask | "face278","facemask" |  
+  | disney | "face278","facemask","disney" |  
+  | removebg | - |  
+  | skyseg | "skyseg" |
+  | clothesseg | "clothesseg" |
+  | hairseg | "hairseg" |
+  | headseg | "face278","headseg" |
+  | comic | "comic" |
+  | cartoon | "cartoon" |
