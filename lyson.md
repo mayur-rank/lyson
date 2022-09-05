@@ -220,6 +220,10 @@
 
     `"maskover": "selecetbyinput()#text1#m_frame.png:a_frame.png:y_frame.png"`
 
+- **maskhintover:** *maskhintover is a frame image that is overlaid help for user to crop photo*
+
+  `"maskhintover": "help_frame1.png"`
+
 - **photoid:** *This is id for pre-selected image from list previously get from multi photo selection.*
 
   `"photoid" :"1"`
@@ -227,6 +231,10 @@
 - **photourl:** *Select photo direct from template asset folder.*
 
   `"photourl" :"sample_image.jpg"`
+
+- **photoeq:** *photoeq is used to select user photo from other maskid. `Used in HiddenMaskInputs`*
+
+  `"photoeq": "getMaskPhoto()#mask1"`
 
 - **isskip:** *When the isskip value is true, this input is not required. `Default: false`*
 
@@ -263,3 +271,10 @@
     | gray | - | Photo with gray effect |
     | color | orange, sky, red, yellow, cyan, blue, gray | Any one color you select for color effect with photo |
 
+- **hs_bgremove:** *When the user's background needs to be removed, hs_bgremove is true. `Default: false` `use in maskinputs`*
+
+  `"hs_bgremove": "true"`
+
+- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in maskinputs`*
+
+  `"hs_bgremovetype": "full"`
