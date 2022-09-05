@@ -2,15 +2,15 @@
 **Lyrical.ly  Script Object Notation** `VERSION 8.0`
 
 
-## index
-- [Common Notation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
-  - [Sample](https://github.com/mayur-rank/lyson/blob/main/lyson.md#sample)
-  - [Key Value Pair](https://github.com/mayur-rank/lyson/blob/main/lyson.md#key-value-pair)
+## Index
+- [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MultiMaskInputs & HiddenMaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [TextEffects](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 
 ## Common Notation
 
-### Sample
 ```
 {
 	"width": "720",
@@ -26,8 +26,6 @@
 	"backgroundvideo" : "background.mp4"
 }
 ```
-
-### Key Value Pair
 
 - **~~type:~~** *type is always none in lyson 7.0+*
 
@@ -130,3 +128,79 @@
   | headseg | "face278","headseg" |
   | comic | "comic" |
   | cartoon | "cartoon" |
+
+
+## MultiMaskInputs & HiddenMaskInputs & MaskInputs
+
+| MultiMaskInputs | HiddenMaskInputs |  MaskInputs |
+|    -------|------------  | ------------  |
+
+|
+
+```
+{
+"multimaskinputs": [{
+"srno": "1",
+"maskid": "mask1",
+"maskimg": "mask1.png",
+"maskover": "over.png"
+}, {
+"maskid": "mask2",
+"maskratiosize": "720,1280",
+"maskratio": "1:2",
+"maskover": "over.png"
+}, {
+"maskid": "mask3",
+"masksize": "720,1280",
+"maskover": "over.png"
+}]
+}
+```
+|
+
+|
+
+```
+{
+	"hiddenmaskinputs": [{
+		"maskid": "hmask1",
+		"maskimg": "mask1.png",
+		"maskover": "over.png",
+		"photoeq": " getMaskPhoto()#mask1"
+	}, {
+		"maskid": "hmask2",
+		"maskimg": "mask2.png",
+		"maskover": "over.png",
+		"photoid": "2",
+		"isgray": "false",
+		"isblur": "false",
+		"photoeffect": "multiply",
+		"photoname": "addoverlay1.png"
+	}]
+}
+```
+|
+
+```
+{
+	"maskinputs": [{
+		"maskid": "fmask1",
+		"maskimg": "mask1.png",
+		"maskover": "over.png",
+		"hs_bgremove": "true",
+		"hs_bgremovetype": "face"
+	}, {
+		"maskid": "fmask1",
+		"maskimg": "mask1.png",
+		"maskover": "over.png",
+		"hs_bgremove": "true",
+		"hs_bgremovetype": "full",
+		"isgray": "false",
+		"isblur": "false",
+		"photoeffect": "multiply",
+		"photoname": "addoverlay1.png"
+	}]
+}
+```
+|
+
