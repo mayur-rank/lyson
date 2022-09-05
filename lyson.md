@@ -248,18 +248,18 @@
 
   `"photoname": "addoverlay1.png"`
 
- ##### Table3 here are some combination of photoeffect & photoname
-
-  | photoeffect | photoname | notes |
-  |------------ | --------- | ----- |
-  | addoverlay | ImageName | Overlay photo and image |
-  | darken | ImageName | Image and photo with darken effect |
-  | lighten | ImageName | Image and photo with lighten effect |
-  | multiply | ImageName | Image and photo with multiply effect |
-  | add | ImageName | Image and photo with add effect |
-  | overlay | ImageName | Image and photo with overlay effect |
-  | screen | ImageName | Image and photo with screen effect |
-  | blur | - | Photo with blur effect |
-  | gray | - | Photo with gray effect |
-  | color | orange, sky, red, yellow, cyan, blue, gray | Any one color you select for color effect with photo |
+   ##### Table3 here are some combination of photoeffect & photoname
+  
+    | photoeffect | photoname | notes |
+    |------------ | --------- | ----- |
+    | addoverlay | ImageName | Overlay photo and image |
+    | darken | ImageName | Image and photo with darken effect |
+    | lighten | ImageName | Image and photo with lighten effect |
+    | multiply | ImageName | Image and photo with multiply effect |
+    | add | ImageName | Image and photo with add effect |
+    | overlay | ImageName | Image and photo with overlay effect |
+    | screen | ImageName | Image and photo with screen effect |
+    | blur | - | Photo with blur effect |
+    | gray | - | Photo with gray effect |
+    | color | orange, sky, red, yellow, cyan, blue, gray | Any one color you select for color effect with photo |
 
