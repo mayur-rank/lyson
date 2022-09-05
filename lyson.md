@@ -158,7 +158,7 @@
 		"maskid": "hmask1",
 		"maskimg": "mask1.png",
 		"maskover": "over.png",
-		"photoeq": " getMaskPhoto()#mask1"
+		"photoeq": "getMaskPhoto()#mask1"
 	}, {
 		"maskid": "hmask2",
 		"maskimg": "mask2.png",
@@ -175,12 +175,14 @@
 ```
 {
 	"maskinputs": [{
+	    "srno": "1",
 		"maskid": "fmask1",
 		"maskimg": "mask1.png",
 		"maskover": "over.png",
 		"hs_bgremove": "true",
 		"hs_bgremovetype": "face"
 	}, {
+	    "srno": "2",
 		"maskid": "fmask1",
 		"maskimg": "mask1.png",
 		"maskover": "over.png",
@@ -193,4 +195,67 @@
 	}]
 }
 ```
+
+- **srno:** *The srno is the order number in this list, and the srno represents the input position to ask the user*
+
+  `"srno" : "1"`
+
+- **maskid:** *maskid is unique id in all inputs, maskid is used to get this user image*
+
+  `"maskid": "mask1"`
+
+- **maskimg:** *This is mask to reshape photo selected by user*
+
+  `"maskimg": "page1_mask1.png"`
+
+  - *selecetbyinput() eq is used to get mask image from previous text input, here selecetbyinput() join with (#) text1 join with (#) mask image list, It means image is selected from list base on text1 input*
+
+    `"maskimg": "selecetbyinput()#text1#m_mask.png:a_mask.png:y_mask.png"`
+
+- **maskover:** *maskover is a frame image that is overlaid above a user selected photo*
+
+  `"maskover": "page1_frame1.png"`
+
+  - *selecetbyinput() eq is used to get overlay image from previous text input, here selecetbyinput() join with (#) text1 join with (#) over image list, It means image is selected from list base on text1 input*
+
+    `"maskover": "selecetbyinput()#text1#m_frame.png:a_frame.png:y_frame.png"`
+
+- **photoid:** *This is id for pre-selected image from list previously get from multi photo selection.*
+
+  `"photoid" :"1"`
+
+- **isskip:** *When the isskip value is true, this input is not required. `Default: false`*
+
+  `"isskip": "true"`
+
+- **isblur:** *If isblur is true, blur effect apply on user selected photo. `Default: false`*
+
+  `"isblur": "true"`
+
+- **isgray:** *If isgray is true, gray effect apply on user selected photo. `Default: false`*
+
+  `"isgray": "true"`
+
+- **photoeffect** *is effect name, define in table. `Default: false`*
+
+  `"photoeffect": "addoverlay"`
+
+ **photoname** *is image or color apply on photo with selected photoeffect. `Must be used with photoeffect`*
+
+  `"photoname": "addoverlay1.png"`
+
+  **Table3 here are some combination of photoeffect & photoname**
+
+  | photoeffect | photoname | notes |
+  |------------ | --------- | ----- |
+  | addoverlay | ImageName | Overlay photo and image |
+  | darken | ImageName | Image and photo with darken effect |
+  | lighten | ImageName | Image and photo with lighten effect |
+  | multiply | ImageName | Image and photo with multiply effect |
+  | add | ImageName | Image and photo with add effect |
+  | overlay | ImageName | Image and photo with overlay effect |
+  | screen | ImageName | Image and photo with screen effect |
+  | blur | - | Photo with blur effect |
+  | gray | - | Photo with gray effect |
+  | color | orange, sky, red, yellow, cyan, blue, gray | Any one color you select for color effect with photo |
 
