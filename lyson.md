@@ -224,6 +224,10 @@
 
   `"photoid" :"1"`
 
+- **photourl:** *Select photo direct from template asset folder.*
+
+  `"photourl" :"sample_image.jpg"`
+
 - **isskip:** *When the isskip value is true, this input is not required. `Default: false`*
 
   `"isskip": "true"`
@@ -240,11 +244,11 @@
 
   `"photoeffect": "addoverlay"`
 
- **photoname** *is image or color apply on photo with selected photoeffect. `Must be used with photoeffect`*
+- **photoname** *is image or color apply on photo with selected photoeffect. `Must be used with photoeffect`*
 
   `"photoname": "addoverlay1.png"`
 
-  **Table3 here are some combination of photoeffect & photoname**
+ ##### Table3 here are some combination of photoeffect & photoname
 
   | photoeffect | photoname | notes |
   |------------ | --------- | ----- |
