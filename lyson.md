@@ -114,7 +114,7 @@
 
 - **aimodel:** *AI Models*
 
-  ```"aimodel": ["face278","facemask","disney","comic"]```
+  `"aimodel": ["face278","facemask","disney","comic"]`
 
   | Effect | Need of Model |  
     -------|------------  
@@ -134,21 +134,21 @@
 
 ```
 {
-"multimaskinputs": [{
-"srno": "1",
-"maskid": "mask1",
-"maskimg": "mask1.png",
-"maskover": "over.png"
-}, {
-"maskid": "mask2",
-"maskratiosize": "720,1280",
-"maskratio": "1:2",
-"maskover": "over.png"
-}, {
-"maskid": "mask3",
-"masksize": "720,1280",
-"maskover": "over.png"
-}]
+	"multimaskinputs": [{
+		"srno": "1",
+		"maskid": "mask1",
+		"maskimg": "mask1.png",
+		"maskover": "over.png"
+	}, {
+		"maskid": "mask2",
+		"maskratiosize": "720,1280",
+		"maskratio": "1:2",
+		"maskover": "over.png"
+	}, {
+		"maskid": "mask3",
+		"masksize": "720,1280",
+		"maskover": "over.png"
+	}]
 }
 ```
 
