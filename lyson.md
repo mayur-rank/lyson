@@ -15,7 +15,7 @@
 - **length:** *length is length of overlay.webm menas is length of video will be render. `In second`*
    > `"length": "26"`
 
-- **logoplace:** *logoplace is define position where logo will be display `Default: TR`*
+- **logoplace:** *logoplace is define position where logo will be display ==Default: TR==*
   > `"logoplace": "TR`
 
   | Code | Position |  
