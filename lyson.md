@@ -2,6 +2,25 @@
 **Lyrical.ly  Script Object Notation** `VERSION 8.0`
 
 ## Common Notation
+
+```
+{
+	"width": "720",
+	"height": "1280",
+	"fps": "20",
+	"type": "none",
+	"time": "0:0,15:0",
+	"length": "15",
+	"logoplace": "TR",
+	"islogoblack": "false",
+	"isexternalaudioallow": "true",
+    "audiotitle": "Dil Se Bandhi Ek Dor",
+	"backgroundvideo" : "background.mp4"
+}
+```
+
+### Key Value 
+
 - **~~type:~~** *type is always none in lyson 7.0+*
 
   `"type": "none"`
@@ -49,7 +68,7 @@
 
 - **islogoblack:** *The logo will be displayed in black if islogoblack is true, otherwise it will be displayed in white `Default: 255`*
 
-  `"logoalpha": "255"`
+  `"islogoblack": "false"`
 
 
 - **videobitrate:** *The videobitrate determines the video output bitrate `Default: 2M`*
@@ -86,4 +105,5 @@
     with (#) audio file list, It means audio file is selected from list by text1 input id*
 
   `"audiofile": "selecetbyinput()#text1#m_audio.mp3:a_audio.mp3:y_audio.mp3"` 
+
 
