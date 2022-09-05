@@ -271,10 +271,10 @@
     | gray | - | Photo with gray effect |
     | color | orange, sky, red, yellow, cyan, blue, gray | Any one color you select for color effect with photo |
 
-- **hs_bgremove:** *When the user's background needs to be removed, hs_bgremove is true. `Default: false` `use in maskinputs`*
+- **hs_bgremove:** *When the user's background needs to be removed, hs_bgremove is true. `Default: false` `use in MaskInputs`*
 
   `"hs_bgremove": "true"`
 
-- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in maskinputs`*
+- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in MaskInputs`*
 
   `"hs_bgremovetype": "full"`
