@@ -6,6 +6,18 @@
 
   `"type": "none"`
 
+- **width:** *output video width `Default: 720`*
+
+  `"width": "1080"`
+
+- **height:** *output video height `Default: 1280`*
+
+  `"height": "1080"`
+
+- **fps:** *output video fps(frame per second) `Default: 20`*
+
+  `"fps": "30"`
+
 - **nophoto:** *nophoto is max number of multiple photo need to selected*
 
   `"nophoto": "6"`
@@ -15,11 +27,11 @@
   `"time": "0:0,4:2,8:0,12:0,16:0,20:18,26:0"`
   ![Sample](https://github.com/mayur-rank/lyson/blob/main/images/timeline.jpg)
 
-- **length:** *length is length of overlay.webm menas is length of video will be render. `In second`*
+- **length:** *The length of the output video is defined by this value. `In second`*
   
   `"length": "26"`
 
-- **logoplace:** *logoplace is define position where logo will be display `Default: TR`*
+- **logoplace:** *The logoplace specifies where the logo will be displayed `Default: TR`*
   
   `"logoplace": "TR`
 
@@ -30,5 +42,48 @@
   | TL | Top, Left|  
   | BL | Bottom, Left|  
   | CC | Center |
-    
+
+- **logoalpha:** *The logoalpha value defines the logo's transparency. Range is 0 - 255 `Default: 255`*
+
+  `"logoalpha": "255"`
+
+- **islogoblack:** *The logo will be displayed in black if islogoblack is true, otherwise it will be displayed in white `Default: 255`*
+
+  `"logoalpha": "255"`
+
+
+- **videobitrate:** *The videobitrate determines the video output bitrate `Default: 2M`*
+
+  `"videobitrate": "2M"`
+
+- **backgroundvideo:** *Background video*
+
+  `"backgroundvideo" : "background.mp4"`
+
+- **crf:** *The value is used to compress the output video, the higher the value, the more compressed the video `Default: 30`*
+
+  `"crf": "27"`
+
+- **isexternalaudioallow:** *When isexternalaudioallow is true, the user can select audio from the SD card `Default: False`*
+
+  `"isexternalaudioallow" : "true"`
+
+
+- **audiotitle:** *Audio Title  `Default: Background Music`*
+
+  `"audiotitle" : "Hey re meri moto"`
   
+  - **selecetbyinput()**: *This eq is used when the audiotitle depends on the previous input, expression is join with (#) text1 join
+    with (#) audio title list, It means title is selected from list by text1 input id*
+    
+  `"audiotitle" : "selecetbyinput()#text1#AudioM:AudioA:AudioY"`
+
+- **audiofile:** *audiofile is name of audio file  `Default: audio.mp3`*
+
+  `"audiofile": "y_audio.mp3"`
+
+  - **selecetbyinput()**: *This eq is used when the audiofile depends on the previous input, expression is join with (#) text1 join
+    with (#) audio file list, It means audio file is selected from list by text1 input id*
+
+  `"audiofile": "selecetbyinput()#text1#m_audio.mp3:a_audio.mp3:y_audio.mp3"` 
+
