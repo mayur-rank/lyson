@@ -874,7 +874,7 @@ json
         textaling is text alignment, type of alignment left, right, center (textaling used width texttop & textleft, if textaling is center then textwidth is must be applicable)
 
             `"textaling": "center"`
-![textaling](./images/textaling.PNG)
+![textaling](./images/textaling.png)
         
 
         - textline
@@ -976,7 +976,7 @@ json
         `"maskingeq" : "getFBF()#60,80,260,280:F_0_F_F,0_0_F_F,0_0_F_F,0_0_0_F#FFFFFF"`
 
         Here mentions all Text Masking animation in below Table
-![maskingeq2](./images/maskingeq2.PNG)
+![maskingeq2](./images/maskingeq2.png)
 
         - blendmode (work on both text and Mask)
         blendmode is used for blend this text on below images with different modes modes are mention in below table 
