@@ -4,7 +4,7 @@
 
 ## Index
 - [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
-- [MultiMaskInputs & HiddenMaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
+- [MultiMaskInputs & HiddenMaskInputs & MaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [TextEffects](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
@@ -175,14 +175,14 @@
 ```
 {
 	"maskinputs": [{
-	    "srno": "1",
+        "srno": "1",
 		"maskid": "fmask1",
 		"maskimg": "mask1.png",
 		"maskover": "over.png",
 		"hs_bgremove": "true",
 		"hs_bgremovetype": "face"
 	}, {
-	    "srno": "2",
+        "srno": "2",
 		"maskid": "fmask1",
 		"maskimg": "mask1.png",
 		"maskover": "over.png",
@@ -274,6 +274,53 @@
 - **hs_bgremove:** *When the user's background needs to be removed, hs_bgremove is true. `Default: false` `use in MaskInputs`*
 
   `"hs_bgremove": "true"`
+
+- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in MaskInputs`*
+
+  `"hs_bgremovetype": "full"`
+
+## TextInputs
+
+```
+{
+  "textinputs": [{
+        "srno": "1",
+		"textid": "text1Name",
+		"textkey": "XXX",
+		"textlable": "Fiance Name",
+		"textsample": "AADITYA",
+		"textmaxchar": "7",
+		"textCase" : "upper"
+	},{
+        "srno": "2",
+        "textid": "text2Date",
+        "textkey": "DDD",
+        "textlable": "Wedding Date",
+        "textinputcontrol": "date",
+        "textsampleval": "/"
+    }, {
+        "srno": "3",
+        "textid": "text3Time",
+        "textkey": "TTT",
+        "textlable": "Wedding Time",
+        "textinputcontrol": "time",
+        "textsampleval": "12"
+    },{
+        "srno": "4",
+		"textid": "text4Language",
+		"textlable": "Select Your Language",
+		"textsampleval": "English:Hindi:Tamil:Kannada:Telugu:Gujarati:Bengali:Malayalam",
+		"textinputcontrol": "spinnerid"
+	},{
+	    "srno": "5",
+        "textid": "text5Gender",
+		"textkey": "XXX",
+		"textlable": "Gender Info",
+		"textsampleval": "Its Baby Boy:Its Baby Girl",
+		"textinputcontrol": "spinner"
+	}]    
+}
+```
 
 - **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in MaskInputs`*
 
