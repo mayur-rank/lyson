@@ -281,7 +281,7 @@
 
 ## TextInputs
 
-```
+```json
 {
   "textinputs": [{
         "srno": "1",
@@ -323,12 +323,15 @@
 ```
 
 - **srno:** *srno is order id in this list of all items, srno repesent this input position to ask user.*
+
  `"srno" : "1"`
 
 - **textid:** *textid is unique id in this list of all items, textid repesent this input in process*
+
   `"textid" : "text1"`
 
 - **textkey:** *key value is XXX which will be replace with input value given by user in display text string.*
+
   `"textkey" : "XXX"`
 
 - **textlable:** *This is input hits show to user above input control*
@@ -337,7 +340,7 @@
 
   - *textlable is depends on previous input, here selecetbyinput() join with (#) text1 join with (#) label list, It means label is selected from list base on text1 input*
   
-   `"textlable": "selecetbyinput()#text1#Enter Name Start With M:Enter Name Start With A:Enter Name Start With Y"`
+    `"textlable": "selecetbyinput()#text1#Enter Name Start With M:Enter Name Start With A:Enter Name Start With Y"`
 
 - **textsample:** *textsample value is example for user to guide about what to fill (not applicable with
   textinputcontrol -> spinner/date/time)*
@@ -347,13 +350,16 @@
   - *textsample is depends on previous input, here selecetbyinput() join with (#) text1
     join with (#) sample list, It means sample value is selected from list base on text1 input*
 
-  `"textsample": "selecetbyinput()#text1#Mayur:Ashok:Yayati"`
-- 
+    `"textsample": "selecetbyinput()#text1#Mayur:Ashok:Yayati"`
+
 - **textmaxchar:** *max limit to enter text in textbox (not applicable with textinputcontrol -> spinner/date/time)*
+
    `"textmaxchar" : "7"`
 
 - **textCase:** *textCase define case of input string fill by user. There is four type of case (not applicable with textinputcontrol -> spinner/date/time) (default no case apply)*
-   - Ex : taj mahal hotel PLACE, RAipur
+    
+    `"textCase" : upper"`
+   Below example for *taj mahal hotel PLACE, Raipur*
 
    | Case     | EXAMPLE                       |
    |----------|-------------------------------|
@@ -361,8 +367,6 @@
    | upper    | TAJ MAHAL HOTEL PLACE, RAIPUR |
    | word     | Taj Mahal Hotel Place, Raipur |
    | sentence | Taj mahal hotel place, raipur |
-
-   `"textCase" : upper"`
 
 - **textinputtype:** *keyboard type(not applicable with textinputcontrol -> spinner/date/time) (default is
   common type)*
@@ -392,6 +396,7 @@
   time)(default is textbox type)*
 
   `"textinputcontrol" : "spinner"`
+
     Lets understand different input method
   - **default(Textbox):** *In this type input control is Textbox user need to insert text in that box
     With this type we used textsampleval then textbox is pre fill with textsampleval
@@ -420,9 +425,9 @@
       `"textsampleval" : "24"`
     time is something like 13:06.
 
-## TextInputs
-    - texteffect is json array list, This is list of text and mask display setting. List is separated with
-id and id count mention in “time” field.
+## Texteffect
+    texteffect is json array list, This is list of text and mask display setting. List is separated with id and id count mention in *time* field.
+
 - **id:** *id is unique number, and id count mention in “time” field (count is number of “,”
   separator in time field). Means if id = 1, it represents first part of timeline*
 
@@ -439,24 +444,30 @@ id and id count mention in “time” field.
   `"background" : "bg.jpg"`
 
   - **background with randimg():** *randimg() function is used to select one of random image from list
+
   `"background" : "randimg()#bg1.png: bg2.png"`
+
     Here randimg() is join with bg1.png: bg2.png using “#” . Means after # there
     is list of image which contain in template. In list image name is join with “:”
     separator. Random image is select from this list
+
   - **background with selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in
     spinnerid text input control"*
+
     `"background" : "selecetbyinput()#text2# bg1.png: bg2.png"`
+
     Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
     mension in textinpus list. text2 is joint with bg1.png: bg2.png using “#” . Means
     after this there is list of image which contain in template. In list image name is
     join with “:” separator. Image contain with text2 input value is selected from list
+
   - **backgroundcolor:** *backgroundcolor hex color code, which display below masksettings and textsettings
     effect"*
+
     `"backgroundcolor" : "#ADADAD"`
     
-## masksettings
-   - masksettings is json array list, This is list of images display with effect and animation in that
-   time line.
+## Masksettings
+   masksettings is json array list, This is list of images display with effect and animation in that time line.
 
    - **cusmaskid:** *cusmaskid is unique number, cusmaskid decided which input is display first. Means
         cusmaskid is used to manage layer in frame. If there is two mask with cusmaskid 1 &
@@ -466,10 +477,8 @@ id and id count mention in “time” field.
    - **maskinputid:** *maskinputid represent the input that need to show here this id must be in
      maskinputs list. Image is get from this mask input id (isedited must be is true)*
 
-     `"maskinputid" : "mask1"` **maskinputid:** *maskinputid represent the input that need to show here this id must be in
-     maskinputs list. Image is get from this mask input id (isedited must be is true)*
-
-     `"maskinputid" : "mask1"`
+     `"maskinputid" : "mask1"` 
+     
    - **isedited:** *isedited is true when you want image from user(used with maskinputid) and false
      when take image direct from template(used with imgname) (default value is true)*
 
@@ -481,26 +490,33 @@ id and id count mention in “time” field.
      `"imgname" : "img_heart.png"`
 
      - **imgname with randimg():** *randimg() function is used to select one of random image from list*
+
       `"imgname" : "randimg()#img_heart.png:img_heart1.png"`
-       - *Here randimg() is join with img_heart.png:img_heart1.png using “#” .
+
+       *Here randimg() is join with img_heart.png:img_heart1.png using “#” .
          Means after # there is list of image which contain in template. In list image
          name is join with “:” separator. Random image is select from this list*
 
-     - **imgname with selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in
-       spinnerid text input control*
+     - **imgname with selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in  spinnerid text input control*
+
        `"imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"`
-         - *Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
+
+       *Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
            mension in textinpus list. text2 is joint with lg_hi.png:lg_ti.png:lg_te.png using
            “#” . Means after this there is list of image which contain in template. In list
            image name is join with “:” separator. Image contain with text2 input value is
            selected from list*
-     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
-       frame is optional to overlay on mask*
+
+     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,  frame is optional to overlay on mask*
+
        `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
+
        `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
-     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
-       frame is optional to overlay on mask*
+
+     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,  frame is optional to overlay on mask*
+
        `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
+
        `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
 
    - **maskanimation:** *maskanimation is image transition animation, type of animation alpha, zoom,
@@ -511,7 +527,7 @@ id and id count mention in “time” field.
      animation start at 0 frame of that part)*
 
      `"timestartoffsetfps" : "0"`  
-     - *In above example if image is show between 8 to 14 sec then there is time frame
+     *In above example if image is show between 8 to 14 sec then there is time frame
        consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
        between this.* 
    - **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
@@ -548,30 +564,32 @@ id and id count mention in “time” field.
    - **maskleft:** *maskleft is left point where image need to draw in 720X1280 canvas*
 
      `"maskleft" : "464"`
-     - Timeline mode is here
+     Timeline mode is here
      - **masklefteq:** *Value Contain with getFBF() function join (#)with frame:Value List,
      as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means*
        - 0 -> 720
        - 60 -> 0
        - 70 -> 0
        - 520 -> 0
+
      `"masklefteq": "getFBF()#0,60,70,520:720,0,0,0"`
 
    - **masktop:** *masktop is top point where image need to draw in 720X1280 canvas*
 
      `"masktop" : "464"`
-       - Timeline mode is here
+       Timeline mode is here
        - **masktopeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
          as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280*
+
        `"masktopeq": "getFBF()#0,60,70,520:-1280,0,0,0"`
 
    - **maskrotate:** *maskrotate is angle of rotation with above left and top value(default value is 0)*
 
      `"maskrotate" : "90"`
-       - Timeline mode is here
-       - **maskrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
-         as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
+       Timeline mode is here
+       - **maskrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
          value is 7.5° means*
+
          `"maskrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0"`
 
    - **maskscale:** *maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is
@@ -591,16 +609,18 @@ id and id count mention in “time” field.
            - 72 -> 5.5
            - 90 -> 0
            - 520 -> 0
+
        `"maskscaleeq": "getFBF()#0,60,70,520:103,103,100,100"` 
 
    - **maskalpha:** *maskalpha is used for transparency of image value between 0 – 255(default value is
      255)*
 
      `"maskalpha" : "255"`
-       - Timeline mode is here
+       Timeline mode is here
        - **maskalphaeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
          as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255
          means (Opacity range is 0 - 255)*
+
          `"maskalphaeq": "getFBF()#64,70,520:0,255,255"`
 
    - **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List,
@@ -663,34 +683,17 @@ id and id count mention in “time” field.
          - screen
          
    - **filtermode:** *(only on Mask , filtermode is used to apply different filter on image, filter mention below table*
-     `"filtermode" : "blur#5"`
-      
-     
- 23)  )
-     
-     
-     "": "",
-     saturation#2.5
-     0
-     (SATURATION value default 1.0f)
-     contrast#2.0
-     (CONTRAST value default 1.2f)
-     brightness#0.3
-     (BRIGHTNESS value default 0.0f)
-     levels
-     (No Parameter)
-     exposure#0.7
-     (EXPOSURE value default 1.0f)
-     rgb#0.9#0.7#0.9
-     (RED#GREEN#BLUE value default
-     1.0f#1.0f#1.0f)
-     rgbdiation#3
-     (RADIUS value default 1 )
-     hue#100.7
-     (HUE value default 90.0f)
-     whitebalance#4000.0f#0.6
-     (TEMPERATURE#TINT value default 5000.0f#0.0f)
-     monochrome# falsecolor#0.3#0.3#0.6#0.10#0.9#0
-     .10
-     (FIRSTRED # FIRSTGREEN #FIRSTBLUE
-     sharpen#2.9
+
+     `"filtermode" : "blur#5"`     
+
+| Filter Mode | Value  | Remark                            |
+|-------------|--------|-----------------------------------|
+| Gray Filter | gray   | -                                 |
+| Blur Filter | blur   | Blur image with 25 default radius |
+|             | blue#5 | Blur image with 5 radius          |
+
+
+    ![Filter Mode1](./images/filtermode1.PNG)
+    ![Filter Mode2](./images/filtermode2.PNG)
+    ![Filter Mode3](./images/filtermode3.PNG)
+    ![Filter Mode4](./images/filtermode4.PNG)
