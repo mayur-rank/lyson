@@ -689,13 +689,13 @@ frame is optional to overlay on mask
 
      `"filtermode" : "blur#5"`     
 
-    | Filter Mode | Value | Remark |
-    |---|---|---|
-    | Gray Filter | gray | - |
-    | Blur Filter | blur | Blur image with 25 default radius |
-    |  | blue#5 | Blur image with 5 radius |
+| Filter Mode | Value | Remark |
+|---|---|---|
+| Gray Filter | gray | - |
+| Blur Filter | blur | Blur image with 25 default radius |
+|  | blue#5 | Blur image with 5 radius |
 
-    ![Filter Mode1](filtermode1.PNG)
-    ![Filter Mode2](filtermode2.PNG)
-    ![Filter Mode3](filtermode3.PNG)
-    ![Filter Mode4](filtermode4.PNG)
+![Filter Mode1](./images/filtermode1.PNG)
+![Filter Mode2](./images/filtermode2.PNG)
+![Filter Mode3](./images/filtermode3.PNG)
+![Filter Mode4](./images/filtermode4.PNG)
