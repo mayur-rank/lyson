@@ -458,237 +458,239 @@ id and id count mention in “time” field.
    - masksettings is json array list, This is list of images display with effect and animation in that
    time line.
 
-- **cusmaskid:** *cusmaskid is unique number, cusmaskid decided which input is display first. Means
-     cusmaskid is used to manage layer in frame. If there is two mask with cusmaskid 1 &
-     2 then number 1 will be draw first and above it 2 will be draw.*
+   - **cusmaskid:** *cusmaskid is unique number, cusmaskid decided which input is display first. Means
+        cusmaskid is used to manage layer in frame. If there is two mask with cusmaskid 1 &
+        2 then number 1 will be draw first and above it 2 will be draw.*
 
-     `"cusmaskid" : "1"`
-- **maskinputid:** *maskinputid represent the input that need to show here this id must be in
-  maskinputs list. Image is get from this mask input id (isedited must be is true)*
+        `"cusmaskid" : "1"`
+   - **maskinputid:** *maskinputid represent the input that need to show here this id must be in
+     maskinputs list. Image is get from this mask input id (isedited must be is true)*
 
-  `"maskinputid" : "mask1"` **maskinputid:** *maskinputid represent the input that need to show here this id must be in
-  maskinputs list. Image is get from this mask input id (isedited must be is true)*
+     `"maskinputid" : "mask1"` **maskinputid:** *maskinputid represent the input that need to show here this id must be in
+     maskinputs list. Image is get from this mask input id (isedited must be is true)*
 
-  `"maskinputid" : "mask1"`
-- **isedited:** *isedited is true when you want image from user(used with maskinputid) and false
-  when take image direct from template(used with imgname) (default value is true)*
+     `"maskinputid" : "mask1"`
+   - **isedited:** *isedited is true when you want image from user(used with maskinputid) and false
+     when take image direct from template(used with imgname) (default value is true)*
 
-  `"isedited" : "true"`
-- **imgname:** *imgname this is image name contain in template. And this is direct image from
-  template. Imgname is also work with equation here we have example (isedited must
-  be is false)*
+     `"isedited" : "true"`
+   - **imgname:** *imgname this is image name contain in template. And this is direct image from
+     template. Imgname is also work with equation here we have example (isedited must
+     be is false)*
 
-  `"imgname" : "img_heart.png"`
+     `"imgname" : "img_heart.png"`
 
-  - **imgname with randimg():** *randimg() function is used to select one of random image from list*
-   `"imgname" : "randimg()#img_heart.png:img_heart1.png"`
-    - *Here randimg() is join with img_heart.png:img_heart1.png using “#” .
-      Means after # there is list of image which contain in template. In list image
-      name is join with “:” separator. Random image is select from this list*
+     - **imgname with randimg():** *randimg() function is used to select one of random image from list*
+      `"imgname" : "randimg()#img_heart.png:img_heart1.png"`
+       - *Here randimg() is join with img_heart.png:img_heart1.png using “#” .
+         Means after # there is list of image which contain in template. In list image
+         name is join with “:” separator. Random image is select from this list*
 
-  - **imgname with selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in
-    spinnerid text input control*
-    `"imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"`
-      - *Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
-        mension in textinpus list. text2 is joint with lg_hi.png:lg_ti.png:lg_te.png using
-        “#” . Means after this there is list of image which contain in template. In list
-        image name is join with “:” separator. Image contain with text2 input value is
-        selected from list*
-  - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
-    frame is optional to overlay on mask*
-    `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
-    `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
-  - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
-    frame is optional to overlay on mask*
-    `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
-    `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
+     - **imgname with selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in
+       spinnerid text input control*
+       `"imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"`
+         - *Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
+           mension in textinpus list. text2 is joint with lg_hi.png:lg_ti.png:lg_te.png using
+           “#” . Means after this there is list of image which contain in template. In list
+           image name is join with “:” separator. Image contain with text2 input value is
+           selected from list*
+     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
+       frame is optional to overlay on mask*
+       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
+       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
+     - **imgname with createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,
+       frame is optional to overlay on mask*
+       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
+       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
 
-- **maskanimation:** *maskanimation is image transition animation, type of animation alpha, zoom,
-  alphazoom, zoomout, noanim (default is noanim)*
+   - **maskanimation:** *maskanimation is image transition animation, type of animation alpha, zoom,
+     alphazoom, zoomout, noanim (default is noanim)*
 
-  `"maskanimation" : "alpha"`
-- **timestartoffsetfps:** *timestartoffsetfps is frame value where animation need to start (default is 0, means
-  animation start at 0 frame of that part)*
+     `"maskanimation" : "alpha"`
+   - **timestartoffsetfps:** *timestartoffsetfps is frame value where animation need to start (default is 0, means
+     animation start at 0 frame of that part)*
 
-  `"timestartoffsetfps" : "0"`  
-  - *In above example if image is show between 8 to 14 sec then there is time frame
-    consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
-    between this.* 
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
-  animation end at last frame of that part, refers above image)*
+     `"timestartoffsetfps" : "0"`  
+     - *In above example if image is show between 8 to 14 sec then there is time frame
+       consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
+       between this.* 
+   - **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
+     animation end at last frame of that part, refers above image)*
 
-  `"timeendoffsetfps" : "100"`
-    - *Here value is 100 then end animation for this image is start at 13 sec*
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
-  animation end at last frame of that part, refers above image)*
+     `"timeendoffsetfps" : "100"`
+       - *Here value is 100 then end animation for this image is start at 13 sec*
+   - **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
+     animation end at last frame of that part, refers above image)*
 
-  `"timeendoffsetfps" : "100"`
+     `"timeendoffsetfps" : "100"`
+   - **hasendanimation:** *hasendanimation is false when you don’t want animation at end point, and true
+     when you need it (default is true)*
+
+     `"hasendanimation" : "false"`
+   - **maskbiteffect:** *maskbiteffect is image animation on music bit, Type of animation is zoom, image
+     change describe in detail (default is n/a)(Only work type -> biteffect)*
+      - First type of animation is Zoom image on bit effect, below is syntax define this
+      animation. Here Z mention zoom and # join with value 103, New biteqscale value
+      create using 103 with max value in biteqscale
+      `"maskbiteffect" : "Z#103"`
+      - Second type of animation is Alpha value change on bit effect, below is syntax
+      define this animation. Here A mention alpha and # join with value
+      img_heart.png:img_heart1.png, Two image name join with ”:” separator, In this
+      animation img_heart.png draw and above it img_heart1.png draw with alpha
+      mention in biteqalpha.
+      `"maskbiteffect" : "A#img_heart.png:img_heart1.png"`
+      - Third Type Is also called GIF Mode loop() is prefix join with number is speed in
+      example is it 3 means every third frame next image show in list, after number
+      there is list of image join with : (scale and rotation not apply on GIF Mode)
+      `"maskbiteffect" :
+      "loop()#3#anim1.png:anim2.png:anim3.png:anim4.png:anim5.png"`
+  
+   - **maskleft:** *maskleft is left point where image need to draw in 720X1280 canvas*
+
+     `"maskleft" : "464"`
+     - Timeline mode is here
+     - **masklefteq:** *Value Contain with getFBF() function join (#)with frame:Value List,
+     as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means*
+       - 0 -> 720
+       - 60 -> 0
+       - 70 -> 0
+       - 520 -> 0
+     `"masklefteq": "getFBF()#0,60,70,520:720,0,0,0"`
+
+   - **masktop:** *masktop is top point where image need to draw in 720X1280 canvas*
+
+     `"masktop" : "464"`
+       - Timeline mode is here
+       - **masktopeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
+         as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280*
+       `"masktopeq": "getFBF()#0,60,70,520:-1280,0,0,0"`
+
+   - **maskrotate:** *maskrotate is angle of rotation with above left and top value(default value is 0)*
+
+     `"maskrotate" : "90"`
+       - Timeline mode is here
+       - **maskrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
+         as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
+         value is 7.5° means*
+         `"maskrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0"`
+
+   - **maskscale:** *maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is
+     50 then image draw with half value, If value is 200 image with double size drawn.(Default value is 100)*
+
+     `"maskscale" : "100"`
+       - Timeline mode is here
+       - **maskscaleeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
+         as per below list 0,60,70,520:103,103,100,100 means at 0 frame scale value is
+         103 means (scale value 100 is actual size)*
+           - 0 -> -1280
+           - 60 -> 0
+           - 70 -> 0
+           - 520 -> 0
+           - 64 -> 7.5
+           - 68 -> 7.5
+           - 72 -> 5.5
+           - 90 -> 0
+           - 520 -> 0
+       `"maskscaleeq": "getFBF()#0,60,70,520:103,103,100,100"` 
+
+   - **maskalpha:** *maskalpha is used for transparency of image value between 0 – 255(default value is
+     255)*
+
+     `"maskalpha" : "255"`
+       - Timeline mode is here
+       - **maskalphaeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
+         as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255
+         means (Opacity range is 0 - 255)*
+         `"maskalphaeq": "getFBF()#64,70,520:0,255,255"`
+
+   - **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List,
+     as per below list
+     130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466 means at
+     130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335,
+     Height -> 0)
+     Frame Mask Value Animation look like
+     String Left Top Width Height As this example we can see that
+     between frame 130 to 150 mask is
+     expand in top to bottom with 0 ->
+     466
+     130 0_0_335_0 0 0 335 0
+     150 0_0_335_466 0 0 335 466
+     160 0_0_335_466 0 0 335 466
+     200 0_0_335_466 0 0 335 466*
+
+     `"maskingeq" : "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466"`
+       - 0 -> 103
+         60 -> 103
+         70 -> 100
+         520 -> 100
+         64 -> 0
+         70 -> 255
+         520 -> 255
+         16
+         Below String contain #FFFFFF is color code used to fill remain part of mask which is
+         transparent as default (This is mainly used when maskingeq deal with blendmode multiply)
+         `"maskingeq": "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466#FFFFFF"`
+
+   - **blendmode:** *blendmode is used for blend this image on below images with different modes
+     modes are mention in below table(work on both text and Mask)*
+
+     `"blendmode" : "overlay"`   
+     - Blendmode Value : add , darken , lighten , multiply , overlay ,screen
 
 
-8) hasendanimation
-   hasendanimation is false when you don’t want animation at end point, and true
-   when you need it (default is true)
-   "hasendanimation" : "false"
-9) maskbiteffect (Only work type -> biteffect)
-   maskbiteffect is image animation on music bit, Type of animation is zoom, image
-   change describe in detail (default is n/a)
-1) First type of animation is Zoom image on bit effect, below is syntax define this
-   animation. Here Z mention zoom and # join with value 103, New biteqscale value
-   create using 103 with max value in biteqscale
-   "maskbiteffect" : "Z#103"
-2) Second type of animation is Alpha value change on bit effect, below is syntax
-   define this animation. Here A mention alpha and # join with value
-   img_heart.png:img_heart1.png, Two image name join with ”:” separator, In this
-   animation img_heart.png draw and above it img_heart1.png draw with alpha
-   mention in biteqalpha.
-   "maskbiteffect" : "A#img_heart.png:img_heart1.png"
-3) Third Type Is also called GIF Mode loop() is prefix join with number is speed in
-   example is it 3 means every third frame next image show in list, after number
-   there is list of image join with : (scale and rotation not apply on GIF Mode)
-   "maskbiteffect" :
-   "loop()#3#anim1.png:anim2.png:anim3.png:anim4.png:anim5.png",
-10) maskleft
-    maskleft is left point where image need to draw in 720X1280 canvas
-    14
-    "maskleft": "464"
-    Timeline mode is here
-- masklefteq Value Contain with getFBF() function join (#)with frame:Value List,
-  as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means
-  0 -> 720
-  60 -> 0
-  70 -> 0
-  520 -> 0
-  "masklefteq": "getFBF()#0,60,70,520:720,0,0,0",
-11) masktop
-    masktop is top point where image need to draw in 720X1280 canvas
-    "masktop": "464"
-    Timeline mode is here
-- masktopeq Value Contain with getFBF() function join (#)with frame:Value List,
-  as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280
-  "masktopeq": "getFBF()#0,60,70,520:-1280,0,0,0",
-12) maskrotate
-    maskrotate is angle of rotation with above left and top value(default value is 0)
-    "maskrotate": "90"
-    Timeline mode is here
-- maskrotateeq Value Contain with getFBF() function join (#)with frame:Value List,
-  as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
-  value is 7.5° means
-  "maskrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0",
-13) maskscale
-    maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is
-    50 then image draw with half value, If value is 200 image with double size drawn.
-    (Default value is 100)
-    "maskscale": "100"
-    0 -> -1280
-    60 -> 0
-    70 -> 0
-    520 -> 0
-    64 -> 7.5
-    68 -> 7.5
-    72 -> 5.5
-    90 -> 0
-    520 -> 0
-    15
-    Timeline mode is here
-- maskscaleeq Value Contain with getFBF() function join (#)with frame:Value List,
-  as per below list 0,60,70,520:103,103,100,100 means at 0 frame scale value is
-  103 means (scale value 100 is actual size)
-  "maskscaleeq": "getFBF()#0,60,70,520:103,103,100,100",
-14) maskalpha
-    maskalpha is used for transparency of image value between 0 – 255(default value is
-255)
-"maskalpha": "255"
-Timeline mode is here
-- maskalphaeq Value Contain with getFBF() function join (#)with frame:Value List,
-  as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255
-  means (Opacity range is 0 - 255)
-  "maskalphaeq": "getFBF()#64,70,520:0,255,255"
-15) maskingeq (different value compare to text)
-    maskingeq Value Contain with getFBF() function join (#)with frame:Value List,
-    as per below list
-    130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466 means at
-    130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335,
-    Height -> 0)
-    Frame Mask Value Animation look like
-    String Left Top Width Height As this example we can see that
-    between frame 130 to 150 mask is
-    expand in top to bottom with 0 ->
-    466
-    130 0_0_335_0 0 0 335 0
-    150 0_0_335_466 0 0 335 466
-    160 0_0_335_466 0 0 335 466
-    200 0_0_335_466 0 0 335 466
-    "maskingeq" :
-    "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466",
-    0 -> 103
-    60 -> 103
-    70 -> 100
-    520 -> 100
-    64 -> 0
-    70 -> 255
-    520 -> 255
-    16
-    Below String contain #FFFFFF is color code used to fill remain part of mask which is
-    transparent as default (This is mainly used when maskingeq deal with blendmode multiply)
-    "maskingeq" :
-    "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466#FFFFFF",
-16) blendmode (work on both text and Mask)
-    blendmode is used for blend this image on below images with different modes
-    modes are mention in below table
-    "blendmode": "overlay",
-17) flipmode (work on both text and Mask)
-    flipmode is used to flip image horizontal, vertical or horizontal + vertical
-    Flip Mode Value
-    No Flip 1,1
-    Horizontal -1,1
-    Vertical 1,-1
-    Horizontal +
-    Vertical
-    -1,-1
-    "flipmode": "-1,1"
-18) skipvalueoninput is work with input is skiable
-    "skipvalueoninput": "mask5#false"
-    Above line show that if mask5 input is (isskip = false) means user fill mask5 input
-    then this setting show in timeline
-    "skipvalueoninput": "text2#true"
-    Above line show that if text2 input is (isskip = true) means user skip text2 input then
-    this setting show in timeline
-    Blendmode Value
-    add
-    darken
-    lighten
-    multiply
-    overlay
-    screen
-    17
-19) filtermode (only on Mask)
-    filtermode is used to apply different filter on image, filter mention below table
-    Filter Mode Value Remark
-    Gray Filter gray -
-    Blur Filter blur Blur image with 25 default radius
-    blur#5 Blur image with 5 radius
-    "filtermode": "blur#5",
-    saturation#2.5
-    0
-    (SATURATION value default 1.0f)
-    contrast#2.0
-    (CONTRAST value default 1.2f)
-    brightness#0.3
-    (BRIGHTNESS value default 0.0f)
-    levels
-    (No Parameter)
-    exposure#0.7
-    (EXPOSURE value default 1.0f)
-    rgb#0.9#0.7#0.9
-    (RED#GREEN#BLUE value default
-    1.0f#1.0f#1.0f)
-    rgbdiation#3
-    (RADIUS value default 1 )
-    hue#100.7
-    (HUE value default 90.0f)
-    whitebalance#4000.0f#0.6
-    (TEMPERATURE#TINT value default 5000.0f#0.0f)
-    monochrome# falsecolor#0.3#0.3#0.6#0.10#0.9#0
-    .10
-    (FIRSTRED # FIRSTGREEN #FIRSTBLUE
-    sharpen#2.9
+   - **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
+     Flip Mode Value
+     - No Flip : 1,1
+     - Horizontal : -1,1
+     - Vertical : 1,-1
+     - Horizontal + Vertical :-1,-1
+
+   `"flipmode" : "-1,1"`   
+
+   - **skipvalueoninput:** *is work with input is skiable*
+         `"skipvalueoninput" : "mask5#false"` 
+       - *Above line show that if mask5 input is (isskip = false) means user fill mask5 input
+        then this setting show in timeline*
+        `"skipvalueoninput": "text2#true"`
+       - *Above line show that if text2 input is (isskip = true) means user skip text2 input then
+        this setting show in timeline*
+       - Blendmode Value
+         - add
+         - darken
+         - lighten
+         - multiply
+         - overlay
+         - screen
+         
+   - **filtermode:** *(only on Mask , filtermode is used to apply different filter on image, filter mention below table*
+     `"filtermode" : "blur#5"`
+      
+     
+ 23)  )
+     
+     
+     "": "",
+     saturation#2.5
+     0
+     (SATURATION value default 1.0f)
+     contrast#2.0
+     (CONTRAST value default 1.2f)
+     brightness#0.3
+     (BRIGHTNESS value default 0.0f)
+     levels
+     (No Parameter)
+     exposure#0.7
+     (EXPOSURE value default 1.0f)
+     rgb#0.9#0.7#0.9
+     (RED#GREEN#BLUE value default
+     1.0f#1.0f#1.0f)
+     rgbdiation#3
+     (RADIUS value default 1 )
+     hue#100.7
+     (HUE value default 90.0f)
+     whitebalance#4000.0f#0.6
+     (TEMPERATURE#TINT value default 5000.0f#0.0f)
+     monochrome# falsecolor#0.3#0.3#0.6#0.10#0.9#0
+     .10
+     (FIRSTRED # FIRSTGREEN #FIRSTBLUE
+     sharpen#2.9
