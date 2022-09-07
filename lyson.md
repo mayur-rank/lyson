@@ -5,7 +5,7 @@
 ## Index
 - [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MultiMaskInputs & HiddenMaskInputs & MaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
-- [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textinputs)
 - [TextEffects](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 
@@ -50,7 +50,7 @@
 - **time:** *time mention timeline for effect and animation draw in canvas*
   
   `"time": "0:0,4:2,8:0,12:0,16:0,20:18,26:0"`
-  ![Sample](https://github.com/mayur-rank/lyson/blob/main/images/timeline.jpg)
+  ![Sample](./images/timeline.jpg)
 
 - **length:** *The length of the output video is defined by this value. `In second`*
   
@@ -135,19 +135,19 @@
 ```json
 {
 	"multimaskinputs": [{
-		"srno": "1",
-		"maskid": "mask1",
-		"maskimg": "mask1.png",
-		"maskover": "over.png"
+        "srno": "1",
+        "maskid": "mask1",
+        "maskimg": "mask1.png",
+        "maskover": "over.png"
 	}, {
-		"maskid": "mask2",
-		"maskratiosize": "720,1280",
-		"maskratio": "1:2",
-		"maskover": "over.png"
+        "maskid": "mask2",
+        "maskratiosize": "720,1280",
+        "maskratio": "1:2",
+        "maskover": "over.png"
 	}, {
-		"maskid": "mask3",
-		"masksize": "720,1280",
-		"maskover": "over.png"
+        "maskid": "mask3",
+        "masksize": "720,1280",
+        "maskover": "over.png"
 	}]
 }
 ```
@@ -155,19 +155,19 @@
 ```json
 {
 	"hiddenmaskinputs": [{
-		"maskid": "hmask1",
-		"maskimg": "mask1.png",
-		"maskover": "over.png",
-		"photoeq": "getMaskPhoto()#mask1"
+        "maskid": "hmask1",
+        "maskimg": "mask1.png",
+        "maskover": "over.png",
+        "photoeq": "getMaskPhoto()#mask1"
 	}, {
-		"maskid": "hmask2",
-		"maskimg": "mask2.png",
-		"maskover": "over.png",
-		"photoid": "2",
-		"isgray": "false",
-		"isblur": "false",
-		"photoeffect": "multiply",
-		"photoname": "addoverlay1.png"
+        "maskid": "hmask2",
+        "maskimg": "mask2.png",
+        "maskover": "over.png",
+        "photoid": "2",
+        "isgray": "false",
+        "isblur": "false",
+        "photoeffect": "multiply",
+        "photoname": "addoverlay1.png"
 	}]
 }
 ```
@@ -176,22 +176,22 @@
 {
 	"maskinputs": [{
         "srno": "1",
-		"maskid": "fmask1",
-		"maskimg": "mask1.png",
-		"maskover": "over.png",
-		"hs_bgremove": "true",
-		"hs_bgremovetype": "face"
+        "maskid": "fmask1",
+        "maskimg": "mask1.png",
+        "maskover": "over.png",
+        "hs_bgremove": "true",
+        "hs_bgremovetype": "face"
 	}, {
         "srno": "2",
-		"maskid": "fmask1",
-		"maskimg": "mask1.png",
-		"maskover": "over.png",
-		"hs_bgremove": "true",
-		"hs_bgremovetype": "full",
-		"isgray": "false",
-		"isblur": "false",
-		"photoeffect": "multiply",
-		"photoname": "addoverlay1.png"
+        "maskid": "fmask1",
+        "maskimg": "mask1.png",
+        "maskover": "over.png",
+        "hs_bgremove": "true",
+        "hs_bgremovetype": "full",
+        "isgray": "false",
+        "isblur": "false",
+        "photoeffect": "multiply",
+        "photoname": "addoverlay1.png"
 	}]
 }
 ```
@@ -342,19 +342,24 @@
   
     `"textlable": "selecetbyinput()#text1#Enter Name Start With M:Enter Name Start With A:Enter Name Start With Y"`
 
-- **textsample:** *textsample value is example for user to guide about what to fill* `Not applicable to **textinputcontrol** -> spinner/date/time`
+- **textsample:** *textsample value is example for user to guide about what to fill* 
 
   `"textsample" : "Andrew"`
 
-  - *textsample is depends on previous input, here selecetbyinput() join with (#) text1 join with (#) sample list, It means sample value is selected from list base on text1 input*
+  > Not applicable to **textinputcontrol** -> spinner/date/time
 
-    `"textsample": "selecetbyinput()#text1#Mayur:Ashok:Yayati"`
+- *textsample is depends on previous input, here selecetbyinput() join with (#) text1 join with (#) sample list, It means sample value is selected from list base on text1 input*
 
-- **textmaxchar:** *max limit to enter text in textbox* `Not applicable to  textinputcontrol -> spinner/date/time'
+  `"textsample": "selecetbyinput()#text1#Mayur:Ashok:Yayati"`
 
-   `"textmaxchar" : "7"`
+- **textmaxchar:** *max limit to enter text in textbox* 
 
-- **textCase:** *textCase define case of input string fill by user. There is four type of case* `Not applicable to textinputcontrol -> spinner/date/time`
+  `"textmaxchar" : "7"`
+
+  > Not applicable to **textinputcontrol** -> spinner/date/time
+    
+
+- **textCase:** *textCase define case of input string fill by user. See below [table](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textcase-list)*
     
     `"textCase" : upper"`
 
@@ -366,14 +371,18 @@
    | word     | Taj Mahal Hotel Place, Raipur |
    | sentence | Taj mahal hotel place, raipur |
 
-- **textinputtype:** *keyboard type* `Not applicable with textinputcontrol -> spinner/date/time` 
+  > Not applicable to textinputcontrol -> spinner/date/time
+
+- **textinputtype:** *keyboard type* 
 
   `"textinputtype" : "numberDecimal"`
 
   ##### Keyboard type list
-  `"date"` `"datetime"` `"none"` `"number"` `"numberDecimal"` `"numberPassword"` `"numberSigned"` `"phone"` `"text"` `"textAutoComplete"` `"textAutoCorrect"``"textCapCharacters"` `"textCapSentences"` `"textCapWords"` `"textEmailAddress"``"textEmailSubject"` `"textFilter"` `"textLongMessage"` `"textMultiLine"` `"textNoSuggestions"``"textPassword"` `"textPersonName"` `"textPhonetic"` `"textPostalAddress"` `"textShortMessage"` `"textUri"` `"textVisiblePassword"` `"textWebEditText"` `"textWebEmailAddress"` `"textWebPassword"` `"time"`
+  `"date"` `"datetime"` `"none"` `"number"` `"numberDecimal"` `"numberPassword"` `"numberSigned"` `"phone"` `"text"` `"textAutoComplete"` `"textAutoCorrect"` `"textCapCharacters"` `"textCapSentences"` `"textCapWords"` `"textEmailAddress"``"textEmailSubject"` `"textFilter"` `"textLongMessage"` `"textMultiLine"` `"textNoSuggestions"``"textPassword"` `"textPersonName"` `"textPhonetic"` `"textPostalAddress"` `"textShortMessage"` `"textUri"` `"textVisiblePassword"` `"textWebEditText"` `"textWebEmailAddress"` `"textWebPassword"` `"time"`
 
-- **textsampleval:** *This is pre inserted value in textbox user can change it if he/she want (applicable with textinputcontrol -> spinner/date/time but different use)*
+  > Not applicable to textinputcontrol -> spinner/date/time
+
+- **textsampleval:** *User of textsampleval define in below [table](https://github.com/mayur-rank/lyson/blob/main/lyson.md#used-of-textsampleval)*
 
   `"textsampleval" : "MICHAEL & JESSICA"`
 
@@ -389,7 +398,7 @@
 
   `"isskip" : "true"`
 
-- **textinputcontrol:** *this is type of text input method and you chose any one of it* `Default: text`
+- **textinputcontrol:** *Input type method mention in below [list](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textinputcontrol-type-list) * `Default: text`
 
   `"textinputcontrol" : "spinner"`
 
@@ -398,30 +407,33 @@
      
   - **text `Default`:** *In this type input control is Textbox user need to insert text in that box If textsampleval has a value, then that value is pre-filled in the textbox*
     
-  - **spinner:** *This is spinner type input control, user has dropdown list and choose value from it. List of value is created from textsampleval with “:” as separator
+  - **spinner:** *This is spinner type input control. List of value is created from **textsampleval** with `:` as separator*
   
     `"textinputcontrol" : "spinner"`
-    `"textsampleval" : "Its Baby Boy:Its Baby Girl"` 
+    `"textsampleval" : "Its Baby Boy:Its Baby Girl"`
   
-    Here user has two options Its Baby Boy or Its Baby Girl
-  - **spinnerid:** *This is spinner type input control, user has dropdown list and choose index from
-    it. List of item is created from textsampleval with “:” as separator.*
-    `"textsampleval" : "Hindi:Tamil:Telugu"`
+    > As per above example there is dropdown list with two item `Its Baby Boy` `Its Baby Girl`
+  
+  - **spinnerid:** *This is spinner type input control, List of value is created from **textsampleval** with `:` as separator*
+  
     `"textinputcontrol" : "spinnerid"`
-    user has three options Hindi, Tamil, Telugu. If user selects Tami then
-    spinner id value is 2(which was used in masksettings and textsettings two select
-    image and text)
-  - **date:** *This is Date Picker control, User can select date from calendar. But the format of
-    date is depends on textsampleval (default separator is “/”)*
+    `"textsampleval" : "Hindi:Tamil:Telugu"`
+  
+    > user has three options Hindi, Tamil, Telugu. If user selects Tamil then spinner id value is 2(Id value is used to select input value)
+    
+  - **date:** *This is Date Picker control, User can select date from calendar. But the format of date is depends on textsampleval* `Default: /`
+  
     `"textinputcontrol" : "date"`
     `"textsampleval" : "-"`
-    date is something like 23-01-2020.
-  - **time:** *This is Time Picker control, User can select time from time picker dialog. But the
-    type of time format (12 hr/ 24 hr) is depends on textsampleval (default format is
-    12hr)*
-      `"textinputcontrol" : "time"`
-      `"textsampleval" : "24"`
-    time is something like 13:06.
+  
+    > date is something like 23-01-2020.
+    
+  - **time:** *This is Time Picker control, User can select time from time picker dialog. But the type of time format **(12 hr/ 24 hr)** is depends on textsampleval* `Default: 12hr`
+      
+    `"textinputcontrol" : "time"`
+    `"textsampleval" : "24"`
+  
+    > time is something like 13:06.
 
 ## Texteffect
 
@@ -728,8 +740,7 @@ then number 1 will be draw first and above it 2 will be draw.*
         
         Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
         
-        - Multi value input text, for this isedited = true, and textinputs must be declare in
-json
+        - Multi value input text, for this isedited = true, and textinputs must be declare in json
 
             `"text": "YYY love ZZZ"`
 
@@ -803,7 +814,7 @@ json
 ![timestartoffsetfps2](./images/timestartoffsetfps2.png)
 
         
-            In above example if image is show between 8 to 14 sec then there is time frame consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps between this.         
+         In above example if image is show between 8 to 14 sec then there is time frame consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps between this.         
 
         - timeendoffsetfps                
         timeendoffsetfps is frame value where animation need to end (default is 0, means animation end at last frame of that part, refers above image)
