@@ -3,15 +3,15 @@
 
 
 ## Index
-- [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
-- [MultiMaskInputs & HiddenMaskInputs & MaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
+- [CommonNotation](#common-notation)
+- [MultiMaskInputs & HiddenMaskInputs & MaskInputs](#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](#textinputs)
 - [TextEffects](#texteffects)
 - [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 
 ## Common Notation
 
-```json
+```
 {
 	"width": "720",
 	"height": "1280",
@@ -132,34 +132,31 @@
 
 ## MultiMaskInputs & HiddenMaskInputs & MaskInputs
 
-```json
-{
-	"multimaskinputs": [{
+```
+    "multimaskinputs": [{
         "srno": "1",
         "maskid": "mask1",
         "maskimg": "mask1.png",
         "maskover": "over.png"
-	}, {
+    }, {
         "maskid": "mask2",
         "maskratiosize": "720,1280",
         "maskratio": "1:2",
         "maskover": "over.png"
-	}, {
+    }, {
         "maskid": "mask3",
         "masksize": "720,1280",
         "maskover": "over.png"
-	}]
-}
+    }]
 ```
 
-```json
-{
-	"hiddenmaskinputs": [{
+```
+    "hiddenmaskinputs": [{
         "maskid": "hmask1",
         "maskimg": "mask1.png",
         "maskover": "over.png",
         "photoeq": "getMaskPhoto()#mask1"
-	}, {
+    }, {
         "maskid": "hmask2",
         "maskimg": "mask2.png",
         "maskover": "over.png",
@@ -168,20 +165,18 @@
         "isblur": "false",
         "photoeffect": "multiply",
         "photoname": "addoverlay1.png"
-	}]
-}
+    }]
 ```
 
-```json
-{
-	"maskinputs": [{
+```
+    "maskinputs": [{
         "srno": "1",
         "maskid": "fmask1",
         "maskimg": "mask1.png",
         "maskover": "over.png",
         "hs_bgremove": "true",
         "hs_bgremovetype": "face"
-	}, {
+    }, {
         "srno": "2",
         "maskid": "fmask1",
         "maskimg": "mask1.png",
@@ -192,8 +187,7 @@
         "isblur": "false",
         "photoeffect": "multiply",
         "photoname": "addoverlay1.png"
-	}]
-}
+    }]
 ```
 
 - **srno:** *The srno is the order number in this list, and the srno represents the input position to ask the user*
@@ -281,8 +275,7 @@
 
 ## TextInputs
 
-```json
-{
+```
   "textinputs": [{
         "srno": "1",
 		"textid": "text1Name",
@@ -319,7 +312,6 @@
 		"textsampleval": "Its Baby Boy:Its Baby Girl",
 		"textinputcontrol": "spinner"
 	}]    
-}
 ```
 
 - **srno:** *srno is order id in this list of all items, srno represent this input position.*
