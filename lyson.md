@@ -5,8 +5,8 @@
 ## Index
 - [CommonNotation](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 - [MultiMaskInputs & HiddenMaskInputs & MaskInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#multimaskinputs--hiddenmaskinputs--maskinputs)
-- [TextInputs](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textinputs)
-- [TextEffects](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [TextInputs](#textinputs)
+- [TextEffects](#texteffects)
 - [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
 
 ## Common Notation
@@ -435,7 +435,7 @@
   
     > time is something like 13:06.
 
-## Texteffect
+## TextEffects
 
 texteffect is json array list, This is list of text and mask display setting.List is separated with id and id count mention in *time* field.
 
