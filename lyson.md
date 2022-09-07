@@ -152,7 +152,7 @@
 }
 ```
 
-```
+```json
 {
 	"hiddenmaskinputs": [{
 		"maskid": "hmask1",
@@ -172,7 +172,7 @@
 }
 ```
 
-```
+```json
 {
 	"maskinputs": [{
         "srno": "1",
@@ -322,11 +322,11 @@
 }
 ```
 
-- **srno:** *srno is order id in this list of all items, srno repesent this input position to ask user.*
+- **srno:** *srno is order id in this list of all items, srno represent this input position.*
 
    `"srno" : "1"`
 
-- **textid:** *textid is unique id in this list of all items, textid repesent this input in process*
+- **textid:** *textid is unique id in this list of all items, textid represent this input in process*
 
   `"textid" : "text1"`
 
@@ -342,25 +342,23 @@
   
     `"textlable": "selecetbyinput()#text1#Enter Name Start With M:Enter Name Start With A:Enter Name Start With Y"`
 
-- **textsample:** *textsample value is example for user to guide about what to fill (not applicable with
-  textinputcontrol -> spinner/date/time)*
+- **textsample:** *textsample value is example for user to guide about what to fill* `Not applicable to **textinputcontrol** -> spinner/date/time`
 
   `"textsample" : "Andrew"`
 
-  - *textsample is depends on previous input, here selecetbyinput() join with (#) text1
-    join with (#) sample list, It means sample value is selected from list base on text1 input*
+  - *textsample is depends on previous input, here selecetbyinput() join with (#) text1 join with (#) sample list, It means sample value is selected from list base on text1 input*
 
     `"textsample": "selecetbyinput()#text1#Mayur:Ashok:Yayati"`
 
-- **textmaxchar:** *max limit to enter text in textbox (not applicable with textinputcontrol -> spinner/date/time)*
+- **textmaxchar:** *max limit to enter text in textbox* `Not applicable to  textinputcontrol -> spinner/date/time'
 
    `"textmaxchar" : "7"`
 
-- **textCase:** *textCase define case of input string fill by user. There is four type of case (not applicable with textinputcontrol -> spinner/date/time) (default no case apply)*
+- **textCase:** *textCase define case of input string fill by user. There is four type of case* `Not applicable to textinputcontrol -> spinner/date/time`
     
     `"textCase" : upper"`
-   Below example for *taj mahal hotel PLACE, Raipur*
 
+    ##### TextCase list
    | Case     | EXAMPLE                       |
    |----------|-------------------------------|
    | lower    | taj mahal hotel place, raipur |
@@ -368,43 +366,43 @@
    | word     | Taj Mahal Hotel Place, Raipur |
    | sentence | Taj mahal hotel place, raipur |
 
-- **textinputtype:** *keyboard type(not applicable with textinputcontrol -> spinner/date/time) (default is
-  common type)*
+- **textinputtype:** *keyboard type* `Not applicable with textinputcontrol -> spinner/date/time` 
 
   `"textinputtype" : "numberDecimal"`
 
-    - *This are keyboard type*
+  ##### Keyboard type list
+  `"date"` `"datetime"` `"none"` `"number"` `"numberDecimal"` `"numberPassword"` `"numberSigned"` `"phone"` `"text"` `"textAutoComplete"` `"textAutoCorrect"``"textCapCharacters"` `"textCapSentences"` `"textCapWords"` `"textEmailAddress"``"textEmailSubject"` `"textFilter"` `"textLongMessage"` `"textMultiLine"` `"textNoSuggestions"``"textPassword"` `"textPersonName"` `"textPhonetic"` `"textPostalAddress"` `"textShortMessage"` `"textUri"` `"textVisiblePassword"` `"textWebEditText"` `"textWebEmailAddress"` `"textWebPassword"` `"time"`
 
-  `"date", "datetime", "none", "number", "numberDecimal", "numberPassword",
-  "numberSigned", "phone", "text", "textAutoComplete", "textAutoCorrect",
-  "textCapCharacters", "textCapSentences", "textCapWords", "textEmailAddress",
-  "textEmailSubject", "textFilter", "textLongMessage", "textMultiLine", "textNoSuggestions",
-  "textPassword", "textPersonName", "textPhonetic", "textPostalAddress",
-  "textShortMessage", "textUri", "textVisiblePassword","textWebEditText",
-  "textWebEmailAddress", "textWebPassword", "time"`
-
-- **textsampleval:** *This is pre inserted value in textbox user can change it if he/she want (applicable
-  with textinputcontrol -> spinner/date/time but different use)*
+- **textsampleval:** *This is pre inserted value in textbox user can change it if he/she want (applicable with textinputcontrol -> spinner/date/time but different use)*
 
   `"textsampleval" : "MICHAEL & JESSICA"`
 
-- **isskip:** *If isskip value is true then this input is not mandatory (default value is false)*
+  ##### Used of textsampleval
+  | textinputcontrol  | textsampleval |  Notes | 
+  |----------|-------------------------------| ------ |
+  |          | `"MICHAEL & JESSICA"`           | Pre store text value |
+  | date    |  `"-"` `"/"` `":"` | Date Format dd/MM/YYYY |
+  | time    |   `"24"` `"12"` | Time Format 12 hr or 24hr |
+  | spinner or  spinnerid    | `"Hindi:Tamil:Telugu"` | String Array or list |
+
+- **isskip:** *If isskip value is true then this input is not mandatory `Default: false`*
 
   `"isskip" : "true"`
 
-- **textinputcontrol:** *this is type of text input method and you chose any one of it (Type: spinner, date,
-  time)(default is textbox type)*
+- **textinputcontrol:** *this is type of text input method and you chose any one of it* `Default: text`
 
   `"textinputcontrol" : "spinner"`
 
-    Lets understand different input method
-  - **default(Textbox):** *In this type input control is Textbox user need to insert text in that box
-    With this type we used textsampleval then textbox is pre fill with textsampleval
-    value (as show in 11).*
-  - **spinner:** *This is spinner type input control, user has dropdown list and choose value from
-    it. List of value is created from textsampleval with “:” as separator.*
+  ##### textinputcontrol type list
+  `"text"` `"date"` `"time"` `"spinner"` `"spinnerid"`
+     
+  - **text `Default`:** *In this type input control is Textbox user need to insert text in that box If textsampleval has a value, then that value is pre-filled in the textbox*
+    
+  - **spinner:** *This is spinner type input control, user has dropdown list and choose value from it. List of value is created from textsampleval with “:” as separator
+  
     `"textinputcontrol" : "spinner"`
     `"textsampleval" : "Its Baby Boy:Its Baby Girl"` 
+  
     Here user has two options Its Baby Boy or Its Baby Girl
   - **spinnerid:** *This is spinner type input control, user has dropdown list and choose index from
     it. List of item is created from textsampleval with “:” as separator.*
@@ -798,10 +796,10 @@ json
 
             `"textanimation": "alpha"`
 
-        - timestartoffsetfps        
-        timestartoffsetfps is frame value where animation need to start (default is 0, means animation start at 0 frame of that part)
+   - timestartoffsetfps        
+   timestartoffsetfps is frame value where animation need to start (default is 0, means animation start at 0 frame of that part)
 
-            `"timestartoffsetfps": "0"`
+       `"timestartoffsetfps": "0"`
 ![timestartoffsetfps2](./images/timestartoffsetfps2.png)
 
         
