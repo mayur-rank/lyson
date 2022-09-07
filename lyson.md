@@ -133,61 +133,61 @@
 ## MultiMaskInputs & HiddenMaskInputs & MaskInputs
 
 ```
-    "multimaskinputs": [{
-        "srno": "1",
-        "maskid": "mask1",
-        "maskimg": "mask1.png",
-        "maskover": "over.png"
-    }, {
-        "maskid": "mask2",
-        "maskratiosize": "720,1280",
-        "maskratio": "1:2",
-        "maskover": "over.png"
-    }, {
-        "maskid": "mask3",
-        "masksize": "720,1280",
-        "maskover": "over.png"
-    }]
+"multimaskinputs": [{
+    "srno": "1",
+    "maskid": "mask1",
+    "maskimg": "mask1.png",
+    "maskover": "over.png"
+}, {
+    "maskid": "mask2",
+    "maskratiosize": "720,1280",
+    "maskratio": "1:2",
+    "maskover": "over.png"
+}, {
+    "maskid": "mask3",
+    "masksize": "720,1280",
+    "maskover": "over.png"
+}]
 ```
 
 ```
-    "hiddenmaskinputs": [{
-        "maskid": "hmask1",
-        "maskimg": "mask1.png",
-        "maskover": "over.png",
-        "photoeq": "getMaskPhoto()#mask1"
-    }, {
-        "maskid": "hmask2",
-        "maskimg": "mask2.png",
-        "maskover": "over.png",
-        "photoid": "2",
-        "isgray": "false",
-        "isblur": "false",
-        "photoeffect": "multiply",
-        "photoname": "addoverlay1.png"
-    }]
+"hiddenmaskinputs": [{
+    "maskid": "hmask1",
+    "maskimg": "mask1.png",
+    "maskover": "over.png",
+    "photoeq": "getMaskPhoto()#mask1"
+}, {
+    "maskid": "hmask2",
+    "maskimg": "mask2.png",
+    "maskover": "over.png",
+    "photoid": "2",
+    "isgray": "false",
+    "isblur": "false",
+    "photoeffect": "multiply",
+    "photoname": "addoverlay1.png"
+}]
 ```
 
 ```
-    "maskinputs": [{
-        "srno": "1",
-        "maskid": "fmask1",
-        "maskimg": "mask1.png",
-        "maskover": "over.png",
-        "hs_bgremove": "true",
-        "hs_bgremovetype": "face"
-    }, {
-        "srno": "2",
-        "maskid": "fmask1",
-        "maskimg": "mask1.png",
-        "maskover": "over.png",
-        "hs_bgremove": "true",
-        "hs_bgremovetype": "full",
-        "isgray": "false",
-        "isblur": "false",
-        "photoeffect": "multiply",
-        "photoname": "addoverlay1.png"
-    }]
+"maskinputs": [{
+    "srno": "1",
+    "maskid": "fmask1",
+    "maskimg": "mask1.png",
+    "maskover": "over.png",
+    "hs_bgremove": "true",
+    "hs_bgremovetype": "face"
+}, {
+    "srno": "2",
+    "maskid": "fmask1",
+    "maskimg": "mask1.png",
+    "maskover": "over.png",
+    "hs_bgremove": "true",
+    "hs_bgremovetype": "full",
+    "isgray": "false",
+    "isblur": "false",
+    "photoeffect": "multiply",
+    "photoname": "addoverlay1.png"
+}]
 ```
 
 - **srno:** *The srno is the order number in this list, and the srno represents the input position to ask the user*
@@ -276,42 +276,42 @@
 ## TextInputs
 
 ```
-  "textinputs": [{
-        "srno": "1",
-		"textid": "text1Name",
-		"textkey": "XXX",
-		"textlable": "Fiance Name",
-		"textsample": "AADITYA",
-		"textmaxchar": "7",
-		"textCase" : "upper"
-	},{
-        "srno": "2",
-        "textid": "text2Date",
-        "textkey": "DDD",
-        "textlable": "Wedding Date",
-        "textinputcontrol": "date",
-        "textsampleval": "/"
-    }, {
-        "srno": "3",
-        "textid": "text3Time",
-        "textkey": "TTT",
-        "textlable": "Wedding Time",
-        "textinputcontrol": "time",
-        "textsampleval": "12"
-    },{
-        "srno": "4",
-		"textid": "text4Language",
-		"textlable": "Select Your Language",
-		"textsampleval": "English:Hindi:Tamil:Kannada:Telugu:Gujarati:Bengali:Malayalam",
-		"textinputcontrol": "spinnerid"
-	},{
-	    "srno": "5",
-        "textid": "text5Gender",
-		"textkey": "XXX",
-		"textlable": "Gender Info",
-		"textsampleval": "Its Baby Boy:Its Baby Girl",
-		"textinputcontrol": "spinner"
-	}]    
+"textinputs": [{
+    "srno": "1",
+    "textid": "text1Name",
+    "textkey": "XXX",
+    "textlable": "Fiance Name",
+    "textsample": "AADITYA",
+    "textmaxchar": "7",
+    "textCase" : "upper"
+},{
+    "srno": "2",
+    "textid": "text2Date",
+    "textkey": "DDD",
+    "textlable": "Wedding Date",
+    "textinputcontrol": "date",
+    "textsampleval": "/"
+}, {
+    "srno": "3",
+    "textid": "text3Time",
+    "textkey": "TTT",
+    "textlable": "Wedding Time",
+    "textinputcontrol": "time",
+    "textsampleval": "12"
+},{
+    "srno": "4",
+    "textid": "text4Language",
+    "textlable": "Select Your Language",
+    "textsampleval": "English:Hindi:Tamil:Kannada:Telugu:Gujarati:Bengali:Malayalam",
+    "textinputcontrol": "spinnerid"
+},{
+    "srno": "5",
+    "textid": "text5Gender",
+    "textkey": "XXX",
+    "textlable": "Gender Info",
+    "textsampleval": "Its Baby Boy:Its Baby Girl",
+    "textinputcontrol": "spinner"
+}]    
 ```
 
 - **srno:** *srno is order id in this list of all items, srno represent this input position.*
