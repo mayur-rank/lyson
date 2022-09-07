@@ -420,7 +420,7 @@
   
     > date is something like 23-01-2020.
     
-  - **time:** *This is Time Picker control, User can select time from time picker dialog. But the type of time format **(12 hr/ 24 hr)** is depends on textsampleval* `Default: 12hr`
+  - **time:** *This is Time Picker control, User can select time from time picker dialog. But the type of time format **(12 hr/ 24 hr)** is depends on textsampleval* `Default: 12`
       
     `"textinputcontrol" : "time"`
     `"textsampleval" : "24"`
@@ -515,178 +515,177 @@
     consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
     between this. 
 
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
+- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end* `default: 0` means animation end at last frame of that part, refers above image*
+
+  `"timeendoffsetfps" : "100"`
+
+  > Here value is 100 then end animation for this image is start at 13 sec
+
+- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end `default: 0`, means
   animation end at last frame of that part, refers above image)*
 
   `"timeendoffsetfps" : "100"`
-    - *Here value is 100 then end animation for this image is start at 13 sec*
-
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end (default is 0, means
-  animation end at last frame of that part, refers above image)*
-
-  `"timeendoffsetfps" : "100"`
-  - **hasendanimation:** *hasendanimation is false when you don’t want animation at end point, and true
-    when you need it (default is true)*
-
-    `"hasendanimation" : "false"`
-  - **maskbiteffect:** *maskbiteffect is image animation on music bit, Type of animation is zoom, image
-    change describe in detail (default is n/a)(Only work type -> biteffect)*
-     - First type of animation is Zoom image on bit effect, below is syntax define this
-     animation. Here Z mention zoom and # join with value 103, New biteqscale value
-     create using 103 with max value in biteqscale
-
-     `"maskbiteffect" : "Z#103"`
-     - Second type of animation is Alpha value change on bit effect, below is syntax
-     define this animation. Here A mention alpha and # join with value
-     img_heart.png:img_heart1.png, Two image name join with ”:” separator, In this
-     animation img_heart.png draw and above it img_heart1.png draw with alpha
-     mention in biteqalpha.
-
-     `"maskbiteffect" : "A#img_heart.png:img_heart1.png"`
-     - Third Type Is also called GIF Mode loop() is prefix join with number is speed in
-     example is it 3 means every third frame next image show in list, after number
-     there is list of image join with : (scale and rotation not apply on GIF Mode)
-     `"maskbiteffect" :
-
-     "loop()#3#anim1.png:anim2.png:anim3.png:anim4.png:anim5.png"`
   
-  - **maskleft:** *maskleft is left point where image need to draw in 720X1280 canvas*
+- **maskbiteffect:** *maskbiteffect is image animation on music bit, Type of animation is zoom, image
+  change describe in detail (default is n/a)(Only work type -> biteffect)*
 
-    `"maskleft" : "464"`
+  - First type of animation is Zoom image on bit effect, below is syntax define this animation. Here Z mention zoom and # join with value 103, New biteqscale value create using 103 with max value in biteqscale
 
-    Timeline mode is here
-    - **masklefteq:** *Value Contain with getFBF() function join (#)with frame:Value List,
-    as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means*
-      - 0 -> 720
-      - 60 -> 0
-      - 70 -> 0
-      - 520 -> 0
+    `"maskbiteffect" : "Z#103"`
 
-    `"masklefteq": "getFBF()#0,60,70,520:720,0,0,0"`
+  - Second type of animation is Alpha value change on bit effect, below is syntax
+    define this animation. Here A mention alpha and # join with value
+    img_heart.png:img_heart1.png, Two image name join with ”:” separator, In this
+    animation img_heart.png draw and above it img_heart1.png draw with alpha
+    mention in biteqalpha.
 
-  - **masktop:** *masktop is top point where image need to draw in 720X1280 canvas*
+    `"maskbiteffect" : "A#img_heart.png:img_heart1.png"`
+  
+  - Third Type Is also called GIF Mode loop() is prefix join with number is speed in example is it 3 means every third frame next image show in list, after number there is list of image join with : (scale and rotation not apply on GIF Mode)
+  
+  `"maskbiteffect" : "loop()#3#anim1.png:anim2.png:anim3.png:anim4.png:anim5.png"`
+  
+- **maskleft:** *maskleft is left point where image need to draw in 720X1280 canvas `Default: 0`*
 
-    `"masktop" : "464"`
+   `"maskleft" : "464"`
+ 
+- **masklefteq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means* 
 
-      Timeline mode is here
-      - **masktopeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
-        as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280*
+  `"masklefteq": "getFBF()#0,60,70,520:720,0,0,0"`
 
-      `"masktopeq": "getFBF()#0,60,70,520:-1280,0,0,0"`
+  #### Timeline 
+  | frame | Value |
+  |-----|----|
+  | 0  | 720 |
+  | 60  | 0 |
+  | 70  | 0 |
+  | 520  | 0 |
 
-      - 0 -> -1280
-      - 60 -> 0
-      - 70 -> 0
-      - 520 -> 0
+- **masktop:** *masktop is top point where image need to draw in 720X1280 canvas `Default: 0`*
 
-  - **maskrotate:** *maskrotate is angle of rotation with above left and top value(default value is 0)*
+  `"masktop" : "464"`
+ 
+- **masktopeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280*
 
-    `"maskrotate" : "90"`
-      Timeline mode is here
-      - **maskrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
-        value is 7.5° means*
+  `"masktopeq": "getFBF()#0,60,70,520:-1280,0,0,0"`
 
-        `"maskrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0"`
-
-        - 64 -> 7.5
-       - 68 -> 7.5
-       - 72 -> 5.5
-       - 90 -> 0
-       - 520 -> 0
-
-  - **maskscale:** *maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is
-    50 then image draw with half value, If value is 200 image with double size drawn.(Default value is 100)*
-
-    `"maskscale" : "100"`
-      - Timeline mode is here
-      - **maskscaleeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
-        as per below list 0,60,70,520:103,103,100,100 means at 0 frame scale value is
-        103 means (scale value 100 is actual size)*
-
-      `"maskscaleeq": "getFBF()#0,60,70,520:103,103,100,100"` 
-
-       - 0 -> 103
-       - 60 -> 103
-       - 70 -> 100
-       - 520 -> 100
+  #### Timeline
+  | frame | Value |
+  |-----|----|
+  | 0  | -1280 |
+  | 60  | 0 |
+  | 70  | 0 |
+  | 520  | 0 |
 
 
-   - **maskalpha:** *maskalpha is used for transparency of image value between 0 – 255(default value is
-     255)*
+- **maskrotate:** *maskrotate is angle of rotation with above left and top value`Default: 0`*
 
-     `"maskalpha" : "255"`
-       Timeline mode is here
-       - **maskalphaeq:** *Value Contain with getFBF() function join (#)with frame:Value List,
-         as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255
-         means (Opacity range is 0 - 255)*
+  `"maskrotate" : "90"`
+  
+- **maskrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
+  value is 7.5° means*
 
-         `"maskalphaeq": "getFBF()#64,70,520:0,255,255"`
+  `"maskrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0"`
 
-        - 64 -> 0
-        - 70 -> 255
-        - 520 -> 255
+  #### Timeline
+  | frame | Value |
+  |-----|----|
+  | 64  | 90 |
+  | 68  | 0 |
+  | 72  | -90 |
+  | 90  | 45 |
 
-   - **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List,
-     as per below list
-     130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466 means at
-     130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335,
-     Height -> 0)
+- **maskscale:** *maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is 50 then image draw with half value, If value is 200 image with double size drawn.*`Default: 100`
 
-     ![maskingeq](./images/maskingeq.png)
+  `"maskscale" : "100"`
+ 
+- **maskscaleeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:103,103,100,100 means at 0 frame scale value is 103 means `Default: 100`*
 
-     `"maskingeq" : "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466"`
+  `"maskscaleeq": "getFBF()#0,60,70,520:103,103,100,100"` 
+
+  #### Timeline
+  | frame | Value |
+  |-----|----|
+  | 0  | 103 |
+  | 60  | 103 |
+  | 70  | 100 |
+  | 520  | 100 |
+
+- **maskalpha:** *maskalpha is used for transparency of image value between 0 – 255 `Default: 255`*
+
+  `"maskalpha" : "255"`
+    
+- **maskalphaeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255 means (Opacity range is 0 - 255)*
+
+  `"maskalphaeq": "getFBF()#64,70,520:0,255,255"`
+
+  #### Timeline
+  | frame | Value |
+  |-----|----|
+  | 0  | 0 |
+  | 60  | 128 |
+  | 70  | 255 |
+  | 520  | 255 | 
+
+
+- **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List, as per below list 130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466 means at
+  130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335,
+  Height -> 0)
+
+  ![maskingeq](./images/maskingeq.png)
+
+  `"maskingeq" : "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466"`
      
-     Below String contain #FFFFFF is color code used to fill remain part of mask which is transparent as default (This is mainly used when maskingeq deal with blendmode multiply)
+  Below String contain #FFFFFF is color code used to fill remain part of mask which is transparent as default (This is mainly used when maskingeq deal with blendmode multiply)
 
-    `"maskingeq" : "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466#FFFFFF"`
-
-
-   - **blendmode:** *blendmode is used for blend this image on below images with different modes
-     modes are mention in below table(work on both text and Mask)*
-
-     `"blendmode" : "overlay"`   
-     - Blendmode Value : add , darken , lighten , multiply , overlay ,screen
+   `"maskingeq" : "getFBF()#130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466#FFFFFF"`
 
 
-   - **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
-     Flip Mode Value
-     - No Flip : 1,1
-     - Horizontal : -1,1
-     - Vertical : 1,-1
-     - Horizontal + Vertical :-1,-1
+- **blendmode:** *blendmode is used for blend this image on below images with different modes
+  modes are mention in below table(work on both text and Mask)*
 
-    `"flipmode" : "-1,1"`   
+  `"blendmode" : "overlay"`
 
-   - **skipvalueoninput:** *is work with input is skiable*
-   
-         `"skipvalueoninput" : "mask5#false"` 
-       - *Above line show that if mask5 input is (isskip = false) means user fill mask5 input
-        then this setting show in timeline*
-        `"skipvalueoninput": "text2#true"`
-       - *Above line show that if text2 input is (isskip = true) means user skip text2 input then
-        this setting show in timeline*
-       - Blendmode Value
-         - add
-         - darken
-         - lighten
-         - multiply
-         - overlay
-         - screen
-         
-   - **filtermode:** *(only on Mask , filtermode is used to apply different filter on image, filter mention below table*
+  #### Blendmode list [More](#)
+  `add` `darken` `lighten` `multiply` `overlay` `screen`
 
-     `"filtermode" : "blur#5"`     
 
-| Filter Mode | Value | Remark |
-|---|---|---|
-| Gray Filter | gray | - |
-| Blur Filter | blur | Blur image with 25 default radius |
-|  | blue#5 | Blur image with 5 radius |
+- **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
 
-![Filter Mode1](./images/filtermode1.PNG)
-![Filter Mode2](./images/filtermode2.PNG)
-![Filter Mode3](./images/filtermode3.PNG)
-![Filter Mode4](./images/filtermode4.PNG)
+  `"flipmode" : "-1,1"`
+ 
+  #### Timeline
+  | Mode | Value |
+    |-----|----|
+  | No Flip  | `1,1` |
+  | Horizontal  | `-1,1` |
+  | Vertical  | `1,-1` |
+  | Horizontal + Vertical  | `-1,-1` |
+
+- **skipvalueoninput:** *is work with input is skiable*
+
+ `"skipvalueoninput" : "mask5#false"`
+
+ > Above line show that if mask5 input is (isskip = false) means user fill mask5 input then this setting show in timeline
+  
+ `"skipvalueoninput": "text2#true"`
+ 
+  >  Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
+ 
+- **filtermode:** *(only on Mask , filtermode is used to apply different filter on image, filter mention below table*
+
+  `"filtermode" : "blur#5"`     
+
+  | Filter Mode | Value | Remark |
+  |---|---|---|
+  | Gray Filter | gray | - |
+  | Blur Filter | blur | Blur image with 25 default radius |
+  |  | blue#5 | Blur image with 5 radius |
+    
+  ![Filter Mode1](./images/filtermode1.PNG)
+  ![Filter Mode2](./images/filtermode2.PNG)
+  ![Filter Mode3](./images/filtermode3.PNG)
+  ![Filter Mode4](./images/filtermode4.PNG)
 
 ## textsettings
 
