@@ -685,9 +685,10 @@
   |---|---|---| --- |
   | Gray  | `gray` | - |  |
   | Blur  | `blur` `blue#5` | - |Blur image with 25 default radius |
-  | Saturation  | `saturation#2.50` | ![Image](./filter_saturation.jpg) | `Default: 1.0` |
-  | Contrast  | `contrast#2.0` | ![Image](./filter_contras.jpg) |`Default: 1.2` |
+  | Saturation  | `saturation#2.50` | ![Image](./images/filter_saturation.jpg) | `Default: 1.0` |
+  | Contrast  | `contrast#2.0` | ![Image](./images/filter_contras.jpg) |`Default: 1.2` |
     
+
   ![Filter Mode1](./images/filtermode1.PNG)
   ![Filter Mode2](./images/filtermode2.PNG)
   ![Filter Mode3](./images/filtermode3.PNG)
