@@ -781,17 +781,17 @@
 
   `"filtermodeeq": "getFBF()#hue#0,40,180,228:0,100,100,0"`
   
-  ```
-  "filtermodeeq": "getFBF()#whitebalance#228,260,400,440:1000_0,5000_0.6,5000_0.6,1000_0"
+
+   #####  filtermodeeq explain using whitebalance filter
+  `"filtermodeeq": "getFBF()#whitebalance#228,260,400,440:1000_0,5000_0.6,5000_0.6,1000_0"`
 
   | frame | Value | Parsing
   |-----|----| ---|
   | 228  | 1000_0 | `TEMPERATURE=1000, TINT=0` |
   | 260  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
   | 400  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
-  | 440  | 1000_0 | ``TEMPERATURE=1000, TINT=0` |
-  
-  ```
+  | 440  | 1000_0 | `TEMPERATURE=1000, TINT=0` |
+
 
 - **aifilter:** *aifilter is ai photo effect*
 
@@ -1156,6 +1156,22 @@ textsettings is json array list, List of texts display with effect and animation
   | Horizontal  | `-1,1` |
   | Vertical  | `1,-1` |
   | Horizontal + Vertical  | `-1,-1` |
+
+- **filtermodeeq:** *getFBF() function get filter value frame by frame* [More](#filter-mode-table)
+
+  `"filtermodeeq": "getFBF()#halftone#0,228:0.01,0.05"`
+
+  `"filtermodeeq": "getFBF()#hue#0,40,180,228:0,100,100,0"`
+
+  #####  filtermodeeq explain using whitebalance filter
+  `"filtermodeeq": "getFBF()#whitebalance#228,260,400,440:1000_0,5000_0.6,5000_0.6,1000_0"`
+
+  | frame | Value | Parsing
+  |-----|----| ---|
+  | 228  | 1000_0 | `TEMPERATURE=1000, TINT=0` |
+  | 260  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
+  | 400  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
+  | 440  | 1000_0 | `TEMPERATURE=1000, TINT=0` |
 
 
 - **textbgcolor:** *used to set bgcolor on text background*
