@@ -470,17 +470,24 @@
 
 - **isedited:** *isedited is true when you want image from user *(used with maskinputid)* and false when take image direct from template assets *(used with imgname)* `Default: true`
 
+  | 1 | 2 |
+  |---|---|
+  | `"isedited" : "true"` |
+  `"maskinputid" : "mask1"`
+
   1. **maskinputid:** *maskinputid represent the input that need to show here this id must be in maskinputs list. Image is get from this mask input id (isedited must be is true)*
 
-  `"isedited" : "true"`
-  `"maskinputid" : "mask1"`
+     `"isedited" : "true"`
+     `"maskinputid" : "mask1"`
 
   2. **imgname:** *This is image name contain in template assets.
 
+    `"isedited" : "false"`
     `"imgname" : "img_heart.png"`
 
     - **randimg():** *randimg() function is used to select one of random image from list*
-  
+
+      `"isedited" : "true"`
       `"imgname" : "randimg()#img_heart.png:img_heart1.png"`
 
       > Here randimg() is join with img_heart.png:img_heart1.png using “#” .
@@ -489,6 +496,7 @@
 
     - **selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in  spinnerid text input control*
 
+      `"isedited" : "true"`
       `"imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"`
 
       > Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
@@ -499,6 +507,7 @@
 
     - **createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,  frame is optional to overlay on mask*
 
+      `"isedited" : "true"`
       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
 
       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
@@ -521,10 +530,6 @@
 
   > Here value is 100 then end animation for this image is start at 13 sec
 
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end `default: 0`, means
-  animation end at last frame of that part, refers above image)*
-
-  `"timeendoffsetfps" : "100"`
   
 - **maskbiteffect:** *maskbiteffect is image animation on music bit, Type of animation is zoom, image
   change describe in detail (default is n/a)(Only work type -> biteffect)*
@@ -646,7 +651,7 @@
 
   `"blendmode" : "overlay"`
 
-  #### Blendmode list [More](#)
+  #### Blendmode list [More](#photoeffect--photoname-combination-table)
   `add` `darken` `lighten` `multiply` `overlay` `screen`
 
 
@@ -654,7 +659,7 @@
 
   `"flipmode" : "-1,1"`
  
-  #### Timeline
+  #### Flip mode type
   | Mode | Value |
     |-----|----|
   | No Flip  | `1,1` |
@@ -664,11 +669,11 @@
 
 - **skipvalueoninput:** *is work with input is skiable*
 
- `"skipvalueoninput" : "mask5#false"`
-
- > Above line show that if mask5 input is (isskip = false) means user fill mask5 input then this setting show in timeline
+  `"skipvalueoninput" : "mask5#false"`
   
- `"skipvalueoninput": "text2#true"`
+  > Above line show that if mask5 input is (isskip = false) means user fill mask5 input then this setting show in timeline
+  
+  `"skipvalueoninput": "text2#true"`
  
   >  Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
  
@@ -676,11 +681,12 @@
 
   `"filtermode" : "blur#5"`     
 
-  | Filter Mode | Value | Remark |
-  |---|---|---|
-  | Gray Filter | gray | - |
-  | Blur Filter | blur | Blur image with 25 default radius |
-  |  | blue#5 | Blur image with 5 radius |
+  | Name | Function | Images | Remarks
+  |---|---|---| --- |
+  | Gray  | `gray` | - |  |
+  | Blur  | `blur` `blue#5` | - |Blur image with 25 default radius |
+  | Saturation  | `saturation#2.50` | ![Image](./filter_saturation.jpg) | `Default: 1.0` |
+  | Contrast  | `contrast#2.0` | ![Image](./filter_contras.jpg) |`Default: 1.2` |
     
   ![Filter Mode1](./images/filtermode1.PNG)
   ![Filter Mode2](./images/filtermode2.PNG)
@@ -689,105 +695,104 @@
 
 ## textsettings
 
-textsettings is json array list, This is list of text display with effect and animation in that time line.
+textsettings is json array list, List of texts display with effect and animation in that time line.
 
-   - **custextid:** *custextid is unique number, custextid decided which input is display first. Means custextid is used to manage layer in frame. If there is two text with custextid 1 & 2
-then number 1 will be draw first and above it 2 will be draw.*
+- **custextid:** *custextid is unique number, custextid decided which input is display first. Means custextid is used to manage layer in frame. If there is two text with custextid 1 & 2 then number 1 will be draw first and above it 2 will be draw.*
 
-   `"custextid" : "10"`  
+  `"custextid" : "10"`  
 
-   - **isedited:** *isedited is true when you want text from user(used with textinputids) and false when text source is from json (default value is false)*
+- **isedited:** *isedited is true when you want text from user(used with textinputids) and false when text source is from json (default value is false)*
 
-   `"isedited" : "true"`   
+  `"isedited" : "true"`   
 
-   - **textinputids:** *textinputids is input id mention in textinputs, there is more than one id also which saprate with “,”*
+- **textinputids:** *textinputids is input id mention in textinputs, there is more than one id also which saprate with “,”*
 
-   `"textinputids" : "text3"`   
+  `"textinputids" : "text3"`   
 
-   `"text2" : "text3"`   
+  `"textinputids": `"text2,text3"`   
 
-   - **text:** *text define value which is draw in canvas there is so much method and equation for text value.*
-        - Single value input text, for this isedited = true, and textinputs must be declare in json.
+- **text:** *text define value which is draw in canvas there is so much method and equation for text value.*
+     - Single value input text, for this isedited = true, and textinputs must be declare in json.
 
-            `"text": "My name is ZZZ"`
+         `"text": "My name is ZZZ"`
 
-            `"isedited": "true"`
+         `"isedited": "true"`
             
-            `"textinputids": "text3"`
+         `"textinputids": "text3"`
         
-        Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
+     Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
         
-        - Multi value input text, for this isedited = true, and textinputs must be declare in json
+     - Multi value input text, for this isedited = true, and textinputs must be declare in json
 
-            `"text": "YYY love ZZZ"`
+         `"text": "YYY love ZZZ"`
 
-            `"isedited": "true"`
+         `"isedited": "true"`
             
-            `"textinputids": "text2,text3"`
+         `"textinputids": "text2,text3"`
 
-            Here text string is create using text2 & text3 input value, suppose user fill value in text2 is *Rahul*, and key for text2 is *YYY* and fill value for text3 is *Sima*, and key for text3 is *ZZZ* then text string is *Rahul love Sima*
+         Here text string is create using text2 & text3 input value, suppose user fill value in text2 is *Rahul*, and key for text2 is *YYY* and fill value for text3 is *Sima*, and key for text3 is *ZZZ* then text string is *Rahul love Sima*
 
-        - No input value, for this isedited = false
+     - No input value, for this isedited = false
 
-            `"text": "Invite you to join"`
+         `"text": "Invite you to join"`
 
-            `"isedited": "false"`
+         `"isedited": "false"`
 
-        Text string is *Invite you to join*
+     Text string is *Invite you to join*
 
-        - Get random value from range, for this isedited = false
+     - Get random value from range, for this isedited = false
 
-            `"text": " getrand()#100#200#VAL%"`
+         `"text": " getrand()#100#200#VAL%"`
 
-            `"isedited": "false"`
+         `"isedited": "false"`
 
-        getrand() function used to select random value, full string separate with “#”, second value is start limit 100 and third value is end limit 200 and VAL is key word where random value replace, % is post string join with random value. May be text is 120% , 130% or 141% it is between 100 to 200 and % join with rand value
+     getrand() function used to select random value, full string separate with “#”, second value is start limit 100 and third value is end limit 200 and VAL is key word where random value replace, % is post string join with random value. May be text is 120% , 130% or 141% it is between 100 to 200 and % join with rand value
 
-        | STRING CODE           | RANGE      |
-        |-----------------------|------------|
-        | getrand()#VAL         | 0 to 100   |
-        | getrand()#500#VAL     | 0 to 500   |
-        | getrand()#200#500#VAL | 200 to 500 |
+     | STRING CODE           | RANGE      |
+     |-----------------------|------------|
+     | getrand()#VAL         | 0 to 100   |
+     | getrand()#500#VAL     | 0 to 500   |
+     | getrand()#200#500#VAL | 200 to 500 |
 
-        - Get current datetime, for this isedited = false
+     - Get current datetime, for this isedited = false
 
-            `"text": "getdate()#dd-MM-yyyy HH:mm#VAL is here"`
+         `"text": "getdate()#dd-MM-yyyy HH:mm#VAL is here"`
 
-            `"isedited": "false"`
+         `"isedited": "false"`
 
-        getdate() function used to selected date time, full string separate with *#*,second part mention format of datetime, VAL is key word where datetime value replace, and * is here* post value join with date Text value is like *01-01-2020 10:30 is here*
+     getdate() function used to selected date time, full string separate with *#*,second part mention format of datetime, VAL is key word where datetime value replace, and * is here* post value join with date Text value is like *01-01-2020 10:30 is here*
 
-        | STRING CODE                        | STRING               |
-        |------------------------------------|----------------------|
-        | getdate()#VAL                      | 01-01-2020           |
-        | getdate()#dd, MMM yyyy#VAL is here | 01, JAN 2020 is here |
-        | getdate()#dd/MM/yyyy HH:mm:ss#VAL  | 01/01/2020 10:30:34  |
+     | STRING CODE                        | STRING               |
+     |------------------------------------|----------------------|
+     | getdate()#VAL                      | 01-01-2020           |
+     | getdate()#dd, MMM yyyy#VAL is here | 01, JAN 2020 is here |
+     | getdate()#dd/MM/yyyy HH:mm:ss#VAL  | 01/01/2020 10:30:34  |
 
-        - Get random one line from list, for this isedited = false
+     - Get random one line from list, for this isedited = false
 
-            `"text": "selectline()#I m here:You r here"`
+         `"text": "selectline()#I m here:You r here"`
             
-            `"isedited": "false"`
+         `"isedited": "false"`
 
-        selectline() function used to select random line from list join with *#* , Here *I m here:You r here* is two line one of it selected as random
+     selectline() function used to select random line from list join with *#* , Here *I m here:You r here* is two line one of it selected as random
 
-        - selecetbyinput() function is used to select one of line from id chosen by user in spinnerid text input control
+     - selecetbyinput() function is used to select one of line from id chosen by user in spinnerid text input control
 
-            `"text": "selecetbyinput()#text2#Hindi:Tamil:Telugu"`
+         `"text": "selecetbyinput()#text2#Hindi:Tamil:Telugu"`
             
-            `"isedited": "false"`
+         `"isedited": "false"`
 
-        Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
+     Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
 
-        - textanimation
-        textanimation is text transition animation, type of animation alpha, zoom, alphazoom, zoomout, noanim (default is noanim)
+     - textanimation
+     textanimation is text transition animation, type of animation alpha, zoom, alphazoom, zoomout, noanim (default is noanim)
 
-            `"textanimation": "alpha"`
+         `"textanimation": "alpha"`
 
-   - timestartoffsetfps        
-   timestartoffsetfps is frame value where animation need to start (default is 0, means animation start at 0 frame of that part)
+- timestartoffsetfps        
+timestartoffsetfps is frame value where animation need to start (default is 0, means animation start at 0 frame of that part)
 
-       `"timestartoffsetfps": "0"`
+    `"timestartoffsetfps": "0"`
 ![timestartoffsetfps2](./images/timestartoffsetfps2.png)
 
         
