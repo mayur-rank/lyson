@@ -9,6 +9,7 @@
 - [TextEffects](#texteffects)
 - [MaskSetting](#masksettings)
 - [TextSetting](#textsettings)
+- [Sample LYSON](#sample-lyson)
 
 ## Common Notation
 
@@ -1303,4 +1304,17 @@ textsettings is json array list, List of texts display with effect and animation
 
   > if *textFName*  or *textLName* any one has value then this item draw on canvas
 
-  
+## Sample Lyson
+
+#### Lyrical.ly
+- [New Baby](./sample/newbaby.lyson)
+  `spinnerid`, `keyboard type`
+
+- [Wedding](./sample/newbaby.lyson)
+  `date` `time` `textcase`
+
+- [AI Cloth Filter](./sample/ai_cloth.lyson)
+  `aimodel` `aifilter` `maskcover`
+
+- [AI Multi Filter](./sample/ai_multi_filter.lyson)
+  `aimodel` `aifilter`
