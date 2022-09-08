@@ -7,7 +7,8 @@
 - [MultiMaskInputs & HiddenMaskInputs & MaskInputs](#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](#textinputs)
 - [TextEffects](#texteffects)
-- [MaskSetting](https://github.com/mayur-rank/lyson/blob/main/lyson.md#common-notation)
+- [MaskSetting](#masksettings)
+- [TextSetting](#textsettings)
 
 ## Common Notation
 
@@ -977,7 +978,6 @@ textsettings is json array list, List of texts display with effect and animation
   | 70  | 255 |
   | 520  | 255 | 
 
-
 - **maskingeq:** maskingeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F means at 60 frame Mask value is 0_0_0_F means (Left -> 0, Top -> 0, Width -> F, Height -> F) here F means Full Size
 
   `"maskingeq" : "getFBF()#60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F"`
@@ -997,8 +997,6 @@ textsettings is json array list, List of texts display with effect and animation
   
   ![maskingeq2](./images/maskingeq2.png)
 
-
-
 - **blendmode:** *blendmode is used for blend this image on below images with different modes
   modes are mention in below table(work on both text and Mask)*
 
@@ -1014,7 +1012,7 @@ textsettings is json array list, List of texts display with effect and animation
 
   #### Flip mode type
   | Mode | Value |
-      |-----|----|
+  |-----|----|
   | No Flip  | `1,1` |
   | Horizontal  | `-1,1` |
   | Vertical  | `1,-1` |
