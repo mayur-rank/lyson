@@ -723,6 +723,7 @@
 
   `"filtermode" : "blur#5"`     
 
+  ##### Filter Mode Table
   | Name | Function | Images | Parameter | Default Value |
   |---|---|---| --- | --- |
   | Gray  | `gray` | - |    | `gray`  |
@@ -735,7 +736,7 @@
   |Rgb | `rgb#0.9#0.7#0.9` | <a target="_blank" href="./images/filter_Rgb.jpg" > Sample </a> |  RED # GREEN # BLUE  | `rgb#1.0#1.0#1.0`|
   |Rgbdiation | `rgbdiation#3` | <a target="_blank" href="./images/filter_rgbdiation.jpg" > Sample </a> | RADIUS | `rgbdiation#3` |
   |Hue | `hue#100.7` | <a target="_blank" href="./images/filter_hue.jpg" > Sample </a> |  HUE | `hue#90.0` |
-  |Whitebalance | `whitebalance#4000.0#0.6` | <a target="_blank" href="./images/filter_whitebalance.jpg" > Sample </a> | TEMPERATURE#TINT | `whitebalance#5000.0#0.6` |
+  |Whitebalance | `whitebalance#4000.0#0.6` | <a target="_blank" href="./images/filter_whitebalance.jpg" > Sample </a> | TEMPERATURE # TINT | `whitebalance#5000.0#0.6` |
   |Monochrome | `monochrome`  | <a target="_blank" href="./images/filter_monocheome.jpg" > Sample </a> | - |  `monochrome` |
   |Falsecolor | `falsecolor#0.3#0.3#0.6#0.10#0.9#0.10` | <a target="_blank" href="./images/filter_falsecolor jpg" > Sample </a> | FIRSTRED # FIRSTGREEN #FIRSTBLUE | `falsecolor#0.0#0.0#0.5#1.0#0.0#0.0` | 
   |Sharpen | `sharpen#2.9`  | <a target="_blank" href="./images/filter_sharpen.jpg" > Sample </a> | SHARPEN | `sharpen#1.0` |
@@ -774,7 +775,23 @@
   |Glass Sphere | `glasssphere#0.5#0.5#0.45#0.5` | <a target="_blank" href="./images/filter_glasssphere.jpg" > Sample </a> | CENTER # RADIUS # REFRACTIVEINDEX  |  `glasssphere#0.5#0.5#0.25#0.71` | 
   |Dilation | `dilation#2` | <a target="_blank" href="./images/filter_dilation.jpg" > Sample </a> | RADIUS | `dilation#1` | 
 
+- **filtermodeeq:** *getFBF() function get filter value frame by frame*
 
+  `"filtermodeeq": "getFBF()#halftone#0,228:0.01,0.05"`
+
+  `"filtermodeeq": "getFBF()#hue#0,40,180,228:0,100,100,0"`
+  
+  ```
+  "filtermodeeq": "getFBF()#whitebalance#228,260,400,440:1000_0,5000_0.6,5000_0.6,1000_0"
+
+  | frame | Value | Parsing
+  |-----|----| ---|
+  | 228  | 1000_0 | `TEMPERATURE=1000, TINT=0` |
+  | 260  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
+  | 400  | 5000_0.6 | `TEMPERATURE=5000, TINT=0.6` |
+  | 440  | 1000_0 | ``TEMPERATURE=1000, TINT=0` |
+  
+  ```
 
 - **aifilter:** *aifilter is ai photo effect*
 
