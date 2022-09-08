@@ -117,6 +117,7 @@
 
   `"aimodel": ["face278","facemask","disney","comic"]`
 
+   #### aifilter list
   | Effect | Need of Model |  
     -------|------------  
   | Face Key Point  | "face278" |  
@@ -709,6 +710,16 @@
   ![Filter Mode2](./images/filtermode2.PNG)
   ![Filter Mode3](./images/filtermode3.PNG)
   ![Filter Mode4](./images/filtermode4.PNG)
+
+
+- **aifilter:** *aifilter is ai photo effect*
+
+  `"aifilter": "disney,comic,removebg"`
+
+  `"aifilter": "clothesseg"`
+
+  #### aifilter list [More](#photoeffect--photoname-combination-table)
+  `disney` `comic` `removebg` `3dgame` `skyseg` `headseg` `hairseg` `clothesseg` `cartoon`
 
 ## textsettings
 
