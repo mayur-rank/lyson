@@ -379,7 +379,7 @@
   `"textsampleval" : "MICHAEL & JESSICA"`
 
   ##### Used of textsampleval
-  | textinputcontrol  | textsampleval |  Notes | 
+  | textinputcontrol  | Code |  Notes | 
   |----------|-------------------------------| ------ |
   |          | `"MICHAEL & JESSICA"`           | Pre store text value |
   | date    |  `"-"` `"/"` `":"` | Date Format dd/MM/YYYY |
@@ -400,30 +400,38 @@
   - **text `Default`:** *In this type input control is Textbox user need to insert text in that box If textsampleval has a value, then that value is pre-filled in the textbox*
     
   - **spinner:** *This is spinner type input control. List of value is created from **textsampleval** with `:` as separator*
-  
-    `"textinputcontrol" : "spinner"`
-    `"textsampleval" : "Its Baby Boy:Its Baby Girl"`
+    
+    ```
+    "textinputcontrol" : "spinner"
+    "textsampleval" : "Its Baby Boy:Its Baby Girl"
+    ```
   
     > As per above example there is dropdown list with two item `Its Baby Boy` `Its Baby Girl`
   
   - **spinnerid:** *This is spinner type input control, List of value is created from **textsampleval** with `:` as separator*
-  
-    `"textinputcontrol" : "spinnerid"`
-    `"textsampleval" : "Hindi:Tamil:Telugu"`
+
+    ```
+    "textinputcontrol" : "spinnerid"
+    "textsampleval" : "Hindi:Tamil:Telugu"
+    ```
   
     > user has three options Hindi, Tamil, Telugu. If user selects Tamil then spinner id value is 2(Id value is used to select input value)
     
   - **date:** *This is Date Picker control, User can select date from calendar. But the format of date is depends on textsampleval* `Default: /`
-  
-    `"textinputcontrol" : "date"`
-    `"textsampleval" : "-"`
+
+    ```
+    "textinputcontrol" : "date"
+    "textsampleval" : "-"
+    ```
   
     > date is something like 23-01-2020.
     
   - **time:** *This is Time Picker control, User can select time from time picker dialog. But the type of time format **(12 hr/ 24 hr)** is depends on textsampleval* `Default: 12`
-      
-    `"textinputcontrol" : "time"`
-    `"textsampleval" : "24"`
+
+    ```
+    "textinputcontrol" : "time"
+    "textsampleval" : "24"
+    ```
   
     > time is something like 13:06.
 
@@ -470,34 +478,37 @@
 
 - **isedited:** *isedited is true when you want image from user *(used with maskinputid)* and false when take image direct from template assets *(used with imgname)* `Default: true`
 
-  | 1 | 2 |
-  |---|---|
-  | `"isedited" : "true"` |
-  `"maskinputid" : "mask1"`
-
   1. **maskinputid:** *maskinputid represent the input that need to show here this id must be in maskinputs list. Image is get from this mask input id (isedited must be is true)*
+    
+     ```
+     "isedited" : "true"
+     "maskinputid" : "mask1"
+     ```
 
-     `"isedited" : "true"`
-     `"maskinputid" : "mask1"`
+  3. **imgname:** *This is image name contain in template assets.
 
-  2. **imgname:** *This is image name contain in template assets.
-
-    `"isedited" : "false"`
-    `"imgname" : "img_heart.png"`
-
+     ```
+     "isedited" : "false"
+     "imgname" : "img_heart.png"
+     ```
+  
     - **randimg():** *randimg() function is used to select one of random image from list*
 
-      `"isedited" : "true"`
-      `"imgname" : "randimg()#img_heart.png:img_heart1.png"`
-
+      ```
+      "isedited" : "false"
+      "imgname" : "randimg()#img_heart.png:img_heart1.png"
+      ```
+      
       > Here randimg() is join with img_heart.png:img_heart1.png using “#” .
         Means after # there is list of image which contain in template. In list image
         name is join with “:” separator. Random image is select from this list
 
     - **selecetbyinput():** *selecetbyinput() function is used to select one of image from id chosen by user in  spinnerid text input control*
 
-      `"isedited" : "true"`
-      `"imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"`
+      ```
+      "isedited" : "false"
+      "imgname" : "selecetbyinput()#text2#lg_hi.png:lg_ti.png:lg_te.png"
+      ```
 
       > Here selecetbyinput() is join with text2 using “#” . Here text2 is text input
           mension in textinpus list. text2 is joint with lg_hi.png:lg_ti.png:lg_te.png using
@@ -507,12 +518,17 @@
 
     - **createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,  frame is optional to overlay on mask*
 
-      `"isedited" : "true"`
+      ```
+      `"isedited" : "false"`
       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
-
+      ```
+       
+      ```
+      `"isedited" : "false"`
       `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
-  
-      > *createImgOnInput()* function is used to crop image from (100,200) to base on mask.jpg, frame is optional to overlay on mask
+      ```
+      
+      > createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg, frame is optional to overlay on mask
     
 - **timestartoffsetfps:** *timestartoffsetfps is frame value where animation need to start `default: 0`, means animation start at 0 frame of that part*
 
@@ -701,7 +717,7 @@ textsettings is json array list, List of texts display with effect and animation
 
   `"custextid" : "10"`  
 
-- **isedited:** *isedited is true when you want text from user(used with textinputids) and false when text source is from json (default value is false)*
+- **isedited:** *isedited is true when you want text from user(used with textinputids) and false when text source is from json* `default: false`
 
   `"isedited" : "true"`   
 
@@ -709,322 +725,329 @@ textsettings is json array list, List of texts display with effect and animation
 
   `"textinputids" : "text3"`   
 
-  `"textinputids": `"text2,text3"`   
+  `"textinputids": "text2,text3"`   
 
 - **text:** *text define value which is draw in canvas there is so much method and equation for text value.*
      - Single value input text, for this isedited = true, and textinputs must be declare in json.
 
-         `"text": "My name is ZZZ"`
-
-         `"isedited": "true"`
-            
-         `"textinputids": "text3"`
+       ```
+       "text": "My name is ZZZ"
+       "isedited": "true"            
+       "textinputids": "text3"
+       ```
         
-     Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
+       > Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
         
      - Multi value input text, for this isedited = true, and textinputs must be declare in json
 
-         `"text": "YYY love ZZZ"`
+       ```
+       "text": "YYY love ZZZ"
+       "isedited": "true"      
+       "textinputids": "text2,text3"
+       ```
 
-         `"isedited": "true"`
-            
-         `"textinputids": "text2,text3"`
+       > Here text string is create using text2 & text3 input value, suppose user fill value in text2 is *Rahul*, and key for text2 is *YYY* and fill value for text3 is *Sima*, and key for text3 is *ZZZ* then text string is *Rahul love Sima*
 
-         Here text string is create using text2 & text3 input value, suppose user fill value in text2 is *Rahul*, and key for text2 is *YYY* and fill value for text3 is *Sima*, and key for text3 is *ZZZ* then text string is *Rahul love Sima*
+     - No input value
 
-     - No input value, for this isedited = false
+       ```
+       "text": "Invite you to join"
+       "isedited": "false"
+       ```
 
-         `"text": "Invite you to join"`
+       > Text string is *Invite you to join*
 
-         `"isedited": "false"`
+     - **getrand()** Get random value from range
 
-     Text string is *Invite you to join*
+       ```
+       "text": " getrand()#100#200#VAL%"
+       "isedited": "false"
+       ```
 
-     - Get random value from range, for this isedited = false
+       > getrand() function used to select random value, full string separate with “#”, second value is start limit 100 and third value is end limit 200 and VAL is key word where random value replace, % is post string join with random value. May be text is 120% , 130% or 141% it is between 100 to 200 and % join with rand value
 
-         `"text": " getrand()#100#200#VAL%"`
+       | STRING CODE           | RANGE      |
+       |-----------------------|------------|
+       | getrand()#VAL         | 0 to 100   |
+       | getrand()#500#VAL     | 0 to 500   |
+       | getrand()#200#500#VAL | 200 to 500 |
 
-         `"isedited": "false"`
+     - **getdate()** Get current datetime
 
-     getrand() function used to select random value, full string separate with “#”, second value is start limit 100 and third value is end limit 200 and VAL is key word where random value replace, % is post string join with random value. May be text is 120% , 130% or 141% it is between 100 to 200 and % join with rand value
+       ```
+       "text": "getdate()#dd-MM-yyyy HH:mm#VAL is here"
+       "isedited": "false"
+       ```
 
-     | STRING CODE           | RANGE      |
-     |-----------------------|------------|
-     | getrand()#VAL         | 0 to 100   |
-     | getrand()#500#VAL     | 0 to 500   |
-     | getrand()#200#500#VAL | 200 to 500 |
+       > getdate() function used to selected date time, full string separate with *#*,second part mention format of datetime, VAL is key word where datetime value replace, and * is here* post value join with date Text value is like *01-01-2020 10:30 is here*
 
-     - Get current datetime, for this isedited = false
+       | STRING CODE                        | STRING               |
+       |------------------------------------|----------------------|
+       | getdate()#VAL                      | 01-01-2020           |
+       | getdate()#dd, MMM yyyy#VAL is here | 01, JAN 2020 is here |
+       | getdate()#dd/MM/yyyy HH:mm:ss#VAL  | 01/01/2020 10:30:34  |
 
-         `"text": "getdate()#dd-MM-yyyy HH:mm#VAL is here"`
+     - **selectline()** Get random one line from list
+     
+       ```
+       "text": "selectline()#I m here:You r here" 
+       "isedited": "false"
+       ```
+ 
+       > selectline() function used to select random line from list join with *#* , Here *I m here:You r here* is two line one of it selected as random
 
-         `"isedited": "false"`
+     - **selecetbyinput()** function is used to select one of line from id chosen by user in spinnerid text input control
 
-     getdate() function used to selected date time, full string separate with *#*,second part mention format of datetime, VAL is key word where datetime value replace, and * is here* post value join with date Text value is like *01-01-2020 10:30 is here*
+       ```
+       "text": "selecetbyinput()#text2#Hindi:Tamil:Telugu"           
+       "isedited": "false"
+       ```
 
-     | STRING CODE                        | STRING               |
-     |------------------------------------|----------------------|
-     | getdate()#VAL                      | 01-01-2020           |
-     | getdate()#dd, MMM yyyy#VAL is here | 01, JAN 2020 is here |
-     | getdate()#dd/MM/yyyy HH:mm:ss#VAL  | 01/01/2020 10:30:34  |
+       > Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
 
-     - Get random one line from list, for this isedited = false
 
-         `"text": "selectline()#I m here:You r here"`
-            
-         `"isedited": "false"`
+- **timestartoffsetfps:** *timestartoffsetfps is frame value where animation need to start `default: 0`, means animation start at 0 frame of that part*
 
-     selectline() function used to select random line from list join with *#* , Here *I m here:You r here* is two line one of it selected as random
+  `"timestartoffsetfps" : "0"`
 
-     - selecetbyinput() function is used to select one of line from id chosen by user in spinnerid text input control
+  ![timestartoffsetfps](./images/timestartoffsetfps.png)
 
-         `"text": "selecetbyinput()#text2#Hindi:Tamil:Telugu"`
-            
-         `"isedited": "false"`
+  > In above example if image is show between 8 to 14 sec then there is time frame
+  consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
+  between this.
 
-     Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
+- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end* `default: 0` means animation end at last frame of that part, refers above image*
 
-     - textanimation
-     textanimation is text transition animation, type of animation alpha, zoom, alphazoom, zoomout, noanim (default is noanim)
+  `"timeendoffsetfps" : "100"`
 
-         `"textanimation": "alpha"`
+  > Here value is 100 then end animation for this image is start at 13 sec
 
-- timestartoffsetfps        
-timestartoffsetfps is frame value where animation need to start (default is 0, means animation start at 0 frame of that part)
+- **textbiteffect** textbiteffect is text animation on music bit, Type of animation is zoom, image change describe in detail (default is n/a)
+ 
+  `"textbiteffect" : "Z#103”`
+  `"texttop": "464"`
 
-    `"timestartoffsetfps": "0"`
-![timestartoffsetfps2](./images/timestartoffsetfps2.png)
+  > First type of animation is Zoom text on bit effect, below is syntax define this animation. Here Z mention zoom and # join with value 103, New biteqscale value create using 103 with max value in biteqscale
 
+
+- **textrotate:** *textrotate is angle of rotation with above left and top value`Default: 0`*
+
+  `"textrotate" : "90"`
+
+- **textrotateeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,68,72,90,520:7.5,7.5,5.5,0,0 means at 64 frame rotate angle
+  value is 7.5° means*
+
+  `"textrotateeq": "getFBF()#64,68,72,90,520:7.5,7.5,5.5,0,0"`
+
+  #### Timeline
+  | frame | Value |
+    |-----|----|
+  | 64  | 90 |
+  | 68  | 0 |
+  | 72  | -90 |
+  | 90  | 45 |
+
+- **textleft:** *textleft is left point where image need to draw in 720X1280 canvas `Default: 0`*
+
+  `"maskleft" : "464"`
+
+- **textlefteq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:720,0,0,0 means at 0 frame left value is 720 means*
+
+  `"textlefteq": "getFBF()#0,60,70,520:720,0,0,0"`
+
+  #### Timeline
+  | frame | Value |
+    |-----|----|
+  | 0  | 720 |
+  | 60  | 0 |
+  | 70  | 0 |
+  | 520  | 0 |
+
+- **texttop:** *texttop is top point where image need to draw in 720X1280 canvas `Default: 0`*
+
+  `"texttop" : "464"`
+
+- **texttopeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:-1280,0,0,0 means at 0 frame top value is -1280*
+
+  `"texttopeq": "getFBF()#0,60,70,520:-1280,0,0,0"`
+
+  #### Timeline
+  | frame | Value |
+    |-----|----|
+  | 0  | -1280 |
+  | 60  | 0 |
+  | 70  | 0 |
+  | 520  | 0 |
+
+- **textwidth:** *textwidth is width of box where you draw text in center *
+ 
+  `"textwidth" : "178"`
+  
+  > Only used with textaling -> center
+
+- **textaling:** *textaling is text alignment* 
+
+  `"textaling": "center"`
+   
+  ##### Textaling list
+  `left` `right` `center`
+  
+  ##### Example to used Textaling with left, top and width
+  ![textaling](./images/textaling.png)
+ 
+  > textaling is center then textwidth is needed
         
-         In above example if image is show between 8 to 14 sec then there is time frame consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps between this.         
+- **textline:** 8textline is define max number of line the text will be drawing.*
 
-        - timeendoffsetfps                
-        timeendoffsetfps is frame value where animation need to end (default is 0, means animation end at last frame of that part, refers above image)
+  `"textline" : "1"`
 
-            `"timeendoffsetfps": "100"`
+  > if textline > 1  linePadding value needed 
+  
+- **linePadding:** *linePadding is space between two line.
+  ```
+  "textline" : "2"
+  "linePadding" : "20"
+  ```
 
-        Here value is 100 then end animation for this image is start at 13 sec 
+- **textfont:** *textfont is text style for drawing text in canvas.*
+
+  `"textfont": "Lobster.otf"`
+
+- **textsize:** *textsize is text size for drawing text in canvas.*
         
-        - hasendanimation 
-        hasendanimation is false when you don’t want animation at end point, and true when you need it (default is true)
+  `"textsize": "65"`
 
-            `"hasendanimation" : "false"`
+- **textcolor:** *textcolor is text color for drawing text in canvas.*
 
-        - textbiteffect (Only work type -> biteffect)
-        textbiteffect is text animation on music bit, Type of animation is zoom, image change describe in detail (default is n/a)
+  `"textcolor": "#ffffff"`
 
-            - First type of animation is Zoom text on bit effect, below is syntax define this animation. Here Z mention zoom and # join with value 103, New biteqscale value create using 103 with max value in biteqscale
+- **textpattern:** *textpattern is image and used as bitmap shader for drawing text in canvas.*
 
-                `"textbiteffect" : "Z#103”`
+  `"textpattern": "img_pattern.png"`
 
-                `"masktop": "464"`
+- **textcolor:** *textcolor is text color for drawing text in canvas.*
 
-       - textrotate
-       textrotate is angle of rotation with below left and top value(default value is 0)
+  `"textcolor": "#ffffff"`
 
-         `"textrotate" : "90"`
-
-            Timeline mode is here
-
-            - textrotateeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 20,40,80:10,0,0 means at 20 frame rotation angle is 10°
-                - 20 -> 10
-                - 40 -> 0
-                - 80 -> 0
-
-                `"textrotateeq": "getFBF()#20,40,80:10,0,0"`
-
-        - textleft              
-        textleft is left point where text need to draw in 720X1280 canvas
-
-            `"textleft": "464"`        
-        Timeline mode is here
-            - textlefteq Value Contain with getFBF() function join (#)with frame:Value List, as per below list 20,40,80:-720,0,0 means at 20 frame left value is -720
-                - 20 -> -720
-                - 40 -> 0
-                - 80 -> 0   
-
-                `"textlefteq": "getFBF()#20,40,80:-720,0,0"`
-
-        - texttop
-        texttop is top point where text need to draw in 720X1280 canvas
-
-            `"texttop": "1135"`
-
-            Timeline mode is here
-
-            - texttopeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 20,40,80:0,583,583 means at 20 frame top value is 0
-
-                `"texttopeq": "getFBF()#20,40,80:0,583,583"`
-
-        - textwidth
-        textwidth is width of box where you draw text in center (Only used with textaling -> center)
+- **textstrokecolor:** *textstrokecolor is border color for drawing text in canvas.*
         
-            `"textwidth" : "178"`
+  `"textstrokecolor": "#1f1f1f"`
+ 
+- **textstrokesize:** *textstrokesize is border size for drawing text in canvas.*
 
-        - textaling
-        textaling is text alignment, type of alignment left, right, center (textaling used width texttop & textleft, if textaling is center then textwidth is must be applicable)
+  `"textstrokesize": "2"`
 
-            `"textaling": "center"`
-![textaling](./images/textaling.png)
+- **textshadowradious:** *textshadowradious is size(expand) of drop shadow border for drawing text in canvas.*
         
+  `"textshadowradious": "2"`
 
-        - textline
-        textline is define max number of line the text will be drawing.(line > 1 must be define value for linePadding)
-
-            `"textline" : "1"`
-
-        - linePadding
-        linePadding is space between two line.(if textline > 1 must be define value for linePadding)
-
-            `"textline" : "2"`
-            `"linePadding" : "20"`
-
-        - textfont
-        textfont is text style for drawing text in canvas.(This font file must be put in  template package)
-
-            `"textfont": "Lobster.otf"`
-
-        - textsize 
-        textsize is text size for drawing text in canvas.
+- **textshadowdx:** *textshadowdx is intensity of drop shadow in x direction.*
         
-            `"textsize": "65"`
+  `"textshadowdx": "1"`
 
-        - textcolor
-        textcolor is text color for drawing text in canvas.
-
-            `"textcolor": "#ffffff"`
-
-        - textpattern
-        textpattern is image and used as bitmap shader for drawing text in canvas.(must be put that image in template package)
+- **textshadowdy:**  *textshadowdy is intensity of drop shadow in y direction.*
         
-            `"textpattern": "img_pattern.png"`
+  `"textshadowdy": "1"`
 
-        - textcolor
-        textcolor is text color for drawing text in canvas.
+- **textscaleeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,60,70,520:103,103,100,100 means at 0 frame scale value is 103 means `Default: 100`*
 
-            `"textcolor": "#ffffff"`
+  `"textscaleeq": "getFBF()#0,60,70,520:103,103,100,100"`
 
-        - textstrokecolor
-        textstrokecolor is border color for drawing text in canvas.
-        
-            `"textstrokecolor": "#1f1f1f"`
+  #### Timeline
+  | frame | Value |
+    |-----|----|
+  | 0  | 103 |
+  | 60  | 103 |
+  | 70  | 100 |
+  | 520  | 100 |
 
-        - textstrokesize
-        textstrokesize is border size for drawing text in canvas.
+- **textalpha:** *textalpha is used for transparency of image value between 0 – 255 `Default: 255`*
 
-            `"textstrokesize": "2"`
+  `"textalpha" : "255"`
 
-        - textshadowradious
-        textshadowradious is size(expand) of drop shadow border for drawing text in canvas.
-        
-            `"textshadowradious": "2"`
+- **textalphaeq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 64,70,520:0,255,255 means at 64 frame opacity value is 255 means (Opacity range is 0 - 255)*
 
-        - textshadowdx
-        textshadowdx is intensity of drop shadow in x direction.
-        
-            `"textshadowdx": "1"`
+  `"textalphaeq": "getFBF()#64,70,520:0,255,255"`
 
-        - textshadowdy 
-        textshadowdy is intensity of drop shadow in y direction.
-        
-            `"textshadowdy": "1"`
+  #### Timeline
+  | frame | Value |
+    |-----|----|
+  | 0  | 0 |
+  | 60  | 128 |
+  | 70  | 255 |
+  | 520  | 255 | 
 
-        - textalpha
-        textalpha is used for transparency of text value between 0 – 255(default value is 255)
-        
-        `"textalpha": "255"`
-        
-        Timeline mode is here
-        
-        - textalphaeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 20,40,80:0,255,255 means at 20 frame opacity value is 0 (opacity range is 0 -> 255)
-                - 20 -> 0
-                - 40 -> 255
-                - 80 -> 255
-            
-            `"textalphaeq": "getFBF()#20,40,80:0,255,255"`
 
-        - textscaleeq
-        textscaleeq Value Contain with getFBF() function join (#)with frame:Value List, as per below list 20,40,80:110,100,100 means at 20 frame scale value is 110 (scale value 100 is actual size)
-            - 20 -> 110
-            - 40 -> 100
-            - 80 -> 100
-        
-            `"textscaleeq": "getFBF()#20,40,80:110,100,100",`
+- **maskingeq:** maskingeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F means at 60 frame Mask value is 0_0_0_F means (Left -> 0, Top -> 0, Width -> F, Height -> F) here F means Full Size
 
-        - maskingeq (different value compare to mask, Text masking contain only 0 & F Value)maskingeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F means at 60 frame Mask value is 0_0_0_F means (Left -> 0, Top -> 0, Width -> F, Height -> F) here F means Full Size
+  `"maskingeq" : "getFBF()#60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F"`
 
-        |                   | Frame | Value   |
-        |-------------------|-------|---------|
-        | Start Animation   | 60    | 0_0_0_F |
-        | Start Animation   | 80    | 0_0_F_F |
-        | Closing Animation | 260   | 0_0_F_F |
-        | Closing Animation | 260   | F_0_F_F |
+  |                   | Frame | Value   |
+  |-------------------|-------|---------|
+  | Start Animation   | 60    | 0_0_0_F |
+  | Start Animation   | 80    | 0_0_F_F |
+  | Closing Animation | 260   | 0_0_F_F |
+  | Closing Animation | 260   | F_0_F_F |
 
-        `"maskingeq" : "getFBF()#60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F"`
+  > Below String contain #FFFFFF is color code used to fill remain part of mask which is *transparent as default *
 
-        Below String contain #FFFFFF is color code used to fill remain part of mask which is *transparent as default (This is mainly used when maskingeq deal with blendmode multiply)*
+  `"maskingeq" : "getFBF()#60,80,260,280:F_0_F_F,0_0_F_F,0_0_F_F,0_0_0_F#FFFFFF"`
 
-        `"maskingeq" : "getFBF()#60,80,260,280:F_0_F_F,0_0_F_F,0_0_F_F,0_0_0_F#FFFFFF"`
+  > Here mentions all Text Masking animation in below Table
+  
+  ![maskingeq2](./images/maskingeq2.png)
 
-        Here mentions all Text Masking animation in below Table
-![maskingeq2](./images/maskingeq2.png)
 
-        - blendmode (work on both text and Mask)
-        blendmode is used for blend this text on below images with different modes modes are mention in below table 
-        Blendmode Value : add , darken , lighten , multiply , overlay , screen
-        
-            `"blendmode": "overlay"`
 
-        - flipmode (work on both text and Mask)
-        flipmode is used to flip text horizontal, vertical or horizontal + vertical
-        
-        | Flip Mode             | Value |
-        |-----------------------|-------|
-        | No Flip               | 1,1   |
-        | Horizontal            | -1,1  |
-        | Vertical              | 1,-1  |
-        | Horizontal + Vertical | -1,-1 |
+- **blendmode:** *blendmode is used for blend this image on below images with different modes
+  modes are mention in below table(work on both text and Mask)*
 
-        '"flipmode": "-1,1"'
+  `"blendmode" : "overlay"`
 
-        - textbgcolor (used to set bgcolor on text background)
-        
-            `"textbgcolor": "#ffffff"`
+  #### Blendmode list [More](#photoeffect--photoname-combination-table)
+  `add` `darken` `lighten` `multiply` `overlay` `screen`
 
-        - textCase
-        
-            textCase define case of input string fill by user. There is four type of case (not applicable with textinputcontrol -> spinner/date/time) (default no case apply)
-        Ex : taj mahal hotel PLACE, RAipur
 
-        | CASE     | EXAMPLE                       |
-        |----------|-------------------------------|
-        | lower    | taj mahal hotel place, raipur |
-        | upper    | TAJ MAHAL HOTEL PLACE, RAIPUR |
-        | word     | Taj Mahal Hotel Place, Raipur |
-        | sentence | Taj mahal hotel place, raipur |
+- **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
 
-        `"textCase" : "upper"`
+  `"flipmode" : "-1,1"`
 
-        - dateformat
+  #### Flip mode type
+  | Mode | Value |
+      |-----|----|
+  | No Flip  | `1,1` |
+  | Horizontal  | `-1,1` |
+  | Vertical  | `1,-1` |
+  | Horizontal + Vertical  | `-1,-1` |
 
-            dateformat used to format date suppose Date is (01/12/1988)   
 
-        | FORMATE       | EXAMPLE           |
-        |---------------|-------------------|
-        | dd.MM.yyyy    | 10.12.1988        |
-        | dd, MMM yyyy  | 10, Dec 1988      |
-        | MMMM dd, yyyy | December 10, 1988 |
-        | weekday       | Thursday          |
+- **textbgcolor:** *used to set bgcolor on text background*
 
-        `"dateformat" : "dd, MMM yyyy"`
+  `"textbgcolor": "#ffffff"`
 
-        - skipvalueoninput is work with input is skiable
-        
-            `"skipvalueoninput": "mask5#false"`
+- **textCase:** *textCase define case of input string fill by user.* [More](#textcase-list)
 
-            Above line show that if mask5 input is (isskip = false) means user fill mask5 input then this setting show in timeline
+  `"textCase" : "upper"`  
 
-            `"skipvalueoninput": "text2#true"`
+- **dateformat** *dateformat used to format date suppose Date is (01/12/1988)*   
 
-        Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
+  `"dateformat" : "dd, MMM yyyy"`
+
+  | FORMATE       | EXAMPLE           |
+  |---------------|-------------------|
+  | dd.MM.yyyy    | 10.12.1988        |
+  | dd, MMM yyyy  | 10, Dec 1988      |
+  | MMMM dd, yyyy | December 10, 1988 |
+  | weekday       | Thursday          |
+
+- **skipvalueoninput:** *is work with input is skiable*
+
+  `"skipvalueoninput" : "mask5#false"`
+
+  > Above line show that if mask5 input is (isskip = false) means user fill mask5 input then this setting show in timeline
+
+  `"skipvalueoninput": "text2#true"`
+
+  >  Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
+
 
