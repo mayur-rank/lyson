@@ -546,13 +546,13 @@
     - **createImgOnInput():** *createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg,  frame is optional to overlay on mask*
 
       ```
-      `"isedited" : "false"`
-      `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"`
+      "isedited" : "false"
+      "imgname" : "createImgOnInput()#mask1#100#200#mask.jpg"
       ```
        
       ```
-      `"isedited" : "false"`
-      `"imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"`
+      "isedited" : "false"
+      "imgname" : "createImgOnInput()#mask1#100#200#mask.jpg#frame.jpg"
       ```
       
       > createImgOnInput() function is used to crop image from (100,200) to base on mask.jpg, frame is optional to overlay on mask
