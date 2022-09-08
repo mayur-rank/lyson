@@ -204,7 +204,7 @@
 
   `"maskimg": "page1_mask1.png"`
 
-  - *selecetbyinput() eq is used to get mask image from previous text input, here selecetbyinput() join with (#) text1 join with (#) mask image list, It means image is selected from list base on text1 input*
+  - **selecetbyinput()** *eq is used to get mask image from previous text input, here selecetbyinput() join with (#) text1 join with (#) mask image list, It means image is selected from list base on text1 input*
 
     `"maskimg": "selecetbyinput()#text1#m_mask.png:a_mask.png:y_mask.png"`
 
@@ -212,7 +212,7 @@
 
   `"maskover": "page1_frame1.png"`
 
-  - *selecetbyinput() eq is used to get overlay image from previous text input, here selecetbyinput() join with (#) text1 join with (#) over image list, It means image is selected from list base on text1 input*
+  - **selecetbyinput()** *eq is used to get overlay image from previous text input, here selecetbyinput() join with (#) text1 join with (#) over image list, It means image is selected from list base on text1 input*
 
     `"maskover": "selecetbyinput()#text1#m_frame.png:a_frame.png:y_frame.png"`
 
