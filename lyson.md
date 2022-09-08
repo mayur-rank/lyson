@@ -685,7 +685,7 @@
   |---|---|---| --- |
   | Gray  | `gray` | - |  |
   | Blur  | `blur` `blue#5` | - |Blur image with 25 default radius |
-  | Saturation  | `saturation#2.50` | ![Image](./images/filter_saturation.jpg=100x100) | `Default: 1.0` |
+  | Saturation  | `saturation#2.50` | <img src="./images/filter_saturation.jpg" width="100">![Image]( | width=100) | `Default: 1.0` |
   | Contrast  | `contrast#2.0` | ![Image](./images/filter_contras.jpg=100x100) |`Default: 1.2` |
     
 
