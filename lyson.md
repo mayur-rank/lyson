@@ -723,56 +723,56 @@
 
   `"filtermode" : "blur#5"`     
 
-  | Name | Function | Images | Default | Parameter |
+  | Name | Function | Images | Parameter | Default Value |
   |---|---|---| --- | --- |
-  | Gray  | `gray` | - | `gray`  |    |
-  | Blur  | `blur` `blue#5` | - | `blue#25` |   |
-  |Saturation | `saturation#2.50` | <a target="_blank" href="./images/filter_saturation.jpg" > Sample </a> | `saturation#1.0` | SATURATION |
-  |Contrast | `contrast#2.0` | <a target="_blank" href="./images/filter_contrast.jpg" > Sample </a> | `contrast#1.2` | CONTRAST |
-  |Brightness | `brightness#0.3` | <a target="_blank" href="./images/filter_brightness.jpg" > Sample </a> | `brightness#0.0` | BRIGHTNESS  |
-  |Levels | levels | <a target="_blank" href="./images/filter_levels.jpg" > Sample </a> | levels |-|
-  |Exposure | `exposure#0.7` | <a target="_blank" href="./images/filter_exposure.jpg" > Sample </a> | `exposure#1.0` |EXPOSURE|
-  |Rgb | `rgb#0.9#0.7#0.9` | <a target="_blank" href="./images/filter_Rgb.jpg" > Sample </a> | `rgb#1.0#1.0#1.0`| RED#GREEN#BLUE  |
-  |Rgbdiation | `rgbdiation#3` | <a target="_blank" href="./images/filter_rgbdiation.jpg" > Sample </a> | `rgbdiation#3` |RADIUS |
-  |Hue | `hue#100.7` | <a target="_blank" href="./images/filter_hue.jpg" > Sample </a> | `hue#90.0` | HUE |
-  |Whitebalance | `whitebalance#4000.0#0.6` | <a target="_blank" href="./images/filter_whitebalance.jpg" > Sample </a> | `whitebalance#5000.0#0.6` | TEMPERATURE#TINT |
-  |Monochrome | `monochrome`  | <a target="_blank" href="./images/filter_monocheome.jpg" > Sample </a> | `monochrome` |- | 
-  |Falsecolor | `falsecolor#0.3#0.3#0.6#0.10#0.9#0.10` | <a target="_blank" href="./images/filter_falsecolor jpg" > Sample </a> | `falsecolor#0.0#0.0#0.5#1.0#0.0#0.0` | FIRSTRED # FIRSTGREEN #FIRSTBLUE |
-  |Sharpen | `sharpen#2.9`  | <a target="_blank" href="./images/filter_sharpen.jpg" > Sample </a> | `sharpen#1.0` |
-  |Transformoperation  | `transformoperation` | <a target="_blank" href="./images/filter_transformoperation.jpg" > Sample </a> | `transformoperation` |-|
-  |Gamma| `gamma#1.6` | <a target="_blank" href="./images/filter_gamma.jpg" > Sample </a> | `gamma#1.2` | GAMMA |
-  |Highlightsandshadows | `highlightsandshadows#1.0#0.9` | <a target="_blank" href="./images/filter_highlightsandows .jpg" > Sample </a> | `highlightsandshadows#0.0#0.1` | HIGHLIGHTS # SHADOWS |
-  |Haze | `haze#1.0#0.2` | <a target="_blank" href="./images/filter_haze.jpg" > Sample </a> | `haze#0.2#0.0` |DISTANCE # SLOPE |
-  |Sepiatone | `sepiatone#1.5` | <a target="_blank" href="./images/filter_sepiatone.jpg" > Sample </a> | `sepiatone#1.5` | INTENSITY  |
-  |Colorinversion | `colorinversion` | <a target="_blank" href="./images/filter_colorinversion.jpg" > Sample </a> | `colorinversion` | - | 
-  |Solarize | `solarize#1.5` | <a target="_blank" href="./images/filter_solarize.jpg" > Sample </a> | `solarize#1.0` | THRESHOLD |
-  |Vibrance | `vibrance#1.5` | <a target="_blank" href="./images/filter_vibrance.jpg" > Sample </a> | `vibrance#0.0` | VIBRANCE | 
-  |Luminance | `luminance` | <a target="_blank" href="./images/filter-luminance.jpg" > Sample </a> | `luminance` | - | 
-  |Luminancethreshold | `luminancethreshold#0.45` | <a target="_blank" href="./images/filter_luminqncethershold.jpg" > Sample </a> | `luminancethreshold#0.5` | THRESHOLD  |
-  |Pixellate | `pixellate#30` | <a target="_blank" href="./images/filter_pixellate.jpg" > Sample </a> | `pixellate#50` | PIXEL |
-  |Halftone | `halftone#0.01` | <a target="_blank" href="./images/filter_halftone.jpg" > Sample </a> | `halftone#0.01` | FRACTIONALWIDTHOFAPIXEL   |
-  |Crosshatch | `crosshatch#0.02#0.006` | <a target="_blank" href="./images/filter_crosshatch.jpg" > Sample </a> | `crosshatch#0.03#0.003` | CROSSHATCHSPACING#LINEWIDTH  |
-  |Sobel Edge Detection | `sobeledgedetection` | <a target="_blank" href="./images/filter_sobeledgedetection.jpg" > Sample </a> | `sobeledgedetection` |
-  |Threshold Sobel Edge Detection | `thresholdsobeledgedetection` | <a target="_blank" href="./images/filter_thresholdsobeledgedetection.jpg" > Sample </a> | `thresholdsobeledgedetection' | - |
-  |Sketch | `sketch` | <a target="_blank" href="./images/filter_sketch.jpg" > Sample </a> | `sketch` | - |
-  |Toon| `toon#0.7#15.0` | <a target="_blank" href="./images/filter_toon.jpg" > Sample </a> | `toon#0.2#10.0` | THRESHOLD#QUANANTIZATIONLEVELS |
-  |Smoothtoon | `smoothtoon` | <a target="_blank" href="./images/filter_smoothtoon.jpg" > Sample </a> | `smoothtoon` |- |
-  |Cga Color Space | `cgacolorspace` | <a target="_blank" href="./images/filter_cgacolorspace.jpg" > Sample </a> | `cgacolorspace` | - | 
-  |Posterize | `posterize#7` | <a target="_blank" href="./images/filter_posterize.jpg" > Sample </a> | `posterize#10` | COLORLEVELS |
-  |Convolution | `convolution#0.10#0.10#.10#0.10#2.0#0.10#0.10#0.10#0.10` | <a target="_blank" href="./images/filter_convolution.jpg" > Sample </a> | `convolution#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0` | MV1 # MV2 # MV3 # MV4 # MV5 # MV6# MV7 # MV8 # MV9 |
-  |Emboss| `emboss#1.2` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> | `emboss#1.0` | INTENSITY |
-  |Laplacian | `laplacian` | <a target="_blank" href="./images/filter_laplacian.jpg" > Sample </a> | `laplacian` | - |
-  |Kuwahara| `kuwahara#1` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> | `kuwahara#1` | RADIUS |
-  |Vignette | `vignette` | <a target="_blank" href="./images/filter_vignette.jpg" > Sample </a> | `vignette` | - | 
-  |Gaussian Blur | `gaussianblur#1.5` | <a target="_blank" href="./images/filter_gaussianblur.jpg" > Sample </a> | `gaussianblur#1.0` | BLUERSIZE |
-  |Box Blur | `boxblur#3` | <a target="_blank" href="./images/filter_boxblur.jpg" > Sample </a> | `boxblur#1` | BLUERSIZE |
-  |Bilateral Blur | `bilateralblur#10.6` | <a target="_blank" href="./images/filter_bilateralblur.jpg" > Sample </a> | `bilateralblur#8.0` | DISTANCENORMALLIZATIONFACTOR |
-  |Zoom Blur | `zoomblur#2#4#3` | <a target="_blank" href="./images/filter_zoomblur.jpg" > Sample </a> | `zoomblur#0.5#0.5#0.2` | BLUERCENTER#BLUERSIZE |
-  |Swirl | `swirl#5#5#10` | <a target="_blank" href="./images/filter_swirl.jpg" > Sample </a> | `swirl#0.5#0.5#1.0` | CENTER#RADIUS#ANGLE  |
-  |Bulge | `bulge#0.9#0.8#0.10` | <a target="_blank" href="./images/filter_bulge.jpg" > Sample </a> | `bulge#0.5#0.5#0.5` | CENTER#RADIUS#SCALE |
-  |Sphre Refraction | `sphrerefraction#0.3#0.4#0.5#0.5` | <a target="_blank" href="./images/filter_sphrerefraction.jpg" > Sample </a> | `sphrerefraction#0.5#0.5#0.25#0.71`	 | CENTER#RADIUS#REFRACTIVEINDEX  |
-  |Glass Sphere | `glasssphere#0.5#0.5#0.45#0.5` | <a target="_blank" href="./images/filter_glasssphere.jpg" > Sample </a> | `glasssphere#0.5#0.5#0.25#0.71` | CENTER#RADIUS#REFRACTIVEINDEX  | 
-  |Dilation | `dilation#2` | <a target="_blank" href="./images/filter_dilation.jpg" > Sample </a> | `dilation#1` | RADIUS |
+  | Gray  | `gray` | - |    | `gray`  |
+  | Blur  | `blur` `blue#5` |   | - | `blue#25` |
+  |Saturation | `saturation#2.50` | <a target="_blank" href="./images/filter_saturation.jpg" > Sample </a> | SATURATION | `saturation#1.0` |
+  |Contrast | `contrast#2.0` | <a target="_blank" href="./images/filter_contrast.jpg" > Sample </a> | CONTRAST | `contrast#1.2` |
+  |Brightness | `brightness#0.3` | <a target="_blank" href="./images/filter_brightness.jpg" > Sample </a> | BRIGHTNESS  | `brightness#0.0` | 
+  |Levels | levels | <a target="_blank" href="./images/filter_levels.jpg" > Sample </a> | - |`levels` |
+  |Exposure | `exposure#0.7` | <a target="_blank" href="./images/filter_exposure.jpg" > Sample </a> |EXPOSURE| `exposure#1.0` |
+  |Rgb | `rgb#0.9#0.7#0.9` | <a target="_blank" href="./images/filter_Rgb.jpg" > Sample </a> |  RED # GREEN # BLUE  | `rgb#1.0#1.0#1.0`|
+  |Rgbdiation | `rgbdiation#3` | <a target="_blank" href="./images/filter_rgbdiation.jpg" > Sample </a> | RADIUS | `rgbdiation#3` |
+  |Hue | `hue#100.7` | <a target="_blank" href="./images/filter_hue.jpg" > Sample </a> |  HUE | `hue#90.0` |
+  |Whitebalance | `whitebalance#4000.0#0.6` | <a target="_blank" href="./images/filter_whitebalance.jpg" > Sample </a> | TEMPERATURE#TINT | `whitebalance#5000.0#0.6` |
+  |Monochrome | `monochrome`  | <a target="_blank" href="./images/filter_monocheome.jpg" > Sample </a> | - |  `monochrome` |
+  |Falsecolor | `falsecolor#0.3#0.3#0.6#0.10#0.9#0.10` | <a target="_blank" href="./images/filter_falsecolor jpg" > Sample </a> | FIRSTRED # FIRSTGREEN #FIRSTBLUE | `falsecolor#0.0#0.0#0.5#1.0#0.0#0.0` | 
+  |Sharpen | `sharpen#2.9`  | <a target="_blank" href="./images/filter_sharpen.jpg" > Sample </a> | SHARPEN | `sharpen#1.0` |
+  |Transformoperation  | `transformoperation` | <a target="_blank" href="./images/filter_transformoperation.jpg" > Sample </a> | -| `transformoperation` |
+  |Gamma| `gamma#1.6` | <a target="_blank" href="./images/filter_gamma.jpg" > Sample </a> | GAMMA | `gamma#1.2` | 
+  |Highlightsandshadows | `highlightsandshadows#1.0#0.9` | <a target="_blank" href="./images/filter_highlightsandows .jpg" > Sample </a> |  HIGHLIGHTS # SHADOWS | `highlightsandshadows#0.0#0.1` |
+  |Haze | `haze#1.0#0.2` | <a target="_blank" href="./images/filter_haze.jpg" > Sample </a> | DISTANCE # SLOPE | `haze#0.2#0.0` |
+  |Sepiatone | `sepiatone#1.5` | <a target="_blank" href="./images/filter_sepiatone.jpg" > Sample </a> | INTENSITY  | `sepiatone#1.5` | 
+  |Colorinversion | `colorinversion` | <a target="_blank" href="./images/filter_colorinversion.jpg" > Sample </a> |  - |  `colorinversion` |
+  |Solarize | `solarize#1.5` | <a target="_blank" href="./images/filter_solarize.jpg" > Sample </a> | THRESHOLD | `solarize#1.0` | 
+  |Vibrance | `vibrance#1.5` | <a target="_blank" href="./images/filter_vibrance.jpg" > Sample </a> |  VIBRANCE |  `vibrance#0.0` |
+  |Luminance | `luminance` | <a target="_blank" href="./images/filter-luminance.jpg" > Sample </a> | - |  `luminance` | 
+  |Luminancethreshold | `luminancethreshold#0.45` | <a target="_blank" href="./images/filter_luminqncethershold.jpg" > Sample </a> | THRESHOLD  |`luminancethreshold#0.5` | 
+  |Pixellate | `pixellate#30` | <a target="_blank" href="./images/filter_pixellate.jpg" > Sample </a> |  PIXEL | `pixellate#50` |
+  |Halftone | `halftone#0.01` | <a target="_blank" href="./images/filter_halftone.jpg" > Sample </a> | FRACTIONALWIDTHOFAPIXEL   | `halftone#0.01` | 
+  |Crosshatch | `crosshatch#0.02#0.006` | <a target="_blank" href="./images/filter_crosshatch.jpg" > Sample </a> |  CROSSHATCHSPACING # LINEWIDTH  | `crosshatch#0.03#0.003` | 
+  |Sobel Edge Detection | `sobeledgedetection` | <a target="_blank" href="./images/filter_sobeledgedetection.jpg" > Sample </a> | - | `sobeledgedetection` |
+  |Threshold Sobel Edge Detection | `thresholdsobeledgedetection` | <a target="_blank" href="./images/filter_thresholdsobeledgedetection.jpg" > Sample </a> | - | `thresholdsobeledgedetection` | 
+  |Sketch | `sketch` | <a target="_blank" href="./images/filter_sketch.jpg" > Sample </a> |  - | `sketch` |
+  |Toon| `toon#0.7#15.0` | <a target="_blank" href="./images/filter_toon.jpg" > Sample </a> | THRESHOLD # QUANANTIZATIONLEVELS | `toon#0.2#10.0` | 
+  |Smoothtoon | `smoothtoon` | <a target="_blank" href="./images/filter_smoothtoon.jpg" > Sample </a> | - | `smoothtoon` |
+  |Cga Color Space | `cgacolorspace` | <a target="_blank" href="./images/filter_cgacolorspace.jpg" > Sample </a> | - |  `cgacolorspace` | 
+  |Posterize | `posterize#7` | <a target="_blank" href="./images/filter_posterize.jpg" > Sample </a> | COLORLEVELS | `posterize#10` | 
+  |Convolution | `convolution#0.10#0.10#.10#0.10#2.0#0.10#0.10#0.10#0.10` | <a target="_blank" href="./images/filter_convolution.jpg" > Sample </a> |  MV1 # MV2 # MV3 # MV4 # MV5 # MV6# MV7 # MV8 # MV9 | `convolution#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0` |
+  |Emboss| `emboss#1.2` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> | INTENSITY | `emboss#1.0` | 
+  |Laplacian | `laplacian` | <a target="_blank" href="./images/filter_laplacian.jpg" > Sample </a> |  - |`laplacian` | 
+  |Kuwahara| `kuwahara#1` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> |   RADIUS | `kuwahara#1` |
+  |Vignette | `vignette` | <a target="_blank" href="./images/filter_vignette.jpg" > Sample </a> | - |  `vignette` | 
+  |Gaussian Blur | `gaussianblur#1.5` | <a target="_blank" href="./images/filter_gaussianblur.jpg" > Sample </a> | BLUER SIZE | `gaussianblur#1.0` | 
+  |Box Blur | `boxblur#3` | <a target="_blank" href="./images/filter_boxblur.jpg" > Sample </a> | BLUERSIZE | `boxblur#1` | 
+  |Bilateral Blur | `bilateralblur#10.6` | <a target="_blank" href="./images/filter_bilateralblur.jpg" > Sample </a> | DISTANCE NORMALLIZATION FACTOR | `bilateralblur#8.0` | 
+  |Zoom Blur | `zoomblur#2#4#3` | <a target="_blank" href="./images/filter_zoomblur.jpg" > Sample </a> | BLUERCENTER # BLUERSIZE | `zoomblur#0.5#0.5#0.2` | 
+  |Swirl | `swirl#5#5#10` | <a target="_blank" href="./images/filter_swirl.jpg" > Sample </a> | CENTER # RADIUS # ANGLE  | `swirl#0.5#0.5#1.0` | 
+  |Bulge | `bulge#0.9#0.8#0.10` | <a target="_blank" href="./images/filter_bulge.jpg" > Sample </a> |  CENTER # RADIUS # SCALE | `bulge#0.5#0.5#0.5` |
+  |Sphre Refraction | `sphrerefraction#0.3#0.4#0.5#0.5` | <a target="_blank" href="./images/filter_sphrerefraction.jpg" > Sample </a> | CENTER # RADIUS # REFRACTIVEINDEX  | `sphrerefraction#0.5#0.5#0.25#0.71`	 | 
+  |Glass Sphere | `glasssphere#0.5#0.5#0.45#0.5` | <a target="_blank" href="./images/filter_glasssphere.jpg" > Sample </a> | CENTER # RADIUS # REFRACTIVEINDEX  |  `glasssphere#0.5#0.5#0.25#0.71` | 
+  |Dilation | `dilation#2` | <a target="_blank" href="./images/filter_dilation.jpg" > Sample </a> | RADIUS | `dilation#1` | 
 
 
 
