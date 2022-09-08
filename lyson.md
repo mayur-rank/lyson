@@ -790,7 +790,7 @@
 
   `"maskcover": "cover.jpg#screen"`
 
-- **hasvalue:** This item is draw if hasvalue condition is true
+- **hasvalue:** *This item is draw if hasvalue condition is true*
 
   `"hasvalue" = "textFName"`
   
@@ -1025,7 +1025,7 @@ textsettings is json array list, List of texts display with effect and animation
 
   > if textline > 1  linePadding value needed 
   
-- **linePadding:** *linePadding is space between two line.
+- **linePadding:** *linePadding is space between two line.*
   ```
   "textline" : "2"
   "linePadding" : "20"
@@ -1099,7 +1099,7 @@ textsettings is json array list, List of texts display with effect and animation
   | 70  | 255 |
   | 520  | 255 | 
 
-- **maskingeq:** maskingeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F means at 60 frame Mask value is 0_0_0_F means (Left -> 0, Top -> 0, Width -> F, Height -> F) here F means Full Size
+- **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List,as per below list 60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F means at 60 frame Mask value is 0_0_0_F means (Left -> 0, Top -> 0, Width -> F, Height -> F) here F means Full Size*
 
   `"maskingeq" : "getFBF()#60,80,260,280:0_0_0_F,0_0_F_F,0_0_F_F,F_0_F_F"`
 
@@ -1169,7 +1169,7 @@ textsettings is json array list, List of texts display with effect and animation
 
   >  Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
 
-- **hasvalue:** This item is draw if hasvalue condition is true
+- **hasvalue:** *This item is draw if hasvalue condition is true*
 
   `"hasvalue" = "textFName"`
 
