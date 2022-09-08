@@ -811,10 +811,16 @@
 - **hasvalue:** *This item is draw if hasvalue condition is true*
 
   `"hasvalue" = "textFName"`
-  
+
+  > if textFName has value then this item draw on canvas
+
   `"hasvalue" = "textFName&textLName"`
 
+  > if textFName and textLName both has value then this item draw on canvas
+
   `"hasvalue" = "textFName|textLName"`
+
+  > if textFName  or textLName any one has value then this item draw on canvas
 
 
 ## textsettings
@@ -1207,6 +1213,14 @@ textsettings is json array list, List of texts display with effect and animation
 
   `"hasvalue" = "textFName"`
 
+  > if textFName has value then this item draw on canvas
+
   `"hasvalue" = "textFName&textLName"`
 
+  > if textFName and textLName both has value then this item draw on canvas
+
   `"hasvalue" = "textFName|textLName"`
+
+  > if textFName  or textLName any one has value then this item draw on canvas
+
+  
