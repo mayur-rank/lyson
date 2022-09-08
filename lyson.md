@@ -473,6 +473,11 @@
 ## Masksettings
    masksettings is json array list, This is list of images display with effect and animation in timeline.
 
+
+```
+
+```
+
 - **cusmaskid:** *cusmaskid is unique number, cusmaskid decided which layer is draw first. Means
      cusmaskid is used to manage layer in frame.*
 
@@ -567,7 +572,14 @@
   - Third Type Is also called GIF Mode loop() is prefix join with number is speed in example is it 3 means every third frame next image show in list, after number there is list of image join with : (scale and rotation not apply on GIF Mode)
   
   `"maskbiteffect" : "loop()#3#anim1.png:anim2.png:anim3.png:anim4.png:anim5.png"`
-  
+
+  - Alpha animation with bit effect *"alpha#-1"* -1 means reverse animation
+
+  `"maskbiteffect" : "alpha"`
+
+  `"maskbiteffect" : "alpha#-1"`
+
+
 - **maskleft:** *maskleft is left point where image need to draw in 720X1280 canvas `Default: 0`*
 
    `"maskleft" : "464"`
@@ -617,6 +629,18 @@
   | 68  | 0 |
   | 72  | -90 |
   | 90  | 45 |
+
+- **maskrotate3deq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,20,60:0_45_0,0_0_90,0_0_0 means at 0 frame rotate angle
+  value is 0_45_0 means x=0°, y=45°, z=0°* 
+
+  `"maskrotate3deq": "maskrotate3deq: getFBF()#0,20,60:0_45_0,0_0_90,0_0_0"`
+
+  #### Timeline
+  | frame | Value | Angle
+  |-----|----| ---|
+  | 0  | 90 | `x=0°, y=45°, z=0°` |
+  | 20  | 0 | `x=0°, y=0°, z=90°` |
+  | 60  | -90 | `x=0°, y=0°, z=0°` |
 
 - **maskscale:** *maskscale is percentage of imahe scale, If it 100 then image draw with original, If it is 50 then image draw with half value, If value is 200 image with double size drawn.*`Default: 100`
 
@@ -701,15 +725,54 @@
 
   | Name | Function | Images | Default
   |---|---|---| --- |
-  | Gray  | `gray` | - |  |
+  | Gray  | `gray` | - | `gray`  |
   | Blur  | `blur` `blue#5` | - | `blue#25` |
-  | Saturation  | `saturation#2.50` | <img src="./images/filter_saturation.jpg" width="200"> | `contrast#1.0` |
-    
-
-  ![Filter Mode1](./images/filtermode1.PNG)
-  ![Filter Mode2](./images/filtermode2.PNG)
-  ![Filter Mode3](./images/filtermode3.PNG)
-  ![Filter Mode4](./images/filtermode4.PNG)
+  |Saturation | `saturation#2.50` | <a target="_blank" href="./images/filter_saturation.jpg" > Sample </a> | `saturation#1.0` |
+  |Contrast | `contrast#2.0` | <a target="_blank" href="./images/filter_contrast.jpg" > Sample </a> | `contrast#1.2` |
+  |Brightness | `brightness#0.3` | <a target="_blank" href="./images/filter_brightness.jpg" > Sample </a> | `brightness#0.0` |
+  |Levels | levels | <a target="_blank" href="./images/filter_levels.jpg" > Sample </a> | levels |
+  |Exposure | `exposure#0.7` | <a target="_blank" href="./images/filter_exposure.jpg" > Sample </a> | `exposure#1.0` |
+  |Rgb | `rgb#0.9#0.7#0.9` | <a target="_blank" href="./images/filter_Rgb.jpg" > Sample </a> | `rgb#1.0#1.0#1.0`|
+  |Rgbdiation | `rgbdiation#3` | <a target="_blank" href="./images/filter_rgbdiation.jpg" > Sample </a> | `rgbdiation#3` |
+  |Hue | `hue#100.7` | <a target="_blank" href="./images/filter_hue.jpg" > Sample </a> | `hue#90.0` |
+  |Whitebalance | `whitebalance#4000.0#0.6` | <a target="_blank" href="./images/filter_whitebalance.jpg" > Sample </a> | `whitebalance#5000.0#0.6` |
+  |Monochrome | `monochrome`  | <a target="_blank" href="./images/filter_monocheome.jpg" > Sample </a> | `monochrome` |
+  |Falsecolor | `falsecolor#0.3#0.3#0.6#0.10#0.9#0.10` | <a target="_blank" href="./images/filter_falsecolor jpg" > Sample </a> | `falsecolor#0.0#0.0#0.5#1.0#0.0#0.0` |
+  |Sharpen | `sharpen#2.9`  | <a target="_blank" href="./images/filter_sharpen.jpg" > Sample </a> | `sharpen#1.0` |
+  |Transformoperation  | `transformoperation` | <a target="_blank" href="./images/filter_transformoperation.jpg" > Sample </a> | `transformoperation` |
+  |Gamma| `gamma#1.6` | <a target="_blank" href="./images/filter_gamma.jpg" > Sample </a> | `gamma#1.2` |
+  |Highlightsandshadows | `highlightsandshadows#1.0#0.9` | <a target="_blank" href="./images/filter_highlightsandows .jpg" > Sample </a> | `highlightsandshadows#0.0#0.1` |
+  |Haze | `haze#1.0#0.2` | <a target="_blank" href="./images/filter_haze.jpg" > Sample </a> | `haze#0.2#0.0` |
+  |Sepiatone | `sepiatone#1.5` | <a target="_blank" href="./images/filter_sepiatone.jpg" > Sample </a> | `sepiatone#1.5` |
+  |Colorinversion | `colorinversion` | <a target="_blank" href="./images/filter_colorinversion.jpg" > Sample </a> | `colorinversion` |
+  |Solarize | `solarize#1.5` | <a target="_blank" href="./images/filter_solarize.jpg" > Sample </a> | `solarize#1.0` |
+  |Vibrance | `vibrance#1.5` | <a target="_blank" href="./images/filter_vibrance.jpg" > Sample </a> | `vibrance#0.0` |
+  |Luminance | `luminance` | <a target="_blank" href="./images/filter-luminance.jpg" > Sample </a> | `luminance` |
+  |Luminancethreshold | `luminancethreshold#0.45` | <a target="_blank" href="./images/filter_luminqncethershold.jpg" > Sample </a> | `luminancethreshold#0.5` |
+  |Pixellate | `pixellate#30` | <a target="_blank" href="./images/filter_pixellate.jpg" > Sample </a> | `pixellate#50` |
+  |Halftone | `halftone#0.01` | <a target="_blank" href="./images/filter_halftone.jpg" > Sample </a> | `halftone#0.01` |
+  |Crosshatch | `crosshatch#0.02#0.006` | <a target="_blank" href="./images/filter_crosshatch.jpg" > Sample </a> | `crosshatch#0.03#0.003` |
+  |Sobel Edge Detection | `sobeledgedetection` | <a target="_blank" href="./images/filter_sobeledgedetection.jpg" > Sample </a> | `sobeledgedetection` |
+  |Threshold Sobel Edge Detection | `thresholdsobeledgedetection` | <a target="_blank" href="./images/filter_thresholdsobeledgedetection.jpg" > Sample </a> | `thresholdsobeledgedetection' |
+  |Sketch | `sketch` | <a target="_blank" href="./images/filter_sketch.jpg" > Sample </a> | `sketch` |
+  |Toon| `toon#0.7#15.0` | <a target="_blank" href="./images/filter_toon.jpg" > Sample </a> | `toon#0.2#10.0` |
+  |Smoothtoon | `smoothtoon` | <a target="_blank" href="./images/filter_smoothtoon.jpg" > Sample </a> | `smoothtoon` |
+  |Cga Color Space | `cgacolorspace` | <a target="_blank" href="./images/filter_cgacolorspace.jpg" > Sample </a> | `cgacolorspace` |
+  |Posterize | `posterize#7` | <a target="_blank" href="./images/filter_posterize.jpg" > Sample </a> | `posterize#10` |
+  |Convolution | `convolution#0.10#0.10#.10#0.10#2.0#0.10#0.10#0.10#0.10` | <a target="_blank" href="./images/filter_convolution.jpg" > Sample </a> | `convolution#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0#0.0` |
+  |Emboss| `emboss#1.2` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> | `emboss#1.0` |
+  |Laplacian | `laplacian` | <a target="_blank" href="./images/filter_laplacian.jpg" > Sample </a> | `laplacian` |
+  |Kuwahara| `kuwahara#1` | <a target="_blank" href="./images/filter_emboss.jpg" > Sample </a> | `kuwahara#1` |
+  |Vignette | `vignette` | <a target="_blank" href="./images/filter_vignette.jpg" > Sample </a> | `vignette` |
+  |Gaussian Blur | `gaussianblur#1.5` | <a target="_blank" href="./images/filter_gaussianblur.jpg" > Sample </a> | `gaussianblur#1.0` |
+  |Box Blur | `boxblur#3` | <a target="_blank" href="./images/filter_boxblur.jpg" > Sample </a> | `boxblur#1` |
+  |Bilateral Blur | `bilateralblur#10.6` | <a target="_blank" href="./images/filter_bilateralblur.jpg" > Sample </a> | `bilateralblur#8.0` |
+  |Zoom Blur | `zoomblur#2#4#3` | <a target="_blank" href="./images/filter_zoomblur.jpg" > Sample </a> | `zoomblur#0.5#0.5#0.2` |
+  |Swirl | `swirl#5#5#10` | <a target="_blank" href="./images/filter_swirl.jpg" > Sample </a> | `swirl#0.5#0.5#1.0` |
+  |Bulge | `bulge#0.9#0.8#0.10` | <a target="_blank" href="./images/filter_bulge.jpg" > Sample </a> | `bulge#0.5#0.5#0.5` |
+  |Sphre Refraction | `sphrerefraction#0.3#0.4#0.5#0.5` | <a target="_blank" href="./images/filter_sphrerefraction.jpg" > Sample </a> | `sphrerefraction#0.5#0.5#0.25#0.71`	 |
+  |Glass Sphere | `glasssphere#0.5#0.5#0.45#0.5` | <a target="_blank" href="./images/filter_glasssphere.jpg" > Sample </a> | `glasssphere#0.5#0.5#0.25#0.71` |
+  |Dilation | `dilation#2` | <a target="_blank" href="./images/filter_dilation.jpg" > Sample </a> | `dilation#1` |
 
 
 - **aifilter:** *aifilter is ai photo effect*
@@ -735,7 +798,6 @@
 
   `"hasvalue" = "textFName|textLName"`
 
-  
 
 ## textsettings
 
@@ -833,6 +895,21 @@ textsettings is json array list, List of texts display with effect and animation
        ```
 
        > Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
+       
+     - **selecttext()** function substring function syntax `selecttext()#inputid#formate#string`
+
+       ```
+       "text": "selecttext()#txt1#latter:1#<VAL> is here"           
+       "isedited": "false"
+       ```
+     
+       > In above example <VAL> is replace with user input (txt1) value, it user enter Rohan in txt1 id then string with be *R is here*
+       
+       ##### format type
+
+       `latter:1` `latter:N` `word:1` `word:N` `substring:2` `substring:0,2` `substring:2,N`
+  
+       > here N is length of string
 
 
 - **timestartoffsetfps:** *timestartoffsetfps is frame value where animation need to start `default: 0`, means animation start at 0 frame of that part*
@@ -854,10 +931,14 @@ textsettings is json array list, List of texts display with effect and animation
 - **textbiteffect** textbiteffect is text animation on music bit, Type of animation is zoom, image change describe in detail (default is n/a)
  
   `"textbiteffect" : "Z#103”`
-  `"texttop": "464"`
 
   > First type of animation is Zoom text on bit effect, below is syntax define this animation. Here Z mention zoom and # join with value 103, New biteqscale value create using 103 with max value in biteqscale
 
+  `"textbiteffect" : "alpha"`
+
+  `"textbiteffect" : "alpha#-1"`
+  
+  > *"alpha#-1"* -1 means reverse animation
 
 - **textrotate:** *textrotate is angle of rotation with above left and top value`Default: 0`*
 
@@ -875,6 +956,18 @@ textsettings is json array list, List of texts display with effect and animation
   | 68  | 0 |
   | 72  | -90 |
   | 90  | 45 |
+
+- **textrotate3deq:** *Value Contain with getFBF() function join (#)with frame:Value List, as per below list 0,20,60:0_45_0,0_0_90,0_0_0 means at 0 frame rotate angle
+  value is 0_45_0 means x=0°, y=45°, z=0°*
+
+  `"textrotate3deq": "maskrotate3deq: getFBF()#0,20,60:0_45_0,0_0_90,0_0_0"`
+
+  #### Timeline
+  | frame | Value | Angle
+    |-----|----| ---|
+  | 0  | 90 | `x=0°, y=45°, z=0°` |
+  | 20  | 0 | `x=0°, y=0°, z=90°` |
+  | 60  | -90 | `x=0°, y=0°, z=0°` |
 
 - **textleft:** *textleft is left point where image need to draw in 720X1280 canvas `Default: 0`*
 
