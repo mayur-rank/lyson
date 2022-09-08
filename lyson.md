@@ -392,7 +392,7 @@
 
   `"isskip" : "true"`
 
-- **textinputcontrol:** *Input type method mention in below [list](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textinputcontrol-type-list) * `Default: text`
+- **textinputcontrol:** *Input type method mention in below* [list](https://github.com/mayur-rank/lyson/blob/main/lyson.md#textinputcontrol-type-list)  `Default: text`
 
   `"textinputcontrol" : "spinner"`
 
@@ -451,7 +451,7 @@
 
   `"background" : "bg.jpg"`
 
-  - **randimg():** *randimg() eq function is used to select one of random image from list
+  - **randimg():** *randimg() eq function is used to select one of random image from list*
 
     `"background" : "randimg()#bg1.png: bg2.png"`
 
@@ -502,7 +502,7 @@
 
      `"cusmaskid" : "1"`
 
-- **isedited:** *isedited is true when you want image from user *(used with maskinputid)* and false when take image direct from template assets *(used with imgname)* `Default: true`
+- **isedited:** *isedited is true when you want image from user (used with maskinputid) and false when take image direct from template assets (used with imgname)* `Default: true`
 
   1. **maskinputid:** *maskinputid represent the input that need to show here this id must be in maskinputs list. Image is get from this mask input id (isedited must be is true)*
     
@@ -511,7 +511,7 @@
      "maskinputid" : "mask1"
      ```
 
-  3. **imgname:** *This is image name contain in template assets.
+  3. **imgname:** *This is image name contain in template assets.*
 
      ```
      "isedited" : "false"
@@ -566,7 +566,7 @@
     consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
     between this. 
 
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end* `default: 0` means animation end at last frame of that part, refers above image*
+- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end `default: 0` means animation end at last frame of that part, refers above image*
 
   `"timeendoffsetfps" : "100"`
 
@@ -695,8 +695,7 @@
 
 
 - **maskingeq:** *maskingeq Value Contain with getFBF() function join (#)with frame:Value List, as per below list 130,150,160,200:0_0_335_0,0_0_335_466,0_0_335_466,0_0_335_466 means at
-  130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335,
-  Height -> 0)
+  130 frame Mask value is 0_0_335_0 means (Left -> 0, Top -> 0, Width -> 335, Height -> 0)*
 
   ![maskingeq](./images/maskingeq.png)
 
@@ -716,7 +715,7 @@
   `add` `darken` `lighten` `multiply` `overlay` `screen`
 
 
-- **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
+- **flipmode:** *flipmode is used to flip image*
 
   `"flipmode" : "-1,1"`
  
@@ -924,7 +923,7 @@ textsettings is json array list, List of texts display with effect and animation
 
 - **text:** *text define value which is draw in canvas there is so much method and equation for text value.*
      
-     - Single value input text, for this isedited = true, and textinputs must be declare in json.
+     - *Single value input text, for this isedited = true, and textinputs must be declare in json.*
 
        ```
        "text": "My name is ZZZ"
@@ -934,7 +933,7 @@ textsettings is json array list, List of texts display with effect and animation
         
        > Here text string is create using text3 input value, suppose user fill value in text3  is *Rahul*, and key for text3 is *ZZZ* then text string is *My name is Rahul*
         
-     - Multi value input text, for this isedited = true, and textinputs must be declare in json
+     - *Multi value input text, for this isedited = true, and textinputs must be declare in json*
 
        ```
        "text": "YYY love ZZZ"
@@ -944,7 +943,7 @@ textsettings is json array list, List of texts display with effect and animation
 
        > Here text string is create using text2 & text3 input value, suppose user fill value in text2 is *Rahul*, and key for text2 is *YYY* and fill value for text3 is *Sima*, and key for text3 is *ZZZ* then text string is *Rahul love Sima*
 
-     - No input value
+     - *No input value*
 
        ```
        "text": "Invite you to join"
@@ -953,7 +952,7 @@ textsettings is json array list, List of texts display with effect and animation
 
        > Text string is *Invite you to join*
 
-     - **getrand()** Get random value from range
+     - **getrand()** *Get random value from range*
 
        ```
        "text": " getrand()#100#200#VAL%"
@@ -968,14 +967,14 @@ textsettings is json array list, List of texts display with effect and animation
        | getrand()#500#VAL     | 0 to 500   |
        | getrand()#200#500#VAL | 200 to 500 |
 
-     - **getdate()** Get current datetime
+     - **getdate()** *Get current datetime*
 
        ```
        "text": "getdate()#dd-MM-yyyy HH:mm#VAL is here"
        "isedited": "false"
        ```
 
-       > getdate() function used to selected date time, full string separate with *#*,second part mention format of datetime, VAL is key word where datetime value replace, and * is here* post value join with date Text value is like *01-01-2020 10:30 is here*
+       > getdate() function used to selected date time, full string separate with `#`,second part mention format of datetime, VAL is key word where datetime value replace, and *VAL is here* post value join with date Text value is like *01-01-2020 10:30 is here*
 
        | STRING CODE                        | STRING               |
        |------------------------------------|----------------------|
@@ -983,7 +982,7 @@ textsettings is json array list, List of texts display with effect and animation
        | getdate()#dd, MMM yyyy#VAL is here | 01, JAN 2020 is here |
        | getdate()#dd/MM/yyyy HH:mm:ss#VAL  | 01/01/2020 10:30:34  |
 
-     - **selectline()** Get random one line from list
+     - **selectline()** *Get random one line from list*
      
        ```
        "text": "selectline()#I m here:You r here" 
@@ -992,7 +991,7 @@ textsettings is json array list, List of texts display with effect and animation
  
        > selectline() function used to select random line from list join with *#* , Here *I m here:You r here* is two line one of it selected as random
 
-     - **selecetbyinput()** function is used to select one of line from id chosen by user in spinnerid text input control
+     - **selecetbyinput()** *function is used to select one of line from id chosen by user in spinnerid text input control*
 
        ```
        "text": "selecetbyinput()#text2#Hindi:Tamil:Telugu"           
@@ -1001,7 +1000,7 @@ textsettings is json array list, List of texts display with effect and animation
 
        > Here selecetbyinput() is join with text2 using “#” . Here text2 is text input mansion in textinpus list. text2 is joint with Hindi:Tamil:Telugu using “#” . Means after this there is list of line. In list line is join with “:” separator. Line contain with text2 input value is selected from list. If spinnerid value is 0 -> Hindi, 1 -> Tamil,2 -> Telugu
        
-     - **selecttext()** function substring function syntax `selecttext()#inputid#formate#string`
+     - **selecttext()** *function substring function syntax* `selecttext()#inputid#formate#string`
 
        ```
        "text": "selecttext()#txt1#latter:1#<VAL> is here"           
@@ -1027,7 +1026,7 @@ textsettings is json array list, List of texts display with effect and animation
   consider as 0 – 120 and we need to fill both timestartoffsetfps, timeendoffsetfps
   between this.
 
-- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end* `default: 0` means animation end at last frame of that part, refers above image*
+- **timeendoffsetfps:** *timeendoffsetfps is frame value where animation need to end `default: 0` means animation end at last frame of that part, refers above image*
 
   `"timeendoffsetfps" : "100"`
 
@@ -1106,7 +1105,7 @@ textsettings is json array list, List of texts display with effect and animation
   | 70  | 0 |
   | 520  | 0 |
 
-- **textwidth:** *textwidth is width of box where you draw text in center *
+- **textwidth:** *textwidth is width of box where you draw text in center*
  
   `"textwidth" : "178"`
   
@@ -1124,7 +1123,7 @@ textsettings is json array list, List of texts display with effect and animation
  
   > textaling is center then textwidth is needed
         
-- **textline:** 8textline is define max number of line the text will be drawing.*
+- **textline:** *textline is define max number of line the text will be drawing.*
 
   `"textline" : "1"`
 
@@ -1215,7 +1214,7 @@ textsettings is json array list, List of texts display with effect and animation
   | Closing Animation | 260   | 0_0_F_F |
   | Closing Animation | 260   | F_0_F_F |
 
-  > Below String contain #FFFFFF is color code used to fill remain part of mask which is *transparent as default *
+  > Below String contain #FFFFFF is color code used to fill remain part of mask which is *transparent as default*
 
   `"maskingeq" : "getFBF()#60,80,260,280:F_0_F_F,0_0_F_F,0_0_F_F,0_0_0_F#FFFFFF"`
 
@@ -1232,7 +1231,7 @@ textsettings is json array list, List of texts display with effect and animation
   `add` `darken` `lighten` `multiply` `overlay` `screen`
 
 
-- **flipmode:** *flipmode is used to flip image horizontal, vertical or horizontal + vertical
+- **flipmode:** *flipmode is used to flip image*
 
   `"flipmode" : "-1,1"`
 
