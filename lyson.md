@@ -117,7 +117,7 @@
 
   `"aimodel": ["face278","facemask","disney","comic"]`
 
-   #### aifilter list
+   #### aimodel with effect
   | Effect | Need of Model |  
     -------|------------  
   | Face Key Point  | "face278" |  
@@ -718,8 +718,24 @@
 
   `"aifilter": "clothesseg"`
 
-  #### aifilter list [More](#photoeffect--photoname-combination-table)
+  #### aifilter list [More](#aimodel-with-effect)
   `disney` `comic` `removebg` `3dgame` `skyseg` `headseg` `hairseg` `clothesseg` `cartoon`
+
+- **maskcover:** *maskcover is overlay apply on image with blendmode [More](#blendmode-list-more)*
+
+  `"maskcover": "cover.jpg"`
+
+  `"maskcover": "cover.jpg#screen"`
+
+- **hasvalue:** This item is draw if hasvalue condition is true
+
+  `"hasvalue" = "textFName"`
+  
+  `"hasvalue" = "textFName&textLName"`
+
+  `"hasvalue" = "textFName|textLName"`
+
+  
 
 ## textsettings
 
@@ -740,6 +756,7 @@ textsettings is json array list, List of texts display with effect and animation
   `"textinputids": "text2,text3"`   
 
 - **text:** *text define value which is draw in canvas there is so much method and equation for text value.*
+     
      - Single value input text, for this isedited = true, and textinputs must be declare in json.
 
        ```
@@ -1059,4 +1076,10 @@ textsettings is json array list, List of texts display with effect and animation
 
   >  Above line show that if text2 input is (isskip = true) means user skip text2 input then this setting show in timeline
 
+- **hasvalue:** This item is draw if hasvalue condition is true
 
+  `"hasvalue" = "textFName"`
+
+  `"hasvalue" = "textFName&textLName"`
+
+  `"hasvalue" = "textFName|textLName"`
