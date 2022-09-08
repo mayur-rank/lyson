@@ -1,0 +1,57 @@
+{
+	"width": "720",
+	"height": "1280",
+	"fps": "30",
+	"type": "none",
+	"time": "0:0,15:0",
+	"length": "15",
+	"logoplace": "TR",
+	"maskinputs":[{
+		"srno": "1",
+		"maskid": "hsmask1",
+		"maskimg": "rbg_img.png",
+		"maskover": "rbg_over.png",
+		"hs_bgremove": "true",
+		"hs_bgremovetype": "fullbody"
+	}],
+	"texteffect":[{
+		"id": "1",
+		"isfullcustomize": "true",
+		"backgroundcolor": "#000000",
+		"masksettings":[{
+			"cusmaskid": "1",
+			"maskinputid": "hsmask1",
+			"isedited": "true",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"masktopeq": "getFBF()#0,60,300:960,0,0"
+		},{
+			"cusmaskid": "2",
+			"maskinputid": "hsmask1",
+			"isedited": "true",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"aifilter": "clothesseg",
+			"maskcover": "cover.jpg#multiply",
+			"masktopeq": "getFBF()#0,60,300:960,0,0"
+		},{
+			"cusmaskid": "0",
+			"imgname": "rbg_img.png",
+			"isedited": "false",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"masktop": "0"
+		},{
+			"cusmaskid": "3",
+			"imgname": "rbg_over.png",
+			"isedited": "false",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"masktop": "0"
+		}]
+	}]
+}

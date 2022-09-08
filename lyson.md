@@ -473,9 +473,28 @@
 ## Masksettings
    masksettings is json array list, This is list of images display with effect and animation in timeline.
 
-
+```
+"masksettings":[{
+    "cusmaskid": "1",
+    "maskinputid": "mask1",
+    "isedited": "true",
+    "timestartoffsetfps": "0",
+    "timeendoffsetfps": "90",
+    "masklefteq": "getFBF()#0,30,60,90:720,90,90,720",
+    "masktop": "370"
+}]
 ```
 
+```
+"masksettings":[{
+  "cusmaskid": "1",
+  "imgname": "rbg_img.png",
+  "isedited": "false",
+  "timestartoffsetfps": "0",
+  "timeendoffsetfps": "300",
+  "maskleft": "0",
+  "masktop": "0"
+}]
 ```
 
 - **cusmaskid:** *cusmaskid is unique number, cusmaskid decided which layer is draw first. Means
@@ -780,7 +799,6 @@
   `"filtermodeeq": "getFBF()#halftone#0,228:0.01,0.05"`
 
   `"filtermodeeq": "getFBF()#hue#0,40,180,228:0,100,100,0"`
-  
 
    #####  filtermodeeq explain using whitebalance filter
   `"filtermodeeq": "getFBF()#whitebalance#228,260,400,440:1000_0,5000_0.6,5000_0.6,1000_0"`
@@ -812,20 +830,83 @@
 
   `"hasvalue" = "textFName"`
 
-  > if textFName has value then this item draw on canvas
+  > if *textFName* has value then this item draw on canvas
 
   `"hasvalue" = "textFName&textLName"`
 
-  > if textFName and textLName both has value then this item draw on canvas
+  > if *textFName* and *textLName* both has value then this item draw on canvas
 
   `"hasvalue" = "textFName|textLName"`
 
-  > if textFName  or textLName any one has value then this item draw on canvas
+  > if *textFName*  or *textLName* any one has value then this item draw on canvas
 
 
 ## textsettings
 
 textsettings is json array list, List of texts display with effect and animation in that time line.
+
+```
+"textsettings":[{
+    "custextid": "3",
+    "text": "XXX",
+    "isedited": "true",
+    "textinputids": "text1",
+    "timestartoffsetfps": "0",
+    "timeendoffsetfps": "100",
+    "textleft": "0",
+    "texttop": "854",
+    "textwidth": "720",
+    "textaling": "center",
+    "textfont": "taileb.ttf",
+    "textsize": "32",
+    "textcolor": "#ffff33",
+    "textline" : "5",
+    "linePadding" : "20"
+}]
+```
+
+```
+"textsettings":[{
+    "custextid": "1",
+    "text": "HAPPY",
+    "isedited": "false",
+    "textanimation": "alpha",
+    "timestartoffsetfps": "4",
+    "timeendoffsetfps": "0",
+    "textline" : "2",
+    "textleft": "216",
+    "texttop": "746",
+    "textfont": "ALLERDISPLAY.TTF",
+    "textsize": "97",
+    "textcolor": "#5e5e5e",
+    "textstrokecolor": "#1f1f1f",
+    "textstrokesize": "2",
+    "textshadowradious": "2",
+    "textshadowdx": "1",
+    "textshadowdy": "1",
+    "textalpha": "255"
+}]
+```
+
+```
+"textsettings":[{
+    "custextid": "2",
+    "isedited": "true",
+    "text": "The Event will take place on DDD",	
+    "textinputids": "text2",				
+    "timestartoffsetfps": "164",
+    "timeendoffsetfps": "310",			
+    "textleft": "0",
+    "texttopeq": "getFBF()#164,170,250,310:1280,1096,1096,-184",
+    "textwidth": "720",
+    "textaling": "center",
+    "textcolor": "#1d6490",
+    "textfont": "Montserrat_Regular.otf",
+    "textsize": "25",
+    "textalphaeq": "getFBF()#164,166,310:0,255,255"
+}]
+```
+
 
 - **custextid:** *custextid is unique number, custextid decided which input is display first. Means custextid is used to manage layer in frame. If there is two text with custextid 1 & 2 then number 1 will be draw first and above it 2 will be draw.*
 
@@ -1213,14 +1294,14 @@ textsettings is json array list, List of texts display with effect and animation
 
   `"hasvalue" = "textFName"`
 
-  > if textFName has value then this item draw on canvas
+  > if *textFName* has value then this item draw on canvas
 
   `"hasvalue" = "textFName&textLName"`
 
-  > if textFName and textLName both has value then this item draw on canvas
+  > if *textFName* and *textLName* both has value then this item draw on canvas
 
   `"hasvalue" = "textFName|textLName"`
 
-  > if textFName  or textLName any one has value then this item draw on canvas
+  > if *textFName*  or *textLName* any one has value then this item draw on canvas
 
   

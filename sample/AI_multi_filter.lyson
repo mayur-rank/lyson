@@ -1,0 +1,45 @@
+{
+	"width": "720",
+	"height": "1280",
+	"nophoto": "1",
+	"fps": "30",
+	"type": "none",
+	"time": "0:0,15:0",
+	"length": "15",
+	"logoplace": "TR",
+	"multimaskinputs":[{
+		"maskid": "mask1",
+		"maskimg": "rbg_img.png"
+	}],
+	"texteffect":[{
+		"id": "1",
+		"isfullcustomize": "true",
+		"backgroundcolor": "#000000",
+		"masksettings":[{
+			"cusmaskid": "2",
+			"maskinputid": "mask1",
+			"isedited": "true",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"aifilter": "disney,comic,removebg",
+			"masktopeq": "getFBF()#0,60,300:960,0,0"
+		},{
+			"cusmaskid": "0",
+			"imgname": "rbg_img.png",
+			"isedited": "false",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"masktop": "0"
+		},{
+			"cusmaskid": "3",
+			"imgname": "rbg_over.png",
+			"isedited": "false",
+			"timestartoffsetfps": "0",
+			"timeendoffsetfps": "300",
+			"maskleft": "0",
+			"masktop": "0"
+		}]
+	}]
+}
