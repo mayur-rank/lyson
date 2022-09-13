@@ -122,7 +122,8 @@
   | Effect | Need of Model |  
     -------|------------  
   | Face Key Point  | "face278" |  
-  | Face Mask | "face278","facemask" |  
+  | Face Mask | "face278","facemask" |
+  | 3dgame | "face278","3dgame" |  
   | disney | "face278","facemask","disney" |  
   | removebg | - |  
   | skyseg | "skyseg" |
@@ -373,7 +374,7 @@
   `"textinputtype" : "numberDecimal"`
 
   ##### Keyboard type list
-  `"date"` `"datetime"` `"none"` `"number"` `"numberDecimal"` `"numberPassword"` `"numberSigned"` `"phone"` `"text"` `"textAutoComplete"` `"textAutoCorrect"` `"textCapCharacters"` `"textCapSentences"` `"textCapWords"` `"textEmailAddress"``"textEmailSubject"` `"textFilter"` `"textLongMessage"` `"textMultiLine"` `"textNoSuggestions"``"textPassword"` `"textPersonName"` `"textPhonetic"` `"textPostalAddress"` `"textShortMessage"` `"textUri"` `"textVisiblePassword"` `"textWebEditText"` `"textWebEmailAddress"` `"textWebPassword"` `"time"`
+  `"date"` `"datetime"` `"none"` `"number"` `"numberDecimal"` `"numberPassword"` `"numberSigned"` `"phone"` `"text"` `"textAutoComplete"` `"textAutoCorrect"` `"textCapCharacters"` `"textCapSentences"` `"textCapWords"` `"textEmailAddress"` `"textEmailSubject"` `"textFilter"` `"textLongMessage"` `"textMultiLine"` `"textNoSuggestions"` `"textPassword"` `"textPersonName"` `"textPhonetic"` `"textPostalAddress"` `"textShortMessage"` `"textUri"` `"textVisiblePassword"` `"textWebEditText"` `"textWebEmailAddress"` `"textWebPassword"` `"time"`
 
   > Not applicable to textinputcontrol -> spinner/date/time
 
