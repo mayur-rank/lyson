@@ -250,6 +250,10 @@
 
   `"photoeffect": "addoverlay"`
 
+- **isimagecropshowing** *After selecting multiple photos, crop activity should not be displayed. `Default: true`*
+
+  `"isimagecropshowing": "false"`
+
 - **photoname** *is image or color apply on photo with selected photoeffect. `Must be used with photoeffect`*
 
   `"photoname": "addoverlay1.png"`
