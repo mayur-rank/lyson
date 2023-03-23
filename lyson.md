@@ -1340,5 +1340,5 @@ textsettings is json array list, List of texts display with effect and animation
 - [AI Multi Filter](./sample/ai_multi_filter.lyson)
   `aimodel` `aifilter`
 
-- [T8 webp and gif sample](./sample/ai_multi_filter.lyson)
+- [T8 webp and gif sample](./sample/web_gif_sample.lyson)
   `outputformat` `webpquality` used in LYSON-T8
