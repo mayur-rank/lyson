@@ -133,6 +133,15 @@
   | comic | "comic" |
   | cartoon | "cartoon" |
 
+- **outputformat:** *outputformat is `.mp4` `.gif` `.webp` `Default: .mp4`*
+
+  `"outputformat": ".wepb"` 
+  > used in only LYSON-T8
+
+- **webpquality:** *webpquality is used to compress webp file 100 with hd and 30 with low quality `Default: 40`*
+
+  `"webpquality": "60"`
+  > used in only LYSON-T8
 
 ## MultiMaskInputs & HiddenMaskInputs & MaskInputs
 
@@ -1330,3 +1339,6 @@ textsettings is json array list, List of texts display with effect and animation
 
 - [AI Multi Filter](./sample/ai_multi_filter.lyson)
   `aimodel` `aifilter`
+
+- [T8 webp and gif sample](./sample/ai_multi_filter.lyson)
+  `outputformat` `webpquality` used in LYSON-T8
