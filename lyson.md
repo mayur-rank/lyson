@@ -6,7 +6,7 @@
 - [CommonNotation](#common-notation)
 - [MultiMaskInputs & HiddenMaskInputs & MaskInputs](#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](#textinputs)
-- [TextEffects](#texteffects)
+- [TextEffect](#texteffect)
 - [MaskSetting](#masksettings)
 - [TextSetting](#textsettings)
 - [Sample LYSON](#sample-lyson)
@@ -195,7 +195,7 @@
     "maskimg": "mask1.png",
     "maskover": "over.png",
     "hs_bgremove": "true",
-    "hs_bgremovetype": "full",
+    "hs_bgremovetype": "fullbody",
     "isgray": "false",
     "isblur": "false",
     "photoeffect": "multiply",
@@ -286,9 +286,9 @@
 
   `"hs_bgremove": "true"`
 
-- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in MaskInputs`*
+- **hs_bgremovetype:** *hs_bgremovetype value is either face or fullbody. `Default: face` `use in MaskInputs`*
 
-  `"hs_bgremovetype": "full"`
+  `"hs_bgremovetype": "fullbody"`
 
 ## TextInputs
 
@@ -452,7 +452,7 @@
   
     > time is something like 13:06.
 
-## TextEffects
+## TextEffect
 
 - **id:** *id is unique number, and id count mention in “time” field (count is number of `,` separator in time field). Means if id = 1, it represents first part of timeline*
 
