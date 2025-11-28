@@ -736,9 +736,9 @@
 
   `"maskbordersize" : "10"`
 
-- **maskshadowcolor:** *maskshadowcolor is used to set shadow color of mask `Default: #000000`*
+- **maskshadowcolor:** *maskshadowcolor is used to set shadow color of mask `Default: #77000000`*
 
-  `"maskshadowcolor" : "#000000"`
+  `"maskshadowcolor" : "#77000000"`
 
 - **maskshadowradius:** *maskshadowradius is used to set shadow radius of mask `Default: 0`*
 
