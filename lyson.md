@@ -1342,3 +1342,6 @@ textsettings is json array list, List of texts display with effect and animation
 
 - [T8 webp and gif sample](./sample/web_gif_sample.lyson)
   `outputformat` `webpquality` used in LYSON-T8
+
+- [Type 11 Ads - sample](./sample/web_gif_sample.lyson)
+  `is_ad_template` `ads_template_redirect_url` `is_ad_template_with_chromecast_intent` used in Type - 11
