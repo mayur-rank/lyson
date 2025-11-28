@@ -6,7 +6,7 @@
 - [CommonNotation](#common-notation)
 - [MultiMaskInputs & HiddenMaskInputs & MaskInputs](#multimaskinputs--hiddenmaskinputs--maskinputs)
 - [TextInputs](#textinputs)
-- [TextEffects](#texteffects)
+- [TextEffect](#texteffect)
 - [MaskSetting](#masksettings)
 - [TextSetting](#textsettings)
 - [Sample LYSON](#sample-lyson)
@@ -195,7 +195,7 @@
     "maskimg": "mask1.png",
     "maskover": "over.png",
     "hs_bgremove": "true",
-    "hs_bgremovetype": "full",
+    "hs_bgremovetype": "fullbody",
     "isgray": "false",
     "isblur": "false",
     "photoeffect": "multiply",
@@ -286,9 +286,9 @@
 
   `"hs_bgremove": "true"`
 
-- **hs_bgremovetype:** *hs_bgremovetype value is either face or full. `Default: face` `use in MaskInputs`*
+- **hs_bgremovetype:** *hs_bgremovetype value is either face or fullbody. `Default: face` `use in MaskInputs`*
 
-  `"hs_bgremovetype": "full"`
+  `"hs_bgremovetype": "fullbody"`
 
 ## TextInputs
 
@@ -452,7 +452,7 @@
   
     > time is something like 13:06.
 
-## TextEffects
+## TextEffect
 
 - **id:** *id is unique number, and id count mention in “time” field (count is number of `,` separator in time field). Means if id = 1, it represents first part of timeline*
 
@@ -1342,6 +1342,3 @@ textsettings is json array list, List of texts display with effect and animation
 
 - [T8 webp and gif sample](./sample/web_gif_sample.lyson)
   `outputformat` `webpquality` used in LYSON-T8
-
-- [Type 11 Ads - sample](./sample/web_gif_sample.lyson)
-  `is_ad_template` `ads_template_redirect_url` `is_ad_template_with_chromecast_intent` used in Type - 11
