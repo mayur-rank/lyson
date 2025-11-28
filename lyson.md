@@ -728,6 +728,31 @@
   `"maskingpatheq" : "getFBF()#160,166,172,178,184,190,196,202,208,300:(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)/(208,208)-(208,208)-(208,208)-(208,208)-(208,208)-(208,208)-(208,208)-(208,208)-(208,208)/(208,0)-(416,0)-(416,208)-(416,416)-(208,416)-(0,416)-(0,208)-(0,0)-(208,0)-(208,0)/(208,0)-(416,0)-(416,208)-(416,416)-(208,416)-(0,416)-(0,208)-(0,0)-(0,0)-(0,0)/(208,0)-(416,0)-(416,208)-(416,416)-(208,416)-(0,416)-(0,416)-(0,416)-(0,416)-(0,416)/(208,0)-(416,0)-(416,208)-(416,416)-(416,416)-(416,416)-(416,416)-(416,416)-(416,416)-(416,416)/(208,0)-(416,0)-(416,0)-(416,0)-(416,0)-(416,0)-(416,0)-(416,0)-(416,0)-(416,0)/(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)-(208,0)"`
 
 
+- **maskbordercolor:** *maskbordercolor is used to set border color of mask `Default: #FFFFFF`*
+
+  `"maskbordercolor" : "#FFFFFF"`
+
+- **maskbordersize:** *maskbordersize is used to set border size of mask `Default: 0`*
+
+  `"maskbordersize" : "10"`
+
+- **maskshadowcolor:** *maskshadowcolor is used to set shadow color of mask `Default: #000000`*
+
+  `"maskshadowcolor" : "#000000"`
+
+- **maskshadowradius:** *maskshadowradius is used to set shadow radius of mask `Default: 0`*
+
+  `"maskshadowradius" : "10"`
+
+- **maskshadowoffx:** *maskshadowoffx is used to set shadow offset x of mask `Default: 0`*
+
+  `"maskshadowoffx" : "5"`
+
+- **maskshadowoffy:** *maskshadowoffy is used to set shadow offset y of mask `Default: 0`*
+
+  `"maskshadowoffy" : "5"`
+
+
 - **blendmode:** *blendmode is used for blend this image on below images with different modes
   modes are mention in below table(work on both text and Mask)*
 
